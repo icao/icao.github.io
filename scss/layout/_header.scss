@@ -1,0 +1,19 @@
+@import "./base/palette";
+
+.header {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  background-color: $color-dark;
+  padding: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1);
+
+  &--fixed {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    // background: tomato;
+  }
+}
