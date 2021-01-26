@@ -1,5 +1,11 @@
+@import "./base/palette";
+// @import "./base/fonts";
+
 .center-full {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.color-enphasis {
+  color: $color-green-standard;
 }

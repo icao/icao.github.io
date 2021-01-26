@@ -1,0 +1,10 @@
+@import "./base/palette";
+@import "./base/fonts";
+
+.title {
+  color: $color-white;
+}
+
+#home {
+  background-image: url("../images/photo.jpg");
+}
