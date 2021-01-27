@@ -8,6 +8,7 @@
 
 * {
   box-sizing: border-box;
+  color: $color-white;
 }
 
 /**
@@ -18,15 +19,9 @@ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   background-color: $color-dark;
-  color: $color-white;
+
   scroll-behavior: smooth;
 }
-
-// html,
-// body {
-//   margin: 0;
-//   padding: 0;
-// }
 
 /* Sections
    ========================================================================== */

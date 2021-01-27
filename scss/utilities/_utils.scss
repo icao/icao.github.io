@@ -41,3 +41,33 @@
   border: 1px solid red;
   background-color: rgba(255, 0, 0, 0.034);
 }
+
+.hero__section {
+  background-color: $color-dark;
+  border-top: 2px solid $color-grey-darker;
+  border-bottom: 2px solid $color-grey-darker;
+}
+
+.title__section {
+  color: $color-white;
+  font-family: $font-roboto;
+  font-size: 30px;
+  font-weight: 500;
+}
+.subtitle__section {
+  color: $color-white;
+  font-family: $font-roboto;
+  font-size: 20px;
+  font-weight: 500;
+  color: $color-green-standard;
+  line-height: 2;
+}
+.tile__dark {
+  background-color: $color-dark;
+  border-top: 2px solid $color-grey-darker;
+  border-bottom: 2px solid $color-grey-darker;
+}
+
+.button__default {
+  background-color: $color-green-standard;
+}
