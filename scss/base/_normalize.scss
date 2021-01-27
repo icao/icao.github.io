@@ -1,9 +1,15 @@
 @import "palette";
+@import "fonts";
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -13,7 +19,14 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
   background-color: $color-dark;
   color: $color-white;
+  scroll-behavior: smooth;
 }
+
+// html,
+// body {
+//   margin: 0;
+//   padding: 0;
+// }
 
 /* Sections
    ========================================================================== */
@@ -25,6 +38,7 @@ html {
 body {
   margin: 0;
   text-rendering: optimizeLegibility;
+  font-family: $font-roboto;
 }
 
 /**

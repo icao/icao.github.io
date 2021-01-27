@@ -1,11 +1,43 @@
 @import "./base/palette";
-// @import "./base/fonts";
+@import "./base/fonts";
+
+.vieport__full {
+  width: 100%;
+  height: 100vh;
+  // margin: 0;
+  // padding: 0;
+  // // overflow: hidden;
+  // box-sizing: border-box;
+  // background-color: rgba(255, 0, 0, 0.048);
+
+  // display: table;
+  // table-layout: fixed;
+  // height: 100%;
+  // position: relative;
+  // top: 0;
+  // left: 0;
+  // z-index: 2;
+  // background-color: red;
+}
+
+// .full-width {
+//   max-width: 100%;
+//   width: 100%;
+//   max-height: 100%;
+//   height: 100vh;
+// }
 
 .center-full {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .color-enphasis {
   color: $color-green-standard;
+}
+
+.debugger-01 {
+  border: 1px solid red;
+  background-color: rgba(255, 0, 0, 0.034);
 }
