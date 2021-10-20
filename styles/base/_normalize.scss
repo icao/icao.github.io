@@ -18,7 +18,8 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  // background-color: $color-dark;
+  background-color: $color-dark;
+  // FIXME: El clor del backgrun siguieene es solo para pruebas
   background-color: rgb(255, 191, 94);
 
   scroll-behavior: smooth;

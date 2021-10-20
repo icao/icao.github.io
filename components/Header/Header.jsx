@@ -1,20 +1,40 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import clsx from 'clsx'
+import { useWindowResize } from '../../hooks/useWindowResize'
 import styles from './Header.module.scss'
 
-const Header = () => {
 
-  let [isOpen, setIsOpen] = useState(true)
+const Header = () => {
+  let [width] = useWindowResize()
+  let [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  useEffect(() => {
+    if (width >= 992) {
+      setIsMenuOpen(false)
+    }
+  })
+
+  function handleClickIconHamburger(event) {
+    event.preventDefault()
+    console.log('handleClickIconHamburger')
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  // FIXME: REVISAR si se puede liminar el eefecto tardio del desvanecimiento del header, por el momeento no,  verificar el transition
 
   return (
-    <header id="header" className={clsx(styles.header, { [styles['header--open']]: isOpen })}>
+    <header id="header" className={clsx(styles.header, { [styles['header--open']]: isMenuOpen })}>
       <nav className={styles.nav}>
         <div className={styles['nav-mobile']}>
           <div className={styles.logo}>
             <span className={styles.logo__typo}>César <strong>Aparicio </strong></span>
           </div>
           <div className={styles['menu-hamburger']}>
-            <div id={styles['icon-hamburger']} className={clsx({ [styles['icon-hamburger--open']]: isOpen })}>
+            <div
+              id={styles['icon-hamburger']}
+              className={clsx({ [styles['icon-hamburger--open']]: isMenuOpen })}
+              onClick={handleClickIconHamburger}
+            >
               <span></span>
               <span></span>
               <span></span>
@@ -22,7 +42,7 @@ const Header = () => {
           </div>
         </div>
 
-        <ul id="menu" className={clsx(styles.menu, { [styles['menu--open']]: isOpen })}>
+        <ul id="menu" className={clsx(styles.menu, { [styles['menu--open']]: isMenuOpen })}>
           <li className={styles.menu__item}>
             <a href="#home" className={clsx(styles['menu__item-link'], styles['menu__item--active'])}
             >Inicio</a>
