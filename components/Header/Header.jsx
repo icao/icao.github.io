@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
 import clsx from 'clsx'
-import { useWindowResize } from '../../hooks/useWindowResize'
 import styles from './Header.module.scss'
-
+import { useWindowResize } from '../../hooks/useWindowResize'
 
 const Header = () => {
   let [width] = useWindowResize()
@@ -19,8 +18,6 @@ const Header = () => {
     console.log('handleClickIconHamburger')
     setIsMenuOpen(!isMenuOpen)
   }
-
-  // FIXME: REVISAR si se puede liminar el eefecto tardio del desvanecimiento del header, por el momeento no,  verificar el transition
 
   return (
     <header id="header" className={clsx(styles.header, { [styles['header--open']]: isMenuOpen })}>
