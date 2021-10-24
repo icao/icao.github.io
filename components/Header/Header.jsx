@@ -7,6 +7,17 @@ const Header = () => {
   let [width] = useWindowResize()
   let [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const [options, setOptions] = useState({
+    linkActive: { id: 1, tag: 'home', name: 'inicio' },
+    links: [
+      { id: 1, tag: 'home', name: 'inicio' },
+      { id: 2, tag: 'resume', name: 'experiencia' },
+      { id: 3, tag: 'skills', name: 'skills' },
+      { id: 4, tag: 'projects', name: 'proyectos' }
+    ]
+
+  })
+
   useEffect(() => {
     if (width >= 992) {
       setIsMenuOpen(false)
@@ -17,6 +28,11 @@ const Header = () => {
     event.preventDefault()
     console.log('handleClickIconHamburger')
     setIsMenuOpen(!isMenuOpen)
+  }
+
+  function handleLinkClick(index) {
+    console.log(`CLICK ${index}`)
+    setOptions({ ...options, linkActive: options.links[index] })
   }
 
   return (
@@ -40,7 +56,18 @@ const Header = () => {
         </div>
 
         <ul id="menu" className={clsx(styles.menu, { [styles['menu--open']]: isMenuOpen })}>
-          <li className={styles.menu__item}>
+          {options.links.map((link, index) => <li className={styles.menu__item} key={link.id}>
+            <a
+              href={`#${link.tag}`}
+              className={clsx(
+                styles['menu__item-link'],
+                options.linkActive.id === link.id ? styles['menu__item--active'] : ''
+              )}
+              onClick={() => handleLinkClick(index)}
+            >{link.name}</a>
+          </li>)}
+
+          {/* <li className={styles.menu__item}>
             <a href="#home" className={clsx(styles['menu__item-link'], styles['menu__item--active'])}
             >Inicio</a>
           </li>
@@ -52,7 +79,7 @@ const Header = () => {
           </li>
           <li className={styles.menu__item}>
             <a href="#works" className={styles['menu__item-link']}>Proyectos</a>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header >);
