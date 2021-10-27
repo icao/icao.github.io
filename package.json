@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "yarn run eslint . --ext js,jsx,ts,tsx --config .eslintrc.json --no-eslintrc",
-    "lint:fix": "yarn run eslint . --ext js,jsx,ts,tsx --config .eslintrc.json --no-eslintrc --fix"
+    "lint:fix": "yarn run eslint . --ext js,jsx,ts,tsx --config .eslintrc.json --no-eslintrc --fix",
+    "prettier": " npx prettier --check \"**/*.{js,jsx,json,ts,tsx,scss,css}\"",
+    "prettier:fix": " npx prettier --write \"**/*.{js,jsx,json,ts,tsx,scss,css}\""
   },
   "dependencies": {
     "clsx": "^1.1.1",
