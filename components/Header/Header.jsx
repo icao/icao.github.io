@@ -15,7 +15,6 @@ const Header = () => {
       { id: 3, tag: 'skills', name: 'skills' },
       { id: 4, tag: 'projects', name: 'proyectos' },
     ],
-
   })
 
   useEffect(() => {
@@ -35,7 +34,12 @@ const Header = () => {
   }
 
   return (
-    <header id="header" className={clsx(styles.header, { [styles['header--open']]: isMenuOpen })}>
+    <header
+      id="header"
+      className={clsx(styles.header, {
+        [styles['header--open']]: isMenuOpen,
+      })}
+    >
       <nav className={styles.nav}>
         <div className={styles['nav-mobile']}>
           <div className={styles.logo}>
@@ -47,7 +51,9 @@ const Header = () => {
           <div className={styles['menu-hamburger']}>
             <button
               id={styles['icon-hamburger']}
-              className={clsx({ [styles['icon-hamburger--open']]: isMenuOpen })}
+              className={clsx({
+                [styles['icon-hamburger--open']]: isMenuOpen,
+              })}
               onClick={handleClickIconHamburger}
               type="button"
             >
@@ -58,14 +64,21 @@ const Header = () => {
           </div>
         </div>
 
-        <ul id="menu" className={clsx(styles.menu, { [styles['menu--open']]: isMenuOpen })}>
+        <ul
+          id="menu"
+          className={clsx(styles.menu, {
+            [styles['menu--open']]: isMenuOpen,
+          })}
+        >
           {options.links.map((link, index) => (
             <li className={styles.menu__item} key={link.id}>
               <a
                 href={`#${link.tag}`}
                 className={clsx(
                   styles['menu__item-link'],
-                  options.linkActive.id === link.id ? styles['menu__item--active'] : '',
+                  options.linkActive.id === link.id
+                    ? styles['menu__item--active']
+                    : ''
                 )}
                 onClick={() => handleLinkClick(index)}
               >

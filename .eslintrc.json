@@ -1,40 +1,26 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "node": true
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb"
-        // "plugin:prettier/recommended",
-        // "eslint:recommended",
-        // "plugin:react/recommended",
-        // "plugin:jsx-a11y/recommended",
-        // "plugin:react-hooks/recommended",
-        // "plugin:@typescript-eslint/eslint-recommended",
-        // "plugin:@typescript-eslint/recommended"
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "react/react-in-jsx-scope": "off",
-        "semi": [
-            "error",
-            "never"
-        ]
-    },
-    "settings": {
-        "react": {
-            "version": "detect"
-        }
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+    // "semi": ["error", "never"]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
     }
+  }
 }
