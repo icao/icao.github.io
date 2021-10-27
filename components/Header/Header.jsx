@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
 import clsx from 'clsx'
 import styles from './Header.module.scss'
-import { useWindowResize } from '../../hooks/useWindowResize'
+import useWindowResize from '../../hooks/useWindowResize'
 
 const Header = () => {
-  let [width] = useWindowResize()
-  let [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [width] = useWindowResize()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const [options, setOptions] = useState({
     linkActive: { id: 1, tag: 'home', name: 'inicio' },
@@ -13,8 +13,8 @@ const Header = () => {
       { id: 1, tag: 'home', name: 'inicio' },
       { id: 2, tag: 'resume', name: 'experiencia' },
       { id: 3, tag: 'skills', name: 'skills' },
-      { id: 4, tag: 'projects', name: 'proyectos' }
-    ]
+      { id: 4, tag: 'projects', name: 'proyectos' },
+    ],
 
   })
 
@@ -26,12 +26,11 @@ const Header = () => {
 
   function handleClickIconHamburger(event) {
     event.preventDefault()
-    console.log('handleClickIconHamburger')
+
     setIsMenuOpen(!isMenuOpen)
   }
 
   function handleLinkClick(index) {
-    console.log(`CLICK ${index}`)
     setOptions({ ...options, linkActive: options.links[index] })
   }
 
@@ -40,32 +39,40 @@ const Header = () => {
       <nav className={styles.nav}>
         <div className={styles['nav-mobile']}>
           <div className={styles.logo}>
-            <span className={styles.logo__typo}>César <strong>Aparicio </strong></span>
+            <span className={styles.logo__typo}>
+              César
+              <strong>Aparicio </strong>
+            </span>
           </div>
           <div className={styles['menu-hamburger']}>
-            <div
+            <button
               id={styles['icon-hamburger']}
               className={clsx({ [styles['icon-hamburger--open']]: isMenuOpen })}
               onClick={handleClickIconHamburger}
+              type="button"
             >
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+              <span />
+              <span />
+              <span />
+            </button>
           </div>
         </div>
 
         <ul id="menu" className={clsx(styles.menu, { [styles['menu--open']]: isMenuOpen })}>
-          {options.links.map((link, index) => <li className={styles.menu__item} key={link.id}>
-            <a
-              href={`#${link.tag}`}
-              className={clsx(
-                styles['menu__item-link'],
-                options.linkActive.id === link.id ? styles['menu__item--active'] : ''
-              )}
-              onClick={() => handleLinkClick(index)}
-            >{link.name}</a>
-          </li>)}
+          {options.links.map((link, index) => (
+            <li className={styles.menu__item} key={link.id}>
+              <a
+                href={`#${link.tag}`}
+                className={clsx(
+                  styles['menu__item-link'],
+                  options.linkActive.id === link.id ? styles['menu__item--active'] : '',
+                )}
+                onClick={() => handleLinkClick(index)}
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
 
           {/* <li className={styles.menu__item}>
             <a href="#home" className={clsx(styles['menu__item-link'], styles['menu__item--active'])}
@@ -82,7 +89,8 @@ const Header = () => {
           </li> */}
         </ul>
       </nav>
-    </header >);
+    </header>
+  )
 }
 
-export default Header;
+export default Header
