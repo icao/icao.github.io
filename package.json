@@ -6,14 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "yarn run eslint . --ext js,jsx,ts,tsx --config .eslintrc.json --no-eslintrc",
-    "lint:fix": "yarn run eslint . --ext js,jsx,ts,tsx --config .eslintrc.json --no-eslintrc --fix",
-    "prettier": " npx prettier --check \"**/*.{js,jsx,json,ts,tsx,scss,css}\"",
-    "prettier:fix": " npx prettier --write \"**/*.{js,jsx,json,ts,tsx,scss,css}\""
+    "lint": "yarn run eslint . --ext js,jsx,ts,tsx",
+    "lint:fix": "yarn run eslint . --ext js,jsx,ts,tsx --fix",
+    "format": " npx prettier --check \"**/*.{js,jsx,json,ts,tsx,scss,css}\"",
+    "format:fix": " npx prettier --write \"**/*.{js,jsx,json,ts,tsx,scss,css}\"",
+    "prepare": "husky install"
   },
   "dependencies": {
     "clsx": "^1.1.1",
     "next": "11.1.2",
+    "prop-types": "^15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "sass": "^1.42.1"
@@ -25,6 +27,12 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix --color",
+    "*.{js,jsx,json,ts,tsx,scss,css}": "npx prettier --write --color"
   }
 }

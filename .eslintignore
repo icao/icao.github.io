@@ -2,8 +2,8 @@ build
 dist
 next
 node_modules
-*.stories.jsx
-_app.jsx
-_document.jsx
+# *.stories.jsx
+# _app.jsx
+# _document.jsx
 
 
