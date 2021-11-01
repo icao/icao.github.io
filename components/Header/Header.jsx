@@ -2,10 +2,13 @@ import { useState, useEffect } from 'react'
 import clsx from 'clsx'
 import styles from './Header.module.scss'
 import useWindowResize from '../../hooks/useWindowResize'
+import { useScrollPositionY } from '../../hooks/useScrollPosition'
 
 const Header = () => {
   const [width] = useWindowResize()
+  const scrollY = useScrollPositionY()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuFixed, setIsMenuFixed] = useState(false)
 
   const [options, setOptions] = useState({
     linkActive: { id: 1, tag: 'home', name: 'inicio' },
@@ -21,7 +24,12 @@ const Header = () => {
     if (width >= 992) {
       setIsMenuOpen(false)
     }
-  })
+  }, [width])
+
+  useEffect(() => {
+    if (scrollY > 100) setIsMenuFixed(true)
+    if (scrollY <= 100) setIsMenuFixed(false)
+  }, [scrollY])
 
   function handleClickIconHamburger(event) {
     event.preventDefault()
@@ -38,6 +46,7 @@ const Header = () => {
       id="header"
       className={clsx(styles.header, {
         [styles['header--open']]: isMenuOpen,
+        [styles['header--fixed']]: isMenuFixed,
       })}
     >
       <nav className={styles.nav}>
@@ -45,7 +54,7 @@ const Header = () => {
           <div className={styles.logo}>
             <span className={styles.logo__typo}>
               César
-              <strong>Aparicio </strong>
+              <strong> Aparicio</strong>
             </span>
           </div>
           <div className={styles['menu-hamburger']}>

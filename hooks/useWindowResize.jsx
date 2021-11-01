@@ -14,7 +14,7 @@ export default function useWindowResize() {
     return () => {
       window.removeEventListener('resize', getWindowSize)
     }
-  })
+  }, [])
 
   return [width, height]
 }
