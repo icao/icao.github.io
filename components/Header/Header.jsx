@@ -3,12 +3,14 @@ import clsx from 'clsx'
 import styles from './Header.module.scss'
 import useWindowResize from '../../hooks/useWindowResize'
 import { useScrollPositionY } from '../../hooks/useScrollPosition'
+import useKeyPress from '../../hooks/useKeyPress'
 
 const Header = () => {
   const [width] = useWindowResize()
   const scrollY = useScrollPositionY()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMenuFixed, setIsMenuFixed] = useState(false)
+  const { isKeyPressed } = useKeyPress('Escape')
 
   const [options, setOptions] = useState({
     linkActive: { id: 1, tag: 'home', name: 'inicio' },
@@ -27,18 +29,24 @@ const Header = () => {
   }, [width])
 
   useEffect(() => {
+    if (isKeyPressed) {
+      setIsMenuOpen(false)
+    }
+  })
+
+  useEffect(() => {
     if (scrollY > 100) setIsMenuFixed(true)
     if (scrollY <= 100) setIsMenuFixed(false)
   }, [scrollY])
 
   function handleClickIconHamburger(event) {
     event.preventDefault()
-
     setIsMenuOpen(!isMenuOpen)
   }
 
   function handleLinkClick(index) {
     setOptions({ ...options, linkActive: options.links[index] })
+    setIsMenuOpen(false)
   }
 
   return (
@@ -49,6 +57,16 @@ const Header = () => {
         [styles['header--fixed']]: isMenuFixed,
       })}
     >
+      {/* 
+      TODO: AGregar cerrarmenu coon teecla ESC - LISTO
+      TODO: SEPARAR EL NAV A OTRO COMPONENTE
+      TODO: VERIFICAR LAS CLASES HEADER OPEN  & HEADER FIXED SI PASAR A NAV O DEJAR EN HEADER, ES MAS PROBABLE QUE SEA EN HEADER DONDE SE QUIEDEN
+
+      TODO: ENVIAR LOS ITEMS DEEL MENU POR PROPS
+      TODO: AGREGAR EL STORYBOOK DEL NAV
+
+       */}
+
       <nav className={styles.nav}>
         <div className={styles['nav-mobile']}>
           <div className={styles.logo}>
@@ -95,20 +113,6 @@ const Header = () => {
               </a>
             </li>
           ))}
-
-          {/* <li className={styles.menu__item}>
-            <a href="#home" className={clsx(styles['menu__item-link'], styles['menu__item--active'])}
-            >Inicio</a>
-          </li>
-          <li className={styles.menu__item}>
-            <a href="#resume" className={styles['menu__item-link']}>Experiencia</a>
-          </li>
-          <li className={styles.menu__item}>
-            <a href="#skills" className={styles['menu__item-link']}>Skills</a>
-          </li>
-          <li className={styles.menu__item}>
-            <a href="#works" className={styles['menu__item-link']}>Proyectos</a>
-          </li> */}
         </ul>
       </nav>
     </header>

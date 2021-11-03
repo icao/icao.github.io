@@ -15,9 +15,6 @@ export function useScrollPosition() {
   }
 
   useEffect(() => {
-    // if (isWindow) {
-
-    //   }
     window.addEventListener('scroll', handleScroll)
     return () => {
       window.removeEventListener('scroll', handleScroll)
