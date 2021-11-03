@@ -57,16 +57,6 @@ const Header = () => {
         [styles['header--fixed']]: isMenuFixed,
       })}
     >
-      {/* 
-      TODO: AGregar cerrarmenu coon teecla ESC - LISTO
-      TODO: SEPARAR EL NAV A OTRO COMPONENTE
-      TODO: VERIFICAR LAS CLASES HEADER OPEN  & HEADER FIXED SI PASAR A NAV O DEJAR EN HEADER, ES MAS PROBABLE QUE SEA EN HEADER DONDE SE QUIEDEN
-
-      TODO: ENVIAR LOS ITEMS DEEL MENU POR PROPS
-      TODO: AGREGAR EL STORYBOOK DEL NAV
-
-       */}
-
       <nav className={styles.nav}>
         <div className={styles['nav-mobile']}>
           <div className={styles.logo}>
@@ -101,12 +91,10 @@ const Header = () => {
             <li className={styles.menu__item} key={link.id}>
               <a
                 href={`#${link.tag}`}
-                className={clsx(
-                  styles['menu__item-link'],
-                  options.linkActive.id === link.id
-                    ? styles['menu__item--active']
-                    : ''
-                )}
+                className={clsx(styles['menu__item-link'], {
+                  [styles['menu__item--active']]:
+                    options.linkActive.id === link.id,
+                })}
                 onClick={() => handleLinkClick(index)}
               >
                 {link.name}
