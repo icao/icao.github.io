@@ -5,11 +5,12 @@
   width: 100%;
   height: auto;
   box-sizing: border-box;
-  background-color: $color-dark;
+  background-color: transparent;
   padding: 45px 50px;
   position: fixed;
   z-index: 100;
-  transition: padding 0.6s cubic-bezier(0.165, 0.85, 0.45, 1);
+  transition: padding 0.6s cubic-bezier(0.165, 0.85, 0.45, 1),
+    background-color 0.6s cubic-bezier(0.165, 0.85, 0.45, 1);
 
   &::before {
     content: '';
@@ -33,6 +34,7 @@
   &--fixed {
     padding-top: 30px;
     padding-bottom: 30px;
+    background-color: $color-dark;
   }
 
   @media screen and (max-width: 768px) {

@@ -3,26 +3,20 @@
 @import '../../../styles/utilities/utils';
 
 #home {
-  overflow: hidden;
 }
 
 .home {
   @extend .vieport__full;
+  overflow: hidden;
+  // background-color: pink;
 }
 
 .home__background {
-  // border: 1px solid pink;
   background-image: url('https://raw.githubusercontent.com/icao/icao-web/main/images/photo02.jpg');
-  // background-color: palegoldenrod;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  // position: relative;
   display: inline-block;
-  // top: -100px;
-  // left: -300px;
-  // width: 750px;
-  // height: 600px;
   top: -2.5vh; // DECOMENTAR
   left: 3vw;
   width: 56vw; // DESCOMENTAR
@@ -161,6 +155,6 @@
   }
 }
 
-.typed__title {
-  font-weight: 500;
-}
+// .typed__title {
+//   font-weight: 500;
+// }
