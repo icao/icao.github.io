@@ -2,13 +2,9 @@
 @import '../../../styles/base/fonts';
 @import '../../../styles/utilities/utils';
 
-#home {
-}
-
 .home {
   @extend .vieport__full;
   overflow: hidden;
-  // background-color: pink;
 }
 
 .home__background {
@@ -17,10 +13,10 @@
   background-position: center center;
   background-size: cover;
   display: inline-block;
-  top: -2.5vh; // DECOMENTAR
+  top: -2.5vh;
   left: 3vw;
-  width: 56vw; // DESCOMENTAR
-  height: 80vh; //DESCOMENTAR
+  width: 56vw;
+  height: 80vh;
   transition: all 0.8s;
   position: relative;
 
@@ -28,7 +24,7 @@
 
   @media screen and (max-width: 1200px) {
     clip-path: polygon(31% 0, 100% 25%, 61% 100%, 0 93%);
-    top: 15vh; // DECOMENTAR
+    top: 15vh;
     left: 3vw;
     width: 640px;
     height: 560px;
@@ -36,7 +32,7 @@
 
   // ipad horizontal
   @media screen and (max-width: 1200px) and (max-height: 1000px) and (orientation: landscape) {
-    top: 10vh; // DECOMENTAR
+    top: 10vh;
     left: 7vw;
   }
 
