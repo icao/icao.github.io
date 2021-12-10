@@ -10,7 +10,9 @@
     "lint:fix": "yarn run eslint . --ext js,jsx,ts,tsx --fix",
     "format": " npx prettier --check \"**/*.{js,jsx,json,ts,tsx,scss,css}\"",
     "format:fix": " npx prettier --write \"**/*.{js,jsx,json,ts,tsx,scss,css}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "clsx": "^1.1.1",
@@ -19,9 +21,20 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "sass": "^1.42.1",
+    "storybook-addon-outline": "^1.4.2",
     "typed.js": "^2.0.12"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/builder-webpack5": "^6.4.9",
+    "@storybook/manager-webpack5": "^6.4.9",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.4.9",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
     "eslint": "^8.1.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -29,8 +42,11 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-storybook": "^0.5.3",
     "husky": "^7.0.4",
-    "lint-staged": "^11.2.6"
+    "lint-staged": "^11.2.6",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --cache --fix --color",
