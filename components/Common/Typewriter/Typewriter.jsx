@@ -33,11 +33,26 @@ Typewriter.propTypes = {
     loopCount: PropTypes.bool,
     showCursor: PropTypes.bool,
     cursorChar: PropTypes.string,
-  }).isRequired,
+  }),
   children: PropTypes.node,
 }
 
 Typewriter.defaultProps = {
+  options: {
+    strings: [
+      'Add in opions your messages!',
+      'Show here your message!',
+      'Try adding your message with the options prop',
+    ],
+    typeSpeed: 50,
+    startDelay: 100,
+    backSpeed: 10,
+    loop: true,
+    backDelay: 1200,
+    loopCount: false,
+    showCursor: true,
+    cursorChar: ' |',
+  },
   children: null,
 }
 

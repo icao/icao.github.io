@@ -8,6 +8,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/preset-scss',
     'storybook-addon-outline',
+    '@hover/storybook-addon-pseudo-states',
   ],
   framework: '@storybook/react',
   core: {
