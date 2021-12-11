@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
+      "@/*": ["./*"],
       "@components/*": ["components/*"],
       "@hooks/*": ["hooks/*"],
       "@pages/*": ["pages/*"],
@@ -10,6 +11,3 @@
   },
   "include": ["**/*.js", "**/*.jsx"]
 }
-
-// FIXME: Resolve all the erros with the import export
-// TODO: https://github.com/import-js/eslint-plugin-import/blob/v2.25.2/docs/rules/no-unresolved.md

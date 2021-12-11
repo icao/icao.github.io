@@ -22,9 +22,8 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
-    "no-console": "error"
-
-    // "semi": ["error", "never"]
+    "no-console": "error",
+    "import/no-unresolved": "off"
   },
   "settings": {
     "react": {
