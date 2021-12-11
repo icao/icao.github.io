@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import clsx from 'clsx'
+import useWindowResize from '@hooks/useWindowResize'
+import { useScrollPositionY } from '@hooks/useScrollPosition'
+import useKeyPress from '@hooks/useKeyPress'
 import styles from './Header.module.scss'
-import useWindowResize from '../../../hooks/useWindowResize'
-import { useScrollPositionY } from '../../../hooks/useScrollPosition'
-import useKeyPress from '../../../hooks/useKeyPress'
 
 const Header = () => {
   const [width] = useWindowResize()

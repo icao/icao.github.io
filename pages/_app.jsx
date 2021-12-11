@@ -1,4 +1,4 @@
-import '../styles/globals.scss'
+import '@styles/globals.scss'
 
 /* eslint-disable react/prop-types */
 function MyApp({ Component, pageProps }) {

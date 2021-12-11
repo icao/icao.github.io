@@ -1,5 +1,5 @@
+import Typewriter from '@components/Common/Typewriter/Typewriter'
 import styles from './Home.module.scss'
-import Typewriter from '../../Common/Typewriter/Typewriter'
 
 const Home = () => (
   <section id="home" className={styles.home}>
