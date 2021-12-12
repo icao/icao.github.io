@@ -59,12 +59,14 @@ const Header = () => {
     >
       <nav className={styles.nav}>
         <div className={styles['nav-mobile']}>
+          {/* Logo */}
           <div className={styles.logo}>
             <span className={styles.logo__typo}>
               César
               <strong> Aparicio</strong>
             </span>
           </div>
+          {/* Icon Hamburguer */}
           <div className={styles['menu-hamburger']}>
             <button
               id={styles['icon-hamburger']}

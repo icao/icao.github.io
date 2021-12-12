@@ -69,14 +69,14 @@
   @media screen and (max-width: 992px) {
     flex-direction: column;
   }
-}
 
-.nav-mobile {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  &-mobile {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .logo {
@@ -149,15 +149,15 @@
     // background-color: transparent;
     // background-color: rebeccapurple;
   }
-}
 
-.menu-hamburger {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: none;
-  @media screen and (max-width: 992px) {
-    display: block;
+  &-hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    @media screen and (max-width: 992px) {
+      display: block;
+    }
   }
 }
 
