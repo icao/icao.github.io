@@ -1,6 +1,6 @@
-@import '../../../styles/base/palette';
-@import '../../../styles/base/fonts';
-@import '../../../styles/utilities/utils';
+@import '@styles/base/palette';
+@import '@styles/base/fonts';
+@import '@styles/utilities/utils';
 
 .home {
   @extend .vieport__full;
