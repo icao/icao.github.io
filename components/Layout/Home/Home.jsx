@@ -5,11 +5,12 @@ const Home = () => (
   <section id="home" className={styles.home}>
     <div className={styles.home__background} />
     <h1 className={styles.home__title}>
-      ¡Hola! Soy
-      <strong>
+      <span className={styles['font-weight-600']}>
+        ¡Hola! Soy
         <span className={styles['color-enphasis']}>{` César Aparicio`}</span>
-      </strong>
-      , Front End Developer y amante del diseño web.
+      </span>
+      , <br />
+      Front End Developer y amante del diseño web.
     </h1>
 
     <div className={styles['typed-container']}>

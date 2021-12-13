@@ -16,55 +16,32 @@
   color: $color-green-standard;
 }
 
-.hero__section {
-  background-color: $color-dark;
-  border-top: 2px solid $color-grey-darker;
-  border-bottom: 2px solid $color-grey-darker;
+.font-weight-100 {
+  font-weight: 100;
 }
 
-.title__section {
-  color: $color-white;
-  font-family: $font-poppins;
-  font-size: 30px;
+.font-weight-200 {
+  font-weight: 200;
+}
+
+.font-weight-300 {
+  font-weight: 300;
+}
+.font-weight-400 {
+  font-weight: 400;
+}
+.font-weight-500 {
   font-weight: 500;
 }
-.subtitle__section {
-  color: $color-white;
-  font-family: $font-poppins;
-  font-size: 20px;
-  font-weight: 500;
-  color: $color-green-standard;
-  line-height: 2;
+.font-weight-600 {
+  font-weight: 600;
 }
-.tile__dark {
-  background-color: $color-dark;
-  border-top: 2px solid $color-grey-darker;
-  border-bottom: 2px solid $color-grey-darker;
+.font-weight-700 {
+  font-weight: 700;
 }
-
-.button__default {
-  background-color: $color-green-standard;
+.font-weight-800 {
+  font-weight: 800;
 }
-
-.card-dark {
-  background-color: $color-grey-darker;
-  color: $color-white;
-  font-family: $font-poppins;
-
-  &__title {
-    color: $color-white;
-  }
-
-  &__footer {
-    // background-color: $color-grey-darker;
-    // color: $color-white;
-    border-top: 1px solid $color-grey;
-  }
+.font-weight-900 {
+  font-weight: 900;
 }
-
-// a {
-//   color: $color-green-standard;
-//   &:hover {
-//     color: $color-white;
-//   }
-// }
