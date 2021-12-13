@@ -16,11 +16,11 @@ const Home = () => (
       <Typewriter
         options={{
           stringsElement: '#strings',
-          typeSpeed: 50,
+          typeSpeed: 60,
           startDelay: 100,
-          backSpeed: 10,
+          backSpeed: 20,
           loop: true,
-          backDelay: 1200,
+          backDelay: 2200,
           loopCount: false,
           showCursor: true,
         }}

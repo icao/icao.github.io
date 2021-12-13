@@ -71,36 +71,33 @@
 
   &__title {
     color: $color-white;
-    // margin-left: -65px;
-    // margin-top: 85px;
     position: absolute;
-    // margin-left: 0;
-    // margin-top: 0;
-    left: 55vw; // DECOMENTAR
-    top: 59vh; // DECOMENTAR
+    left: 55vw;
+    top: 59vh;
     bottom: auto;
     font-size: 1.4vw;
     text-align: left;
-    width: 29vw; //DESCOMENTAR
+    width: 30vw;
     transition: all 0.8s;
     font-weight: 300;
+    font-family: $font-montserrat;
 
     @media screen and (max-width: 1200px) {
       font-size: 20px;
-      left: 50vw; // DECOMENTAR
-      top: 55vh; // DECOMENTAR
+      left: 50vw;
+      top: 55vh;
     }
 
     // ipad horizontal
     @media screen and (max-width: 1200px) and (max-height: 1000px) and (orientation: landscape) {
-      // background-color: red;
-      left: 58vw; // DECOMENTAR
-      top: 65vh; // DECOMENTAR
+      left: 58vw;
+      top: 60vh;
     }
 
     @media screen and (max-width: 992px) {
-      left: 45px; // DECOMENTAR
-      top: 65vh; // DECOMENTAR
+      width: 35vw;
+      left: 45px;
+      top: 67vh;
     }
 
     @media screen and (max-width: 576px) {
@@ -117,7 +114,7 @@
 
     @media screen and (max-height: 550px) and (orientation: landscape) {
       left: 0;
-      top: auto;
+      top: 50%;
       bottom: 0;
       width: 50%;
       margin: 0;
@@ -131,8 +128,9 @@
   bottom: 50px;
   width: 100%;
   height: auto;
-  line-height: 0.9;
-  font-size: 4vw;
+  font-family: $font-montserrat;
+  font-size: 4.5vw;
+  font-weight: 600;
   text-align: center;
   color: $color-white;
 
@@ -144,7 +142,7 @@
 
   @media screen and (max-height: 550px) and (orientation: landscape) {
     text-align: right;
-    font-size: 3.6vw;
+    font-size: 20px;
     padding-right: 30px;
     bottom: 30px;
   }
