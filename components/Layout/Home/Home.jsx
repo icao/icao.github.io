@@ -1,5 +1,7 @@
 import Typewriter from '@components/Common/Typewriter/Typewriter'
 import Codepen from '@components/Icons/Codepen/Codepen'
+import Github from '@components/Icons/Github/Github'
+import Linkedin from '@components/Icons/Linkedin/Linkedin'
 import Link from 'next/link'
 import styles from './Home.module.scss'
 
@@ -59,12 +61,22 @@ const Home = () => (
         </div>
       </Typewriter>
     </div>
-
+    {/* TODO: style the icons and finish, we need modify the container of the typewriter for big resolutions */}
     <div className={styles['social-network__container']}>
       <div className={styles['social-network__icon']}>
         <Link href="https://codepen.io/icao" passHref>
           <a href="replace" target="_blank" rel="noopener noreferrer">
             <Codepen color="#ffffff" hoverColor="#dd013f" />
+          </a>
+        </Link>
+        <Link href="https://github.com/icao" passHref>
+          <a href="replace" target="_blank" rel="noopener noreferrer">
+            <Github color="#ffffff" hoverColor="#dd013f" />
+          </a>
+        </Link>
+        <Link href="https://www.linkedin.com/in/cesaricao/" passHref>
+          <a href="replace" target="_blank" rel="noopener noreferrer">
+            <Linkedin color="#ffffff" hoverColor="#dd013f" />
           </a>
         </Link>
       </div>
