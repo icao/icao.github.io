@@ -1,4 +1,6 @@
 import Typewriter from '@components/Common/Typewriter/Typewriter'
+import Codepen from '@components/Icons/Codepen/Codepen'
+import Link from 'next/link'
 import styles from './Home.module.scss'
 
 const Home = () => (
@@ -56,6 +58,16 @@ const Home = () => (
           </p>
         </div>
       </Typewriter>
+    </div>
+
+    <div className={styles['social-network__container']}>
+      <div className={styles['social-network__icon']}>
+        <Link href="https://codepen.io/icao" passHref>
+          <a href="replace" target="_blank" rel="noopener noreferrer">
+            <Codepen color="#ffffff" hoverColor="#dd013f" />
+          </a>
+        </Link>
+      </div>
     </div>
   </section>
 )

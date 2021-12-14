@@ -154,3 +154,18 @@
     background-color: pink;
   }
 }
+
+.social-network {
+  &__container {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+  }
+
+  &__icon {
+    // border: 1px solid red;
+    // width: 22px;
+    width: 52px;
+    // transition: all 5.8s;
+  }
+}
