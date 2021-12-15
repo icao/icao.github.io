@@ -26,6 +26,7 @@ module.exports = {
     config.resolve.alias['@pages'] = path.resolve(__dirname, '../pages')
     config.resolve.alias['@styles'] = path.resolve(__dirname, '../styles')
     config.resolve.alias['@assets'] = path.resolve(__dirname, '../assets')
+    config.resolve.alias['@public'] = path.resolve(__dirname, '../public')
 
     return config
   },

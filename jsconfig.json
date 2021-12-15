@@ -7,7 +7,8 @@
       "@hooks/*": ["hooks/*"],
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
-      "@assets/*": ["assets/*"]
+      "@assets/*": ["assets/*"],
+      "@public/*": ["public/*"]
     }
   },
   "include": ["**/*.js", "**/*.jsx"]

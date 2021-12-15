@@ -3,11 +3,21 @@ import Codepen from '@components/Icons/Codepen/Codepen'
 import Github from '@components/Icons/Github/Github'
 import Linkedin from '@components/Icons/Linkedin/Linkedin'
 import Link from 'next/link'
+import Image from 'next/image'
+import backgroundImage from '@public/images/background.jpg'
 import styles from './Home.module.scss'
 
 const Home = () => (
   <section id="home" className={styles.home}>
-    <div className={styles.home__background} />
+    <div className={styles.home__background}>
+      <Image
+        src={backgroundImage}
+        placeholder="blur"
+        alt="image cesar aparicio"
+        layout="fill"
+        objectFit="cover"
+      />
+    </div>
     <h1 className={styles.home__title}>
       <span className={styles['font-weight-600']}>
         ¡Hola! Soy
