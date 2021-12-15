@@ -81,7 +81,7 @@
     transition: all 0.8s;
     font-weight: 300;
     font-family: $font-montserrat;
-    line-height: 32px;
+    line-height: 1.25;
 
     @media screen and (max-width: 1200px) {
       font-size: 20px;
@@ -120,7 +120,6 @@
       width: 50%;
       margin: 0;
       padding: 30px;
-      line-height: 24px;
     }
   }
 }
