@@ -25,6 +25,8 @@ module.exports = {
     config.resolve.alias['@hooks'] = path.resolve(__dirname, '../hooks')
     config.resolve.alias['@pages'] = path.resolve(__dirname, '../pages')
     config.resolve.alias['@styles'] = path.resolve(__dirname, '../styles')
+    config.resolve.alias['@assets'] = path.resolve(__dirname, '../assets')
+
     return config
   },
 }

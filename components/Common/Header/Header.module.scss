@@ -106,6 +106,13 @@
     padding: 1em 2em;
     text-align: center;
 
+    &:last-child {
+      padding-right: 0;
+      @media screen and (max-width: 992px) {
+        padding-right: 2em;
+      }
+    }
+
     &-link {
       font-size: 1em;
       color: $color-grey-regular;
@@ -114,6 +121,9 @@
       text-transform: capitalize;
       transition: all 0.5s ease-out;
       display: inline-block;
+      @media screen and (max-width: 992px) {
+        font-size: 1.2em;
+      }
 
       &:hover {
         color: $color-white;

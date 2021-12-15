@@ -61,22 +61,26 @@ const Home = () => (
         </div>
       </Typewriter>
     </div>
-    {/* TODO: style the icons and finish, we need modify the container of the typewriter for big resolutions */}
+
     <div className={styles['social-network__container']}>
       <div className={styles['social-network__icon']}>
         <Link href="https://codepen.io/icao" passHref>
           <a href="replace" target="_blank" rel="noopener noreferrer">
-            <Codepen color="#ffffff" hoverColor="#dd013f" />
+            <Codepen color="#e7eeff" hoverColor="#dd013f" />
           </a>
         </Link>
+      </div>
+      <div className={styles['social-network__icon']}>
         <Link href="https://github.com/icao" passHref>
           <a href="replace" target="_blank" rel="noopener noreferrer">
-            <Github color="#ffffff" hoverColor="#dd013f" />
+            <Github color="#e7eeff" hoverColor="#dd013f" />
           </a>
         </Link>
+      </div>
+      <div className={styles['social-network__icon']}>
         <Link href="https://www.linkedin.com/in/cesaricao/" passHref>
           <a href="replace" target="_blank" rel="noopener noreferrer">
-            <Linkedin color="#ffffff" hoverColor="#dd013f" />
+            <Linkedin color="#e7eeff" hoverColor="#dd013f" />
           </a>
         </Link>
       </div>

@@ -6,7 +6,8 @@
       "@components/*": ["components/*"],
       "@hooks/*": ["hooks/*"],
       "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@assets/*": ["assets/*"]
     }
   },
   "include": ["**/*.js", "**/*.jsx"]

@@ -36,16 +36,16 @@
     }
 
     @media screen and (max-width: 992px) {
-      clip-path: polygon(31% 0, 100% 25%, 61% 100%, 0 93%);
+      clip-path: polygon(25% 0%, 100% 25%, 80% 100%, 0 85%);
       top: 15vh;
-      left: 3vw;
+      left: 10vw;
       width: 640px;
       height: 560px;
     }
 
     @media screen and (max-width: 768px) {
       clip-path: polygon(25% 0, 100% 25%, 80% 100%, 0 85%);
-      top: 6vh;
+      top: 8vh;
       left: 6vw;
       width: 640px;
       height: 560px;
@@ -73,7 +73,7 @@
     color: $color-white;
     position: absolute;
     left: 55vw;
-    top: 59vh;
+    top: 56vh;
     bottom: auto;
     font-size: 1.4vw;
     text-align: left;
@@ -81,6 +81,7 @@
     transition: all 0.8s;
     font-weight: 300;
     font-family: $font-montserrat;
+    line-height: 32px;
 
     @media screen and (max-width: 1200px) {
       font-size: 20px;
@@ -108,26 +109,27 @@
       margin-top: 0;
       margin-left: 0;
       padding-left: 30px;
-      padding-right: 60px;
-      padding-bottom: 80px;
-      background-color: palevioletred;
+      padding-right: 80px;
+      padding-bottom: 90px;
     }
 
     @media screen and (max-height: 550px) and (orientation: landscape) {
       left: 0;
-      top: 50%;
+      top: 40%;
       bottom: 0;
       width: 50%;
       margin: 0;
       padding: 30px;
+      line-height: 24px;
     }
   }
 }
 
 .typed-container {
   position: absolute;
-  bottom: 50px;
+  bottom: 40px;
   width: 100%;
+  padding: 0 2em;
   height: auto;
   font-family: $font-montserrat;
   font-size: 4.5vw;
@@ -135,13 +137,21 @@
   text-align: center;
   color: $color-white;
 
+  @media screen and (max-width: 992px) {
+    padding-left: 50px;
+    text-align: left;
+  }
+
+  @media screen and (max-width: 768px) {
+    text-align: left;
+    bottom: 30px;
+    padding-left: 30px;
+  }
+
   @media screen and (max-width: 576px) {
     text-align: left;
     padding-left: 30px;
-    padding-right: 60px;
-    // padding-bottom: 70px;
-    bottom: 30px;
-    background-color: palevioletred;
+    padding-right: 80px;
   }
 
   @media screen and (max-height: 550px) and (orientation: landscape) {
@@ -149,20 +159,28 @@
     font-size: 20px;
     padding-left: 30px;
     padding-right: 30px;
-    // padding-bottom: 70px;
-    bottom: 30px;
-    background-color: pink;
   }
 }
 
 .social-network {
   &__container {
     position: absolute;
-    bottom: 50px;
     right: 50px;
+    bottom: 50px;
+    width: 22px;
+
+    @media screen and (max-width: 768px) {
+      right: 30px;
+      bottom: 30px;
+    }
+
+    @media screen and (max-height: 550px) and (orientation: landscape) {
+      bottom: 40px;
+    }
   }
 
   &__icon {
     width: 22px;
+    margin-top: 20px;
   }
 }
