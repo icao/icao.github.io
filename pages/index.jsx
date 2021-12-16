@@ -6,7 +6,7 @@ export default function Index() {
   return (
     <div>
       <Head>
-        <title>César aparicio - icao - Front End Developer</title>
+        <title>icao | César aparicio | Front End Developer</title>
         <meta
           name="description"
           content="I am a Front End Developer and Design Lover"
@@ -27,7 +27,7 @@ export default function Index() {
       <Header />
       <main>
         <Home />
-        <div>
+        <section className="container">
           <br />
           <br />
           <br />
@@ -103,7 +103,7 @@ export default function Index() {
             molestiae. Suscipit est fuga, ut quia laudantium cum. Quam
             distinctio excepturi officia suscipit.
           </p>
-        </div>
+        </section>
       </main>
     </div>
   )

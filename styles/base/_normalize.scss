@@ -61,6 +61,15 @@ body {
 }
 
 /**
+ * Selection text
+ */
+
+*::selection {
+  color: #ffffff;
+  background-color: $color-red-redbull;
+}
+
+/**
  * Render the `main` element consistently in IE.
  */
 
