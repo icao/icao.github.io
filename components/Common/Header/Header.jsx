@@ -19,7 +19,7 @@ const Header = () => {
       { id: 2, tag: 'about', name: 'icao' },
       { id: 3, tag: 'skills', name: 'skills' },
       { id: 4, tag: 'projects', name: 'proyectos' },
-      { id: 4, tag: 'resume', name: 'experiencia' },
+      { id: 5, tag: 'resume', name: 'experiencia' },
     ],
   })
 
