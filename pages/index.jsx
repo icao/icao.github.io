@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '@components/Common/Header/Header'
 import Home from '@components/Layout/Home/Home'
+import Title from '@components/Common/Title/Title'
 
 export default function Index() {
   return (
@@ -27,6 +28,13 @@ export default function Index() {
       <Header />
       <main>
         <Home />
+        <section className="container">
+          <Title
+            text=" websites"
+            textEmphasis="The best"
+            positionEmphasisBefore
+          />
+        </section>
         <section className="container">
           <br />
           <br />

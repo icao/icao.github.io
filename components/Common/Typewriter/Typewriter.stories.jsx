@@ -1,5 +1,5 @@
+import styles from '@components/Layout/Home/Home.module.scss'
 import Typewriter from './Typewriter'
-import styles from '../../Layout/Home/Home.module.scss'
 
 export default {
   title: 'Components/Common/Typewriter',

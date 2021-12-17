@@ -1,0 +1,14 @@
+@import '@styles/base/fonts';
+@import '@styles/base/palette';
+
+.title {
+  font-family: $font-montserrat;
+  font-weight: 600;
+  font-size: 3em;
+  margin: 0;
+  color: $color-white;
+}
+
+.text-emphasis {
+  color: $color-red-redbull;
+}

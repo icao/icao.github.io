@@ -16,9 +16,10 @@ const Header = () => {
     linkActive: { id: 1, tag: 'home', name: 'inicio' },
     links: [
       { id: 1, tag: 'home', name: 'inicio' },
-      { id: 2, tag: 'resume', name: 'experiencia' },
+      { id: 2, tag: 'about', name: 'icao' },
       { id: 3, tag: 'skills', name: 'skills' },
       { id: 4, tag: 'projects', name: 'proyectos' },
+      { id: 4, tag: 'resume', name: 'experiencia' },
     ],
   })
 
