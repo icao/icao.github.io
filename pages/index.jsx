@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from '@components/Common/Header/Header'
 import Home from '@components/Layout/Home/Home'
 import Title from '@components/Common/Title/Title'
+import Card from '@components/Common/Card/Card'
 
 export default function Index() {
   return (
@@ -41,6 +42,14 @@ export default function Index() {
             textEmphasis="The best"
             positionEmphasisBefore
           />
+          <br />
+          <br />
+          <br />
+
+          <section>
+            <Card />
+            <Card />
+          </section>
         </section>
         <section id="projects" className="container vieport__full">
           <Title

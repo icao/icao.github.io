@@ -1,0 +1,41 @@
+@import '@styles/base/palette';
+
+.card {
+  margin: 0;
+  padding: 0;
+  &__image {
+    width: 100%;
+    max-width: 350px;
+    height: 500px;
+    margin: 1em;
+    position: relative;
+    overflow: hidden;
+    border: 20px solid greenyellow;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      max-width: 550px;
+      height: 700px;
+    }
+
+    &-container {
+      width: 100%;
+      height: inherit;
+      object-fit: cover;
+      position: relative;
+    }
+  }
+
+  &__detail {
+    border-radius: 50%;
+    position: absolute;
+    background-color: $color-red-redbull;
+    z-index: 10;
+    transition: transform 2.5s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
+    transform: scale(0);
+  }
+
+  &__detail--animated {
+    transform: scale(3);
+  }
+}
