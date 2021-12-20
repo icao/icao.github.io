@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
-// import useHover from '@hooks/useHover'
-import photo from '@public/images/photo01.jpeg'
-// import photo from '@public/images/photo07.jpg'
+// import photo from '@public/images/photo02.jpeg'
+import photo from '@public/images/photo07.jpg'
 import clsx from 'clsx'
 import styles from './Card.module.scss'
 
@@ -10,22 +9,14 @@ const initialPosition = { positionDetailX: 0, positionDetailY: 0 }
 
 const Card = () => {
   const cardDetail = useRef(null)
-  // const [refElement, isHover] = useHover()
   const [maximumDiameter, setMaximumDiameter] = useState(0)
   const [{ positionDetailX, positionDetailY }, setPositionMouse] =
     useState(initialPosition)
-  const [isAnimated, setIsAnimated] = useState(false)
-
-  useEffect(() => {})
+  const [isHover, setIsHover] = useState(false)
 
   const updateValues = (event) => {
     const x = event.pageX - event.target.offsetLeft - maximumDiameter / 2
     const y = event.pageY - event.target.offsetTop - maximumDiameter / 2
-
-    setMaximumDiameter(
-      Math.max(cardDetail.current.clientWidth, cardDetail.current.clientHeight)
-    )
-
     setPositionMouse({
       positionDetailX: x,
       positionDetailY: y,
@@ -34,35 +25,31 @@ const Card = () => {
 
   const handleMouseEnter = (event) => {
     updateValues(event)
-    setIsAnimated(true)
+    setIsHover(true)
+    setMaximumDiameter(
+      Math.max(cardDetail.current.clientWidth, cardDetail.current.clientHeight)
+    )
   }
-
   const handleMouseLeave = (event) => {
+    setIsHover(false)
     updateValues(event)
-    setIsAnimated(false)
   }
 
-  //  let x = event.pageX - event.target.offsetLeft - maximumMeasure / 2
-  //  let y = event.pageY - event.target.offsetTop - maximumMeasure / 2
+  useEffect(() => {
+    const node = cardDetail.current
 
-  //  detail.style.setProperty('top', `${y}px`)
-  //  detail.style.setProperty('left', `${x}px`)
-
-  //  detail.classList.add('detail--animated')
+    node.addEventListener('mouseenter', handleMouseEnter)
+    node.addEventListener('mouseleave', handleMouseLeave)
+    return () => {
+      node.removeEventListener('mouseenter', handleMouseEnter)
+      node.removeEventListener('mouseleave', handleMouseLeave)
+    }
+  }, [isHover])
 
   return (
     <div className={styles.card}>
-      <div
-        className={styles.card__image}
-        ref={cardDetail}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div
-          // ref={refElement}
-          className={styles['card__image-container']}
-        >
-          {/* {console.log(positionDetailX, positionDetailY)} */}
+      <div className={styles.card__image} ref={cardDetail}>
+        <div className={styles['card__image-container']}>
           <Image
             src={photo}
             placeholder="blur"
@@ -71,9 +58,10 @@ const Card = () => {
             objectFit="cover"
           />
         </div>
+
         <div
           className={clsx(styles.card__detail, {
-            [styles['card__detail--animated']]: isAnimated,
+            [styles['card__detail--animated']]: isHover,
           })}
           style={{
             width: `${maximumDiameter}px`,

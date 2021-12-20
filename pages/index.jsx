@@ -46,7 +46,10 @@ export default function Index() {
           <br />
           <br />
 
-          <section>
+          <section className="colection">
+            <Card />
+            <Card />
+            <Card />
             <Card />
             <Card />
           </section>
