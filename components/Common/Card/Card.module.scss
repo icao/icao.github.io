@@ -6,8 +6,9 @@
 
   &__image {
     width: 100%;
-    max-width: 350px;
-    height: 500px;
+    // max-width: 350px;
+    // height: 500px;
+    height: auto;
     // margin: 1em;
     position: relative;
     overflow: hidden;
@@ -15,9 +16,9 @@
     background-color: rgb(10, 183, 196);
 
     @media screen and (max-width: 768px) {
-      width: 100%;
-      max-width: 550px;
-      height: 700px;
+      // width: 100%;
+      // max-width: 550px;
+      // height: 700px;
     }
 
     &-container {

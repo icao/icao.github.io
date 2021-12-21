@@ -1,34 +1,35 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
-// import photo from '@public/images/photo02.jpeg'
-import photo from '@public/images/photo07.jpg'
+// import photo from '@public/images/photo03.jpeg'
+import photo from '@public/images/photo06.jpg'
 import clsx from 'clsx'
 import styles from './Card.module.scss'
 
-const initialPosition = { positionDetailX: 0, positionDetailY: 0 }
+const initialPosition = {
+  positionDetailX: null,
+  positionDetailY: null,
+}
 
 const Card = () => {
   const cardDetail = useRef(null)
-  const [maximumDiameter, setMaximumDiameter] = useState(0)
+
+  const [isHover, setIsHover] = useState(false)
+  const [maximumDiameter, setMaximumDiameter] = useState(null)
   const [{ positionDetailX, positionDetailY }, setPositionMouse] =
     useState(initialPosition)
-  const [isHover, setIsHover] = useState(false)
 
   const updateValues = (event) => {
-    const x = event.pageX - event.target.offsetLeft - maximumDiameter / 2
-    const y = event.pageY - event.target.offsetTop - maximumDiameter / 2
     setPositionMouse({
-      positionDetailX: x,
-      positionDetailY: y,
+      positionDetailX:
+        event.pageX - event.target.offsetLeft - maximumDiameter / 2,
+      positionDetailY:
+        event.pageY - event.target.offsetTop - maximumDiameter / 2,
     })
   }
 
   const handleMouseEnter = (event) => {
-    updateValues(event)
     setIsHover(true)
-    setMaximumDiameter(
-      Math.max(cardDetail.current.clientWidth, cardDetail.current.clientHeight)
-    )
+    updateValues(event)
   }
   const handleMouseLeave = (event) => {
     setIsHover(false)
@@ -38,13 +39,17 @@ const Card = () => {
   useEffect(() => {
     const node = cardDetail.current
 
+    setMaximumDiameter(
+      Math.max(cardDetail.current.clientWidth, cardDetail.current.clientHeight)
+    )
+
     node.addEventListener('mouseenter', handleMouseEnter)
     node.addEventListener('mouseleave', handleMouseLeave)
     return () => {
       node.removeEventListener('mouseenter', handleMouseEnter)
       node.removeEventListener('mouseleave', handleMouseLeave)
     }
-  }, [isHover])
+  }, [isHover, maximumDiameter])
 
   return (
     <div className={styles.card}>
@@ -54,11 +59,10 @@ const Card = () => {
             src={photo}
             placeholder="blur"
             alt="photo"
-            layout="fill"
+            layout="responsive"
             objectFit="cover"
           />
         </div>
-
         <div
           className={clsx(styles.card__detail, {
             [styles['card__detail--animated']]: isHover,
