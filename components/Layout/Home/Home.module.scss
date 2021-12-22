@@ -19,7 +19,7 @@
     transition: all 0.8s;
     position: relative;
 
-    clip-path: polygon(31% 0, 100% 25%, 61% 100%, 0 93%);
+    clip-path: polygon(31% 0%, 100% 25%, 63% 95%, 0% 86%);
 
     @media screen and (max-width: 1200px) {
       clip-path: polygon(31% 0, 100% 25%, 61% 100%, 0 93%);
@@ -52,8 +52,9 @@
     }
 
     @media screen and (max-width: 576px) {
-      top: 10vh;
-      left: -1vw;
+      clip-path: polygon(50% 0%, 100% 30%, 60% 100%, 0% 85%);
+      top: 8vh;
+      left: -15vw;
       width: 600px;
       height: 540px;
     }

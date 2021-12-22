@@ -36,7 +36,7 @@ export default function Index() {
             positionEmphasisBefore
           />
         </section>
-        <section id="skills" className="container vieport__full">
+        <section id="skills" className="container ">
           <Title
             text="websites"
             textEmphasis="The best"

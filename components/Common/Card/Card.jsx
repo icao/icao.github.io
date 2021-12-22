@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
-// import photo from '@public/images/photo03.jpeg'
-import photo from '@public/images/photo06.jpg'
+import photo from '@public/images/photo03.jpeg'
+// import photo from '@public/images/photo06.jpg'
 import clsx from 'clsx'
 import styles from './Card.module.scss'
 
@@ -75,8 +75,10 @@ const Card = () => {
           }}
         />
       </div>
-      <div>
-        <h3>Proyecto encabezado</h3>
+      <div className={styles.card__footer}>
+        <h3 className={styles.card__title}>
+          Temas para wox launcher(lanzador windows)
+        </h3>
       </div>
     </div>
   )
