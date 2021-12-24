@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
+import PropTypes from 'prop-types'
 import Image from 'next/image'
-import photo from '@public/images/photo03.jpeg'
-// import photo from '@public/images/photo06.jpg'
 import clsx from 'clsx'
+// import photo from '/public/images/photo02.jpeg'
+// import photo from '@public/images/photo07.jpg'
 import styles from './Card.module.scss'
 
 const initialPosition = {
@@ -10,7 +11,7 @@ const initialPosition = {
   positionDetailY: null,
 }
 
-const Card = () => {
+const Card = ({ urlImage, title }) => {
   const cardDetail = useRef(null)
 
   const [isHover, setIsHover] = useState(false)
@@ -56,11 +57,15 @@ const Card = () => {
       <div className={styles.card__image} ref={cardDetail}>
         <div className={styles['card__image-container']}>
           <Image
-            src={photo}
-            placeholder="blur"
-            alt="photo"
-            layout="responsive"
-            objectFit="cover"
+            // src={photo}
+            // placeholder="blur"
+            // alt="photo"
+            // layout="responsive"
+            // objectFit="cover"
+            src={urlImage}
+            layout="fill"
+            className={styles.image}
+            objectFit="contain"
           />
         </div>
         <div
@@ -76,12 +81,15 @@ const Card = () => {
         />
       </div>
       <div className={styles.card__footer}>
-        <h3 className={styles.card__title}>
-          Temas para wox launcher(lanzador windows)
-        </h3>
+        <h3 className={styles.card__title}>{title}</h3>
       </div>
     </div>
   )
+}
+
+Card.propTypes = {
+  urlImage: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 }
 
 export default Card

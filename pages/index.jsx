@@ -5,6 +5,52 @@ import Title from '@components/Common/Title/Title'
 import Card from '@components/Common/Card/Card'
 
 export default function Index() {
+  const projects = [
+    {
+      id: 'ICAO01',
+      urlImage: '/images/photo01.jpeg',
+      title: 'The player winner',
+      ramonas: '/public/images/photo04.jpg',
+    },
+    {
+      id: 'ICAO02',
+      urlImage: '/images/photo02.jpeg',
+      title: 'VSCODE Extension',
+      ramonas: '/public/images/photo05.jpg',
+    },
+    {
+      id: 'ICAO03',
+      urlImage: '/images/photo03.jpeg',
+      title: 'Doesnt Matter',
+      ramonas: '/public/images/photo06.jpg',
+    },
+    {
+      id: 'ICAO04',
+      urlImage: '/images/photo04.jpeg',
+      title: 'Doesnt Matter',
+      ramonas: '/public/images/photo06.jpg',
+    },
+    {
+      id: 'ICAO05',
+      urlImage: '/images/photo05.jpg',
+      title: 'Doesnt Matter',
+      ramonas: '/public/images/photo06.jpg',
+    },
+    {
+      id: 'ICAO06',
+      urlImage:
+        'https://images.pexels.com/photos/9749273/pexels-photo-9749273.jpeg',
+      title: 'Doesnt Matter',
+      ramonas: '/public/images/photo06.jpg',
+    },
+    {
+      id: 'ICAO07',
+      urlImage: '/images/photo07.jpg',
+      title: 'Doesnt Matter',
+      ramonas: '/public/images/photo06.jpg',
+    },
+  ]
+
   return (
     <div>
       <Head>
@@ -47,11 +93,13 @@ export default function Index() {
           <br />
 
           <section className="colection">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {projects.map((project) => (
+              <Card
+                urlImage={project.urlImage}
+                title={project.title}
+                key={project.id}
+              />
+            ))}
           </section>
         </section>
         <section id="projects" className="container vieport__full">
