@@ -23,7 +23,8 @@
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
     "no-console": "error",
-    "import/no-unresolved": "off"
+    "import/no-unresolved": "off",
+    "react/function-component-definition": "off"
   },
   "settings": {
     "react": {

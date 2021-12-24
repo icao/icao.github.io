@@ -20,7 +20,8 @@
 
       width: 100%;
 
-      & > div {
+      & > div,
+      span {
         position: unset !important;
       }
 
