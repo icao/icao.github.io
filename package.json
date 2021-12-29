@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "yarn run eslint . --ext js,jsx,ts,tsx",
@@ -36,6 +36,7 @@
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.4.9",
     "babel-loader": "^8.2.3",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.5.1",
     "eslint": "^8.5.0",
     "eslint-config-airbnb": "^19.0.2",
