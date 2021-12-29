@@ -46,7 +46,7 @@ export default function Index() {
     {
       id: 'ICAO07',
       urlImage: '/images/photo07.jpg',
-      title: 'Doesnt Matter',
+      title: 'Doesnt Matter, dont worry about it',
       ramonas: '/public/images/photo06.jpg',
     },
   ]

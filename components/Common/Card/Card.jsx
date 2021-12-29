@@ -2,8 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 import clsx from 'clsx'
-// import photo from '/public/images/photo02.jpeg'
-// import photo from '@public/images/photo07.jpg'
+import OpenModal from '@components/Icons/OpenModal/OpenModal'
 import styles from './Card.module.scss'
 
 const initialPosition = {
@@ -57,11 +56,6 @@ const Card = ({ urlImage, title }) => {
       <div className={styles.card__image} ref={cardDetail}>
         <div className={styles['card__image-container']}>
           <Image
-            // src={photo}
-            // placeholder="blur"
-            // alt="photo"
-            // layout="responsive"
-            // objectFit="cover"
             src={urlImage}
             layout="fill"
             className={styles.image}
@@ -79,6 +73,15 @@ const Card = ({ urlImage, title }) => {
             left: `${positionDetailX}px`,
           }}
         />
+        <div className={styles['card__icon-container']}>
+          <div
+            className={clsx(styles.card__icon, {
+              [styles['card__icon--animated']]: isHover,
+            })}
+          >
+            <OpenModal color="#e7eeff" />
+          </div>
+        </div>
       </div>
       <div className={styles.card__footer}>
         <h3 className={styles.card__title}>{title}</h3>

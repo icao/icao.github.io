@@ -95,12 +95,11 @@
 
 .colection {
   display: grid;
-  gap: 1.9em;
+  gap: 3em 1.9em;
   grid-auto-rows: auto;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
 
-  // grid-template-columns: repeat(3, 1fr);
-  // grid-template-rows: masonry;
+  grid-template-rows: masonry; // Cuando los navegadores lo soporten, se pondra en masonry auomaticamente
 }
 
 .grid {
