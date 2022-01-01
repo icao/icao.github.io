@@ -3,6 +3,7 @@ import Header from '@components/Common/Header/Header'
 import Home from '@components/Layout/Home/Home'
 import Title from '@components/Common/Title/Title'
 import Card from '@components/Common/Card/Card'
+import Modal from '@components/Common/Modal/Modal'
 
 export default function Index() {
   const projects = [
@@ -91,7 +92,7 @@ export default function Index() {
           <br />
           <br />
           <br />
-
+          <Modal />
           <section className="colection">
             {projects.map((project) => (
               <Card
