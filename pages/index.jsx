@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Head from 'next/head'
 import Header from '@components/Common/Header/Header'
 import Home from '@components/Layout/Home/Home'
@@ -6,6 +7,7 @@ import Card from '@components/Common/Card/Card'
 import Modal from '@components/Common/Modal/Modal'
 
 export default function Index() {
+  const [isOpenModal, setIsOpenModal] = useState(false)
   const projects = [
     {
       id: 'ICAO01',
@@ -92,14 +94,17 @@ export default function Index() {
           <br />
           <br />
           <br />
-          <Modal />
+          {isOpenModal && <Modal showModal={setIsOpenModal} />}
+
           <section className="colection">
             {projects.map((project) => (
-              <Card
-                urlImage={project.urlImage}
-                title={project.title}
+              <div
                 key={project.id}
-              />
+                onClick={() => setIsOpenModal(true)}
+                aria-hidden="true"
+              >
+                <Card urlImage={project.urlImage} title={project.title} />
+              </div>
             ))}
           </section>
         </section>
