@@ -14,12 +14,12 @@
   z-index: 1000000;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 
   &__content {
-    margin-top: 30px;
-    width: 550px;
-    height: 800px;
-
+    margin: 30px;
+    min-width: 100px;
+    min-height: 100px;
     background-color: rgba($color-dark-rgb, 1);
     position: relative;
   }

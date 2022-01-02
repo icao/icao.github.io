@@ -5,9 +5,11 @@ import Home from '@components/Layout/Home/Home'
 import Title from '@components/Common/Title/Title'
 import Card from '@components/Common/Card/Card'
 import Modal from '@components/Common/Modal/Modal'
+import Link from 'next/link'
 
 export default function Index() {
   const [isOpenModal, setIsOpenModal] = useState(false)
+  const [modalContent, setModalContent] = useState(null)
   const projects = [
     {
       id: 'ICAO01',
@@ -94,13 +96,63 @@ export default function Index() {
           <br />
           <br />
           <br />
-          {isOpenModal && <Modal showModal={setIsOpenModal} />}
+          {isOpenModal && (
+            <Modal showModal={setIsOpenModal}>{modalContent}</Modal>
+          )}
 
           <section className="colection">
             {projects.map((project) => (
               <div
                 key={project.id}
-                onClick={() => setIsOpenModal(true)}
+                onClick={() => {
+                  setIsOpenModal(true)
+                  setModalContent(
+                    <div
+                      style={{
+                        maxWidth: '550px',
+                        width: '100%',
+                        height: 'auto',
+                        boxSizing: 'border-box',
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: 'inherit',
+                          height: '400px',
+                        }}
+                      >
+                        <img
+                          src="https://www.petmd.com/sites/default/files/CANS_dogsmiling_379727605.jpg"
+                          alt="dog"
+                          style={{
+                            objectFit: 'cover',
+                            width: 'inherit',
+                            height: 'inherit',
+                          }}
+                        />
+                      </div>
+                      <h2>{project.title}</h2>
+                      <p style={{ wordWrap: 'break-word' }}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Assumenda officiis iure deserunt expedita pariatur ullam
+                        sed id, voluptatum, quis eligendi obcaecati, at porro
+                        voluptate aspernatur.
+                      </p>
+                      <Link
+                        href="https://www.linkedin.com/in/cesaricao/"
+                        passHref
+                      >
+                        <a
+                          href="replace"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          VER PROJECTO
+                        </a>
+                      </Link>
+                    </div>
+                  )
+                }}
                 aria-hidden="true"
               >
                 <Card urlImage={project.urlImage} title={project.title} />

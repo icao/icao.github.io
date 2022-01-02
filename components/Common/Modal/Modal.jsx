@@ -4,7 +4,7 @@ import Close from '@components/Icons/Close/Close'
 import useKeyPress from '@hooks/useKeyPress'
 import styles from './Modal.module.scss'
 
-const Modal = ({ showModal }) => {
+const Modal = ({ showModal, children }) => {
   const { isKeyPressed } = useKeyPress('Escape')
 
   const refOutModal = useRef()
@@ -36,6 +36,7 @@ const Modal = ({ showModal }) => {
         >
           <Close color="#e7eeff" hoverColor="#dd013f" />
         </button>
+        {children}
       </div>
     </div>
   )
@@ -43,6 +44,7 @@ const Modal = ({ showModal }) => {
 
 Modal.propTypes = {
   showModal: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 export default Modal
