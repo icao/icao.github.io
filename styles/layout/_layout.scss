@@ -18,14 +18,21 @@
 .container {
   width: 100%;
   margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
 
   &-fluid {
     max-width: none;
     padding-left: 32px;
     padding-right: 32px;
     width: 100%;
+  }
+}
+
+.section {
+  padding: 40px 0 40px 0;
+  &__title {
+    margin-bottom: 100px;
   }
 }
 
@@ -93,7 +100,7 @@
   }
 }
 
-.colection {
+.collection {
   display: grid;
   gap: 3em 1.9em;
   grid-auto-rows: auto;

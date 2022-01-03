@@ -46,3 +46,72 @@
 .font-weight-900 {
   font-weight: 900;
 }
+
+.next__image {
+  &-container {
+    position: relative;
+
+    width: 100%;
+
+    & > div,
+    span {
+      position: unset !important;
+    }
+  }
+
+  &--responsive {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+
+  &--cover {
+    object-fit: cover;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+}
+
+.link {
+  position: relative;
+  color: $color-white;
+  transition: all 0.3s;
+  font-family: $font-montserrat;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  &:hover {
+    color: $color-red-redbull;
+  }
+}
+
+.button--call-to-action {
+  position: relative;
+  color: $color-red-redbull;
+  transition: all 0.3s ease-in-out;
+  font-family: $font-montserrat;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  border: 2px solid $color-red-redbull;
+  display: inline-block;
+  &:hover {
+    background-color: $color-red-redbull;
+    color: $color-white;
+  }
+}
+
+.ul__emphasis {
+  list-style: none;
+  li::before {
+    content: '\2022';
+    color: $color-red-redbull;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+}

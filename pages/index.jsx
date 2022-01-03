@@ -1,61 +1,10 @@
-import { useState } from 'react'
 import Head from 'next/head'
 import Header from '@components/Common/Header/Header'
 import Home from '@components/Layout/Home/Home'
 import Title from '@components/Common/Title/Title'
-import Card from '@components/Common/Card/Card'
-import Modal from '@components/Common/Modal/Modal'
-import Link from 'next/link'
+import Projects from '@components/Layout/Projects/Projects'
 
 export default function Index() {
-  const [isOpenModal, setIsOpenModal] = useState(false)
-  const [modalContent, setModalContent] = useState(null)
-  const projects = [
-    {
-      id: 'ICAO01',
-      urlImage: '/images/photo01.jpeg',
-      title: 'The player winner',
-      ramonas: '/public/images/photo04.jpg',
-    },
-    {
-      id: 'ICAO02',
-      urlImage: '/images/photo02.jpeg',
-      title: 'VSCODE Extension',
-      ramonas: '/public/images/photo05.jpg',
-    },
-    {
-      id: 'ICAO03',
-      urlImage: '/images/photo03.jpeg',
-      title: 'Doesnt Matter',
-      ramonas: '/public/images/photo06.jpg',
-    },
-    {
-      id: 'ICAO04',
-      urlImage: '/images/photo04.jpeg',
-      title: 'Doesnt Matter',
-      ramonas: '/public/images/photo06.jpg',
-    },
-    {
-      id: 'ICAO05',
-      urlImage: '/images/photo05.jpg',
-      title: 'Doesnt Matter',
-      ramonas: '/public/images/photo06.jpg',
-    },
-    {
-      id: 'ICAO06',
-      urlImage:
-        'https://images.pexels.com/photos/9749273/pexels-photo-9749273.jpeg',
-      title: 'Doesnt Matter',
-      ramonas: '/public/images/photo06.jpg',
-    },
-    {
-      id: 'ICAO07',
-      urlImage: '/images/photo07.jpg',
-      title: 'Doesnt Matter, dont worry about it',
-      ramonas: '/public/images/photo06.jpg',
-    },
-  ]
-
   return (
     <div>
       <Head>
@@ -65,7 +14,7 @@ export default function Index() {
           content="I am a Front End Developer and Design Lover"
         />
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#181919" />
+        <meta name="theme-color" content="#141414" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -80,100 +29,49 @@ export default function Index() {
       <Header />
       <main>
         <Home />
-        <section id="about" className="container vieport__full">
-          <Title
-            text="websites"
-            textEmphasis="The best"
-            positionEmphasisBefore
-          />
-        </section>
-        <section id="skills" className="container ">
-          <Title
-            text="websites"
-            textEmphasis="The best"
-            positionEmphasisBefore
-          />
-          <br />
-          <br />
-          <br />
-          {isOpenModal && (
-            <Modal showModal={setIsOpenModal}>{modalContent}</Modal>
-          )}
-
-          <section className="colection">
-            {projects.map((project) => (
-              <div
-                key={project.id}
-                onClick={() => {
-                  setIsOpenModal(true)
-                  setModalContent(
-                    <div
-                      style={{
-                        maxWidth: '550px',
-                        width: '100%',
-                        height: 'auto',
-                        boxSizing: 'border-box',
-                      }}
-                    >
-                      <div
-                        style={{
-                          width: 'inherit',
-                          height: '400px',
-                        }}
-                      >
-                        <img
-                          src="https://www.petmd.com/sites/default/files/CANS_dogsmiling_379727605.jpg"
-                          alt="dog"
-                          style={{
-                            objectFit: 'cover',
-                            width: 'inherit',
-                            height: 'inherit',
-                          }}
-                        />
-                      </div>
-                      <h2>{project.title}</h2>
-                      <p style={{ wordWrap: 'break-word' }}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Assumenda officiis iure deserunt expedita pariatur ullam
-                        sed id, voluptatum, quis eligendi obcaecati, at porro
-                        voluptate aspernatur.
-                      </p>
-                      <Link
-                        href="https://www.linkedin.com/in/cesaricao/"
-                        passHref
-                      >
-                        <a
-                          href="replace"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          VER PROJECTO
-                        </a>
-                      </Link>
-                    </div>
-                  )
-                }}
-                aria-hidden="true"
-              >
-                <Card urlImage={project.urlImage} title={project.title} />
-              </div>
-            ))}
+        <div className="container vieport__full">
+          <section id="about" className=" section">
+            <Title
+              text="websites"
+              textEmphasis="The best"
+              positionEmphasisBefore
+            />
           </section>
-        </section>
-        <section id="projects" className="container vieport__full">
-          <Title
-            text="websites"
-            textEmphasis="The best"
-            positionEmphasisBefore
-          />
-        </section>
-        <section id="resume" className="container vieport__full">
-          <Title
-            text="websites"
-            textEmphasis="The best"
-            positionEmphasisBefore
-          />
-        </section>
+        </div>
+        <div className="container vieport__full">
+          <section id="skills" className=" section">
+            <Title
+              text="websites"
+              textEmphasis="The best"
+              positionEmphasisBefore
+            />
+            <br />
+            <br />
+            <br />
+          </section>
+        </div>
+
+        <div id="resume" className="container vieport__full section">
+          <section className="section">
+            <Title
+              text="websites"
+              textEmphasis="The best"
+              positionEmphasisBefore
+            />
+          </section>
+        </div>
+        <div id="projects" className="container">
+          <section className="section">
+            <div className="section__title">
+              <Title
+                text="Proyectos"
+                textEmphasis="Mis"
+                positionEmphasisBefore
+              />
+            </div>
+            <Projects />
+          </section>
+        </div>
       </main>
     </div>
   )

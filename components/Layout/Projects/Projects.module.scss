@@ -1,0 +1,57 @@
+@import '@styles/base/palette';
+@import '@styles/base/fonts';
+
+%format-text {
+  font-family: $font-poppins;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $color-grey-regular;
+}
+
+.detail {
+  &__container {
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 550px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      height: 450px;
+    }
+
+    @media screen and (max-width: 576px) {
+      width: 100%;
+      height: 350px;
+    }
+  }
+
+  &__content {
+    padding: 30px;
+  }
+
+  &__title {
+    font-family: $font-montserrat;
+    color: $color-white;
+  }
+  &__text {
+    @extend %format-text;
+  }
+
+  &__list {
+    @extend %format-text;
+  }
+
+  &__footer {
+    width: 100%;
+    height: auto;
+    text-align: right;
+    padding-top: 30px;
+  }
+}
