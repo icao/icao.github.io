@@ -104,7 +104,7 @@
   display: grid;
   gap: 3em 1.9em;
   grid-auto-rows: auto;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
 
   grid-template-rows: masonry; // Cuando los navegadores lo soporten, se pondra en masonry auomaticamente
 }

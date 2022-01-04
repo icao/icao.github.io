@@ -24,17 +24,32 @@
     min-height: 100px;
     background-color: rgba($color-dark-rgb, 1);
     position: relative;
+
+    animation-name: example;
+    animation-duration: 0.5s;
+  }
+
+  @keyframes example {
+    from {
+      transform: translateY(-40%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   &__button {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     background-color: transparent;
+    background-color: $color-dark-intense;
     border: none;
     position: absolute;
     top: 0;
     right: 0;
-    margin: 20px 20px 0 0;
+    padding: 12.5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,5 +57,35 @@
     cursor: pointer;
     transition: all 0.3s ease-out;
     z-index: 20;
+    overflow: hidden;
+
+    & > * {
+      min-width: 100%;
+      height: auto;
+      z-index: 15;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 50px;
+      height: 50px;
+      background-color: $color-red-redbull;
+      border-radius: 50%;
+      top: -90%;
+      right: -90%;
+
+      transition: transform 0.3s cubic-bezier(0.185, 0.85, 0.45, 1) 0s;
+    }
+
+    &:hover {
+      &::after {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        transition: transform 0.5s cubic-bezier(0.185, 0.85, 0.45, 1) 0s;
+        transform: scale(4);
+      }
+    }
   }
 }

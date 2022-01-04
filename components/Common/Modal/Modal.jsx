@@ -34,7 +34,7 @@ const Modal = ({ showModal, children }) => {
           type="button"
           onClick={() => showModal(false)}
         >
-          <Close color="#e7eeff" hoverColor="#dd013f" />
+          <Close color="#e7eeff" />
         </button>
         {children}
       </div>
