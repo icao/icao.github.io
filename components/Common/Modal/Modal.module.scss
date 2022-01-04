@@ -1,5 +1,6 @@
 @import '@styles/base/palette';
 @import '@styles/base/fonts';
+@import '@styles/utilities/keyframes';
 
 .modal {
   position: fixed;
@@ -25,19 +26,8 @@
     background-color: rgba($color-dark-rgb, 1);
     position: relative;
 
-    animation-name: example;
+    animation-name: fadeInDown;
     animation-duration: 0.5s;
-  }
-
-  @keyframes example {
-    from {
-      transform: translateY(-40%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
   }
 
   &__button {
