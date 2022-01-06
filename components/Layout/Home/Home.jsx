@@ -38,6 +38,7 @@ const Home = () => (
           backDelay: 2200,
           loopCount: false,
           showCursor: true,
+          cursorChar: '_',
         }}
       >
         <div id="strings">

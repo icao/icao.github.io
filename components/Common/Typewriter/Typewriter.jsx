@@ -51,7 +51,7 @@ Typewriter.defaultProps = {
     backDelay: 1200,
     loopCount: false,
     showCursor: true,
-    cursorChar: ' |',
+    cursorChar: ' ┃',
   },
   children: null,
 }

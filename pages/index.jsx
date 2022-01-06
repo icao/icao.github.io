@@ -51,10 +51,10 @@ export default function Index() {
           </section>
         </div>
 
-        <div id="resume" className="container vieport__full section">
+        <div id="resume" className="container vieport__full">
           <section className="section">
             <Title
-              text="websites"
+              text="error"
               textEmphasis="The best"
               positionEmphasisBefore
             />
