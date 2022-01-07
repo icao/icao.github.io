@@ -3,6 +3,7 @@ import Header from '@components/Common/Header/Header'
 import Home from '@components/Layout/Home/Home'
 import Title from '@components/Common/Title/Title'
 import Projects from '@components/Layout/Projects/Projects'
+import Footer from '@components/Layout/Footer/Footer'
 
 export default function Index() {
   return (
@@ -73,6 +74,7 @@ export default function Index() {
           </section>
         </div>
       </main>
+      <Footer />
     </div>
   )
 }
