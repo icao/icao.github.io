@@ -6,6 +6,11 @@
   @extend .vieport__full;
   overflow: hidden;
 
+  background-image: url('/images/background_05.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
   &__background {
     background-color: #181919;
     background-repeat: no-repeat;
