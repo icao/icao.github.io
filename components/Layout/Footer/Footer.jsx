@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Codepen from '@components/Icons/Codepen/Codepen'
 import Linkedin from '@components/Icons/Linkedin/Linkedin'
 import Github from '@components/Icons/Github/Github'
-// import bFooter from '@public/images/b_footer.jpg'
 import logoFooter from '@public/images/logo_footer.png'
 import styles from './Footer.module.scss'
 

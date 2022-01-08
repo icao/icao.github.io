@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react'
 import Head from 'next/head'
 import Header from '@components/Common/Header/Header'
 import Home from '@components/Layout/Home/Home'
@@ -6,6 +7,46 @@ import Projects from '@components/Layout/Projects/Projects'
 import Footer from '@components/Layout/Footer/Footer'
 
 export default function Index() {
+  const refElement = useRef(null)
+  const [isWaypointCompleted, setIsWaypointCompleted] = useState(false)
+
+  function handleScroll() {
+    const node = refElement.current
+
+    const windowHeight =
+      (document.documentElement && document.documentElement.scrollTop) ||
+      document.body.scrollTop
+
+    // Posicion inicial despecto al TOP, donde se ejecutara solo el evento
+    const inicioSlideActivo = node.offsetTop
+    // Posicion final despecto al TOP, donde se ejecutara solo el evento
+    // const finalSlideActivo = node.offsetTop + node.offsetHeight
+
+    // console.log(windowHeight, inicioSlideActivo, finalSlideActivo)
+
+    if (windowHeight === inicioSlideActivo) {
+      // console.log('YA ME OCULTE')
+      setIsWaypointCompleted(true)
+    }
+    if (
+      windowHeight < inicioSlideActivo &&
+      windowHeight > inicioSlideActivo - 90
+    ) {
+      // console.log(
+      //   'YA APARECIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII',
+      //   inicioSlideActivo - 90
+      // )
+      setIsWaypointCompleted(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <div>
       <Head>
@@ -27,9 +68,12 @@ export default function Index() {
           rel="stylesheet"
         />
       </Head>
-      <Header />
+
+      {!isWaypointCompleted && <Header />}
+
       <main>
         <Home />
+
         <div className="container vieport__full">
           <section id="about" className=" section">
             <Title
@@ -74,7 +118,10 @@ export default function Index() {
           </section>
         </div>
       </main>
-      <Footer />
+
+      <div ref={refElement}>
+        <Footer />
+      </div>
     </div>
   )
 }
