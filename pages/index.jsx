@@ -7,44 +7,25 @@ import Projects from '@components/Layout/Projects/Projects'
 import Footer from '@components/Layout/Footer/Footer'
 
 export default function Index() {
-  const refElement = useRef(null)
+  const refFooter = useRef(null)
   const [isWaypointCompleted, setIsWaypointCompleted] = useState(false)
 
-  function handleScroll() {
-    const node = refElement.current
-
-    const windowHeight =
-      (document.documentElement && document.documentElement.scrollTop) ||
-      document.body.scrollTop
-
-    // Posicion inicial despecto al TOP, donde se ejecutara solo el evento
-    const inicioSlideActivo = node.offsetTop
-    // Posicion final despecto al TOP, donde se ejecutara solo el evento
-    // const finalSlideActivo = node.offsetTop + node.offsetHeight
-
-    // console.log(windowHeight, inicioSlideActivo, finalSlideActivo)
-
-    if (windowHeight === inicioSlideActivo) {
-      // console.log('YA ME OCULTE')
+  function callback(entries) {
+    if (entries[0].isIntersecting) {
       setIsWaypointCompleted(true)
-    }
-    if (
-      windowHeight < inicioSlideActivo &&
-      windowHeight > inicioSlideActivo - 90
-    ) {
-      // console.log(
-      //   'YA APARECIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII',
-      //   inicioSlideActivo - 90
-      // )
+    } else {
       setIsWaypointCompleted(false)
     }
   }
+  const options = {
+    root: null,
+    rootMargin: '0px 0px 0px 0px',
+    threshold: 0.9,
+  }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
+    const observer = new IntersectionObserver(callback, options)
+    observer.observe(refFooter.current)
   }, [])
 
   return (
@@ -69,7 +50,18 @@ export default function Index() {
         />
       </Head>
 
-      {!isWaypointCompleted && <Header />}
+      {!isWaypointCompleted && (
+        <Header
+          listItems={[
+            { id: 1, tag: 'home', name: 'inicio' },
+            { id: 2, tag: 'about', name: 'icao' },
+            { id: 3, tag: 'skills', name: 'skills' },
+            { id: 4, tag: 'resume', name: 'experiencia' },
+            { id: 5, tag: 'projects', name: 'proyectos' },
+          ]}
+          idItemActive={{ id: 1 }}
+        />
+      )}
 
       <main>
         <Home />
@@ -119,7 +111,7 @@ export default function Index() {
         </div>
       </main>
 
-      <div ref={refElement}>
+      <div ref={refFooter}>
         <Footer />
       </div>
     </div>
