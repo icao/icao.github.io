@@ -49,7 +49,7 @@ const Footer = () => (
             icao © Copyright 2022. Todos los derechos reservados.
             <br />
             <br />
-            Diseño & Desarrollo por <b>icao</b>.
+            Diseño & Desarrollo hecho con <small>🤍</small> por <b>icao</b>.
           </p>
         </div>
       </div>

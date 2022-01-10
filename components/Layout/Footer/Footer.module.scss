@@ -12,12 +12,6 @@
 
   &__filtro-background {
     background-color: rgba($color-dark-intense-rgb, 0.2);
-    padding: 120px 0 120px 0;
-    @media screen and (max-width: 992px) {
-      padding: 0;
-      width: 100%;
-      height: 100%;
-    }
   }
 
   &__image {
@@ -44,6 +38,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: auto;
+    height: 100vh;
     @media screen and (max-width: 992px) {
       width: auto;
       height: 100vh;
