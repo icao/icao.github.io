@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react'
 import clsx from 'clsx'
 import useWindowResize from '@hooks/useWindowResize'
-import { useScrollPositionY } from '@hooks/useScrollPosition'
 import useKeyPress from '@hooks/useKeyPress'
 import styles from './Header.module.scss'
 
 const Header = () => {
   const [width] = useWindowResize()
-  const scrollY = useScrollPositionY()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMenuFixed, setIsMenuFixed] = useState(false)
   const { isKeyPressed } = useKeyPress('Escape')
@@ -35,10 +33,18 @@ const Header = () => {
     }
   })
 
+  function handleScroll() {
+    const windowHeight =
+      (document.documentElement && document.documentElement.scrollTop) ||
+      document.body.scrollTop
+    if (windowHeight > 180) setIsMenuFixed(true)
+    else setIsMenuFixed(false)
+  }
+
   useEffect(() => {
-    if (scrollY > 100) setIsMenuFixed(true)
-    if (scrollY <= 100) setIsMenuFixed(false)
-  }, [scrollY])
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   function handleClickIconHamburger(event) {
     event.preventDefault()

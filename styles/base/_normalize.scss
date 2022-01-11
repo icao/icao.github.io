@@ -21,6 +21,9 @@ html {
 
   scroll-behavior: smooth;
   scroll-padding-top: 110px;
+  @media screen and (max-width: 992px) {
+    scroll-padding-top: 90px;
+  }
 }
 
 /* Sections

@@ -8,13 +8,13 @@ import Footer from '@components/Layout/Footer/Footer'
 
 export default function Index() {
   const refFooter = useRef(null)
-  const [isWaypointCompleted, setIsWaypointCompleted] = useState(false)
+  const [isFooterIntersected, setIsFooterIntersected] = useState(false)
 
   function callback(entries) {
     if (entries[0].isIntersecting) {
-      setIsWaypointCompleted(true)
+      setIsFooterIntersected(true)
     } else {
-      setIsWaypointCompleted(false)
+      setIsFooterIntersected(false)
     }
   }
   const options = {
@@ -25,8 +25,17 @@ export default function Index() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(callback, options)
-    observer.observe(refFooter.current)
-  }, [])
+
+    if (refFooter.current) {
+      observer.observe(refFooter.current)
+    }
+
+    return () => {
+      if (refFooter.current) {
+        observer.unobserve(refFooter.current)
+      }
+    }
+  }, [refFooter, options])
 
   return (
     <div>
@@ -50,22 +59,10 @@ export default function Index() {
         />
       </Head>
 
-      {!isWaypointCompleted && (
-        <Header
-          listItems={[
-            { id: 1, tag: 'home', name: 'inicio' },
-            { id: 2, tag: 'about', name: 'icao' },
-            { id: 3, tag: 'skills', name: 'skills' },
-            { id: 4, tag: 'resume', name: 'experiencia' },
-            { id: 5, tag: 'projects', name: 'proyectos' },
-          ]}
-          idItemActive={{ id: 1 }}
-        />
-      )}
+      {!isFooterIntersected && <Header />}
 
       <main>
         <Home />
-
         <div className="container vieport__full">
           <section id="about" className=" section">
             <Title
