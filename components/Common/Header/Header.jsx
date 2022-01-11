@@ -1,24 +1,28 @@
 import { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import clsx from 'clsx'
 import useWindowResize from '@hooks/useWindowResize'
 import useKeyPress from '@hooks/useKeyPress'
 import styles from './Header.module.scss'
 
-const Header = () => {
+const menuItems = [
+  { id: 1, tag: 'home', name: 'home' },
+  { id: 2, tag: 'about', name: 'about' },
+  { id: 3, tag: 'skills', name: 'skills' },
+  { id: 4, tag: 'resume', name: 'resume' },
+  { id: 5, tag: 'projects', name: 'projects' },
+]
+
+const Header = ({ transparent }) => {
   const [width] = useWindowResize()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMenuFixed, setIsMenuFixed] = useState(false)
   const { isKeyPressed } = useKeyPress('Escape')
 
-  const [options, setOptions] = useState({
-    linkActive: { id: 1, tag: 'home', name: 'inicio' },
-    links: [
-      { id: 1, tag: 'home', name: 'inicio' },
-      { id: 2, tag: 'about', name: 'icao' },
-      { id: 3, tag: 'skills', name: 'skills' },
-      { id: 4, tag: 'resume', name: 'experiencia' },
-      { id: 5, tag: 'projects', name: 'proyectos' },
-    ],
+  const [itemActive, setItemActive] = useState({
+    id: 1,
+    tag: 'home',
+    name: 'inicio',
   })
 
   useEffect(() => {
@@ -51,10 +55,35 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  function handleLinkClick(index) {
-    setOptions({ ...options, linkActive: options.links[index] })
+  function handleItemClick(index) {
+    setItemActive(menuItems[index])
     setIsMenuOpen(false)
   }
+
+  // FIXME:
+  // TODO: Validar porque projects no se selecciona bien ne el menu y se regresa a resume
+
+  const options = {
+    root: null,
+    rootMargin: '0px 0px 0px 0px',
+    threshold: 0.5,
+  }
+
+  useEffect(() => {
+    menuItems.forEach((item) => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(({ isIntersecting }) => {
+          if (isIntersecting) {
+            setItemActive(item)
+          }
+        })
+      }, options)
+      observer.observe(document.querySelector(`#${item.tag}`))
+      return () => {
+        observer.disconnect()
+      }
+    })
+  }, [menuItems])
 
   return (
     <header
@@ -62,6 +91,7 @@ const Header = () => {
       className={clsx(styles.header, {
         [styles['header--open']]: isMenuOpen,
         [styles['header--fixed']]: isMenuFixed,
+        [styles['header--transparent']]: transparent,
       })}
     >
       <nav className={styles.nav}>
@@ -96,17 +126,16 @@ const Header = () => {
             [styles['menu--open']]: isMenuOpen,
           })}
         >
-          {options.links.map((link, index) => (
-            <li className={styles.menu__item} key={link.id}>
+          {menuItems.map((item, index) => (
+            <li className={styles.menu__item} key={item.id}>
               <a
-                href={`#${link.tag}`}
+                href={`#${item.tag}`}
                 className={clsx(styles['menu__item-link'], {
-                  [styles['menu__item--active']]:
-                    options.linkActive.id === link.id,
+                  [styles['menu__item--active']]: itemActive.id === item.id,
                 })}
-                onClick={() => handleLinkClick(index)}
+                onClick={() => handleItemClick(index)}
               >
-                {link.name}
+                {item.name}
               </a>
             </li>
           ))}
@@ -114,6 +143,14 @@ const Header = () => {
       </nav>
     </header>
   )
+}
+
+Header.propTypes = {
+  transparent: PropTypes.bool,
+}
+
+Header.defaultProps = {
+  transparent: false,
 }
 
 export default Header

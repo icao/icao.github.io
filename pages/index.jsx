@@ -59,39 +59,32 @@ export default function Index() {
         />
       </Head>
 
-      {!isFooterIntersected && <Header />}
+      <Header transparent={isFooterIntersected} />
 
       <main>
         <Home />
-        <div className="container vieport__full">
-          <section id="about" className=" section">
-            <Title
-              text="websites"
-              textEmphasis="The best"
-              positionEmphasisBefore
-            />
-          </section>
-        </div>
-        <div className="container vieport__full">
-          <section id="skills" className=" section">
-            <Title
-              text="websites"
-              textEmphasis="The best"
-              positionEmphasisBefore
-            />
-            <br />
-            <br />
-            <br />
-          </section>
+
+        <div id="about">
+          <div className="container vieport__full">
+            <section className=" section">
+              <Title text="about" textEmphasis="The " positionEmphasisBefore />
+            </section>
+          </div>
         </div>
 
+        <div id="skills">
+          <div className="container vieport__full">
+            <section className=" section">
+              <Title text="skills" textEmphasis="The" positionEmphasisBefore />
+              <br />
+              <br />
+              <br />
+            </section>
+          </div>
+        </div>
         <div id="resume" className="container vieport__full">
           <section className="section">
-            <Title
-              text="error"
-              textEmphasis="The best"
-              positionEmphasisBefore
-            />
+            <Title text="resume" textEmphasis="The" positionEmphasisBefore />
           </section>
         </div>
         <div id="projects" className="container">
