@@ -30,9 +30,17 @@
 }
 
 .section {
-  padding: 40px 0 40px 0;
+  padding: 180px 0 40px 0;
   &__title {
     margin-bottom: 100px;
+  }
+
+  @media screen and (max-width: 992px) {
+    padding: 150px 0 40px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 120px 0 30px 0;
   }
 }
 
@@ -101,6 +109,8 @@
 }
 
 .collection {
+  width: 100%;
+  height: auto;
   display: grid;
   gap: 3em 1.9em;
   grid-auto-rows: auto;

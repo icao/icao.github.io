@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 import useWindowResize from '@hooks/useWindowResize'
@@ -14,6 +14,7 @@ const menuItems = [
 ]
 
 const Header = ({ transparent }) => {
+  const refHeader = useRef()
   const [width] = useWindowResize()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMenuFixed, setIsMenuFixed] = useState(false)
@@ -60,20 +61,17 @@ const Header = ({ transparent }) => {
     setIsMenuOpen(false)
   }
 
-  // FIXME:
-  // TODO: Validar porque projects no se selecciona bien ne el menu y se regresa a resume
-
-  const options = {
-    root: null,
-    rootMargin: '0px 0px 0px 0px',
-    threshold: 0.5,
-  }
-
   useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: `${refHeader.current.offsetHeight * -1}px 0px`,
+      threshold: 0.15, // FIXME: ajustarme al final del proyecto, dependo del height de cada seccion
+    }
+
     menuItems.forEach((item) => {
       const observer = new IntersectionObserver((entries) => {
-        entries.forEach(({ isIntersecting }) => {
-          if (isIntersecting) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
             setItemActive(item)
           }
         })
@@ -83,11 +81,12 @@ const Header = ({ transparent }) => {
         observer.disconnect()
       }
     })
-  }, [menuItems])
+  }, [menuItems, refHeader.current?.offsetHeight])
 
   return (
     <header
       id="header"
+      ref={refHeader}
       className={clsx(styles.header, {
         [styles['header--open']]: isMenuOpen,
         [styles['header--fixed']]: isMenuFixed,
