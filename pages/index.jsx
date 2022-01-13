@@ -67,7 +67,11 @@ export default function Index() {
         <div id="about">
           <div className="container ">
             <section className=" section">
-              <Title text="about" textEmphasis="The " positionEmphasisBefore />
+              <Title
+                text="Sobre mi ›"
+                textEmphasis="ICAO"
+                positionEmphasisAfter
+              />
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut
                 consectetur suscipit nulla maiores cum esse impedit tempore
@@ -198,7 +202,11 @@ export default function Index() {
         <div id="skills">
           <div className="container ">
             <section className=" section">
-              <Title text="skills" textEmphasis="The" positionEmphasisBefore />
+              <Title
+                text="Habilidades"
+                textEmphasis="Mis"
+                positionEmphasisBefore
+              />
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Veritatis sequi distinctio aut, error exercitationem voluptatum
@@ -335,7 +343,11 @@ export default function Index() {
         <div id="resume">
           <div className="container ">
             <section className="section">
-              <Title text="resume" textEmphasis="The" positionEmphasisBefore />
+              <Title
+                text="Experiencia"
+                textEmphasis="Mi"
+                positionEmphasisBefore
+              />
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 obcaecati facere voluptate, dolore aut necessitatibus quo
@@ -465,7 +477,7 @@ export default function Index() {
         <Footer />
       </div>
       {/* Uncomment this line to debug the intersection observer */}
-      <script src="https://unpkg.com/intersection-observer-debugger" />
+      {/* <script src="https://unpkg.com/intersection-observer-debugger" /> */}
     </div>
   )
 }

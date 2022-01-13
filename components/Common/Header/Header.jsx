@@ -7,10 +7,10 @@ import styles from './Header.module.scss'
 
 const menuItems = [
   { id: 1, tag: 'home', name: 'home' },
-  { id: 2, tag: 'about', name: 'about' },
-  { id: 3, tag: 'skills', name: 'skills' },
-  { id: 4, tag: 'resume', name: 'resume' },
-  { id: 5, tag: 'projects', name: 'projects' },
+  { id: 2, tag: 'about', name: 'icao' },
+  { id: 3, tag: 'skills', name: 'habilidades' },
+  { id: 4, tag: 'resume', name: 'experiencia' },
+  { id: 5, tag: 'projects', name: 'proyectos' },
 ]
 
 const Header = ({ transparent }) => {
