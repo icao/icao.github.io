@@ -1,6 +1,7 @@
 @import '@styles/base/palette';
 @import '@styles/base/fonts';
 @import '@styles/utilities/utils';
+@import '@styles/utilities/keyframes';
 
 .home {
   @extend .vieport__full;
@@ -12,6 +13,10 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+
+  will-change: transform;
+  animation-name: fadeIn;
+  animation-duration: 2.5s;
 
   &__background {
     background-color: #181919;
@@ -27,6 +32,9 @@
     position: relative;
 
     clip-path: polygon(31% 0%, 100% 25%, 63% 95%, 0% 86%);
+    will-change: transform;
+    animation-name: zoomingEntrance;
+    animation-duration: 2s;
 
     @media screen and (max-width: 1200px) {
       clip-path: polygon(31% 0, 100% 25%, 61% 100%, 0 93%);
