@@ -5,4 +5,13 @@ export default {
   component: Header,
 }
 
-export const HeaderDefault = () => <Header />
+export const HeaderDefault = () => (
+  <div>
+    <Header />
+    <div id="home" />
+    <div id="about" />
+    <div id="skills" />
+    <div id="resume" />
+    <div id="projects" />
+  </div>
+)
