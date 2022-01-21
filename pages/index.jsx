@@ -5,6 +5,8 @@ import Home from '@components/Layout/Home/Home'
 import Title from '@components/Common/Title/Title'
 import Projects from '@components/Layout/Projects/Projects'
 import Footer from '@components/Layout/Footer/Footer'
+import Hero from '@components/Layout/Hero/Hero'
+import Legend from '@components/Common/Legend/Legend'
 
 export default function Index() {
   const refFooter = useRef(null)
@@ -40,7 +42,7 @@ export default function Index() {
   return (
     <div>
       <Head>
-        <title>icao | César aparicio | Front End Developer</title>
+        <title>ICAO | César aparicio | Front End Developer</title>
         <meta
           name="description"
           content="I am a Front End Developer and Design Lover"
@@ -73,131 +75,61 @@ export default function Index() {
                 positionEmphasisAfter
               />
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut
-                consectetur suscipit nulla maiores cum esse impedit tempore
-                tenetur voluptates neque eaque a, in, soluta quisquam sapiente
-                saepe at aliquam animi expedita alias sint, fugit quae. Atque
-                hic rerum nostrum blanditiis illo provident fuga, cum corrupti.
-                Atque delectus aliquid dolorum est. Doloremque fugiat, doloribus
-                aut rerum aliquam ipsa quia, obcaecati suscipit ea accusantium
-                dolorem aspernatur nulla eligendi assumenda soluta esse
-                voluptates velit? Explicabo eos quam, labore doloremque
-                consequatur modi inventore eum, amet laborum neque, aliquid
-                eaque. Impedit eveniet nemo esse reprehenderit placeat
-                praesentium at maxime possimus? Maiores molestias porro eligendi
-                voluptate, a ab, cupiditate repudiandae id illo earum itaque
-                sunt iusto, veniam eos officia corporis fugiat nesciunt suscipit
-                labore sapiente rem. Quidem molestias fugit recusandae. Voluptas
-                dolore impedit corporis ea. Voluptas, fugiat praesentium.
-                Deserunt autem earum inventore magni optio perferendis placeat
-                quibusdam facilis quasi ullam laborum suscipit voluptate in
-                repellat, minus tempore? Odit praesentium impedit autem commodi
-                porro, sapiente nulla suscipit tempora ab et voluptas possimus
-                rem eligendi vel consequuntur modi dolores nesciunt dicta?
-                Ducimus culpa assumenda veniam commodi consequatur repudiandae,
-                nesciunt officiis ex fugiat perferendis, quia eaque illum quo
-                ipsam libero! Rem itaque ad, facere non quis deserunt vero
-                labore nobis et officiis aspernatur veniam quisquam perspiciatis
-                dolorum facilis earum perferendis temporibus nisi iure. Maiores
-                quam aliquid non pariatur corporis cupiditate minus, laboriosam
-                quidem quae nam minima similique tenetur eveniet! Recusandae
-                optio amet distinctio placeat iusto harum eaque exercitationem
-                impedit aliquam fuga non illum perferendis unde saepe aut,
-                dignissimos officia nam laudantium ratione et. Quam, placeat
-                deserunt. Minus vel ea consequuntur esse at impedit, odit ut
-                libero aperiam assumenda atque perferendis porro rerum maiores
-                minima quos doloremque modi illum voluptatem! Magnam maxime
-                sequi sed dolor earum consequuntur reiciendis alias quod
-                mollitia iusto, expedita, provident voluptatem laudantium dolore
-                debitis veniam amet, obcaecati tenetur voluptatibus quasi
-                tempora recusandae nulla magni. Numquam magni perspiciatis ab
-                illo exercitationem dolores deserunt repellendus eos odit modi,
-                eum, accusantium unde quod perferendis beatae ipsa nisi eaque
-                obcaecati a animi consequuntur in officia ad! Quis repellendus
-                omnis doloremque laudantium sit repellat sed, tenetur dolor nemo
-                soluta sunt nostrum enim maiores qui. Non incidunt dicta aliquid
-                ratione sapiente! Odio ea debitis amet. Corrupti similique
-                dolorum eaque rem fuga ratione harum laborum tempora nisi
-                possimus, nihil, odio quam neque voluptates quasi impedit
-                accusantium autem officia modi a. Mollitia, eos nesciunt? Ad
-                dolor molestias maiores. Officia quam id nobis unde corporis
-                veritatis, libero consequatur inventore! Sunt, itaque? Facere
-                omnis rem distinctio temporibus beatae obcaecati eaque
-                repudiandae minus doloribus dolore possimus blanditiis ratione
-                maxime aliquid, nesciunt perferendis dignissimos perspiciatis
-                vel error repellendus quam veniam eum? Atque possimus nulla
-                veniam repellat autem dolore minima, ea doloremque reiciendis!
-                Ullam, dolores quos nisi fugit tempore quaerat praesentium dolor
-                itaque laboriosam expedita magni, inventore officiis aliquid
-                consectetur, exercitationem saepe sit nulla porro est provident!
-                Cupiditate quibusdam, eligendi ullam eius magnam qui numquam
-                ipsam consequuntur ut eveniet quo esse cumque, cum eum
-                temporibus quia incidunt soluta blanditiis exercitationem
-                quaerat illo inventore tempora. Eaque deleniti repudiandae iure
-                est nesciunt eos impedit unde, id asperiores praesentium veniam
-                necessitatibus vero non hic laboriosam nulla dolorum aliquam
-                atque in! Nesciunt eaque perspiciatis sed. Natus aliquam officia
-                aspernatur ea dignissimos nisi. Veniam libero porro cum
-                consequatur aliquam facere cumque suscipit nostrum, ducimus
-                distinctio incidunt, culpa placeat quia fugiat delectus quos
-                eveniet at quas, ab vero excepturi eum! Nesciunt deserunt ad
-                atque magni fugiat perspiciatis molestiae cumque ipsum, esse
-                corrupti minima, repellat, commodi aliquam totam id eum sed
-                nulla! Veritatis numquam id mollitia nihil, nam tempore delectus
-                voluptate! Voluptates, temporibus! Ut, totam fugiat.
-                Exercitationem id, inventore, eaque quisquam quidem in dolores
-                consequatur, quae modi porro minima perferendis. Odit assumenda
-                in cupiditate quos voluptatibus provident qui officiis fugit
-                molestiae modi consequuntur non quam molestias, eligendi quia ab
-                deleniti illum error. Explicabo, illum quasi, velit, adipisci
-                ipsam a ullam itaque libero fugit mollitia nulla! Molestias,
-                quas eius delectus ad possimus labore, accusamus laudantium
-                quibusdam obcaecati quo eveniet in rerum quos, magni error.
-                Tempore, est ipsum et animi cumque, delectus harum quam alias
-                consequatur maiores dicta porro voluptatem quis officia
-                provident eaque, fugit esse veniam ratione. Porro dolorum
-                facilis itaque ut animi quasi facere alias, obcaecati tenetur
-                dolor quo et asperiores voluptatibus enim, totam eligendi ullam
-                est magnam perferendis, corporis eaque non at sit quibusdam?
-                Eveniet qui, debitis a odit dolorum tenetur nisi dolorem
-                delectus et accusamus, quam dolor nobis sunt rerum dolore
-                tempora aperiam recusandae consectetur quibusdam distinctio
-                fugiat. Nisi laborum, magnam hic nulla ratione ad quam ea
-                dolorum maiores minus amet. Reprehenderit eum vitae vero
-                maiores, expedita laborum cum cupiditate assumenda dolorum
-                repellendus nostrum ab, officia culpa quo quibusdam enim dolorem
-                architecto eaque iusto voluptatum. Corrupti voluptas ad aut
-                magnam incidunt eligendi at aliquam excepturi odit? Earum esse
-                recusandae aliquam consectetur architecto ipsum autem? Expedita,
-                amet dolorem sunt aspernatur facere veniam est atque! Minima,
-                libero tempora maiores molestiae, quam quod necessitatibus minus
-                expedita nihil autem ratione ab quasi mollitia! Repellendus
-                blanditiis esse quo provident libero quos, delectus repudiandae
-                porro nesciunt quae corporis. Aliquid sunt at modi provident
-                soluta corrupti! Dolorem odit mollitia, modi tempore distinctio
-                rerum quidem harum sunt. Obcaecati totam deserunt optio esse
-                officiis pariatur mollitia cumque facilis neque, voluptatum
-                deleniti ex? Ab nobis autem tempore voluptatibus quam. Iure
-                tenetur, incidunt tempore voluptatibus temporibus ut nostrum
-                aspernatur ea totam itaque dicta, nulla quisquam explicabo
-                consequuntur veniam porro cumque ab dolorem commodi error
-                cupiditate aperiam delectus voluptates expedita? Eos quis nam
-                deleniti, veniam ex facilis iusto amet eaque nostrum rem
-                doloribus a dolorem officiis provident architecto fugit atque ea
-                voluptatum itaque similique expedita suscipit, magni eum quae?
-                Animi ratione nobis, quo expedita modi tempore doloremque
-                aliquid quos sit cumque, asperiores dolorum aperiam accusantium
-                eum, aliquam numquam laborum beatae id eligendi sequi provident
-                fugiat rem omnis rerum! Doloremque, ad temporibus maxime, fuga
-                nam omnis dolores nulla amet tempora quibusdam rerum veritatis
-                ab praesentium facilis vitae. Ipsam cumque accusantium
-                exercitationem ipsum iste a asperiores hic ducimus enim, numquam
-                ea. Tenetur labore autem, ducimus fuga quaerat nihil cumque qui
-                vel maxime fugit enim et, temporibus quis culpa.
+                Hola! Gracias por tomarte el tiempo de conocerme, es un placer
+                para mi que estes aqui.
               </p>
+              <p>
+                Dejame presentarme, mi nombre es Ildefonso César Aparicio
+                Orozco, soy Mexicano y resido actualmente en la ciudad de
+                México.
+              </p>
+              <p>
+                Soy Front End Developer y amante del diseño, tengo pasión por
+                implementar UI modernas, sobre todo inovadoras. La curiosidad me
+                alienta a estar en continuo aprendizaje y me llevó a encontrar
+                un área en el desarrollo web, en la cual decidí empeñar mi
+                talento.
+              </p>
+              <p>
+                Me encanta lo que hago, me gusta involucrarme con personas de
+                distintar áreas y asi formar un pensamiento interdiciplinario,
+                lo cual va de la mano con la implementacion de software.
+              </p>
+              <p>
+                Cuando no programo, me gusta tomar fotografias, aun soy un
+                fotografo amateur, pero me llaman las calles y las personas, por
+                eso me gusta el estilo de street photography.
+              </p>
+              <p>
+                Me encanta escuchar musica para la ocasion, disfruto en hacerlo
+                mientras trabajo.
+              </p>
+              <p>
+                Y no dejo a un lado los videojuegos, confiezo que me gusta el
+                universo de World of Warcraft y Halo.
+              </p>
+
+              <p>
+                Si quieres conocer mas de mis detalles profesionales, considera
+                seguir explorando mas abajo, adelante.
+              </p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
             </section>
           </div>
         </div>
+
+        <Hero>
+          <div className="container">
+            <Legend text="Cuando yo cambio, el mundo cambia" center />
+          </div>
+        </Hero>
 
         <div id="skills">
           <div className="container ">
@@ -472,7 +404,16 @@ export default function Index() {
           </div>
         </div>
       </main>
-
+      <Hero>
+        <div className="container">
+          <Legend
+            text="Levantate una y otra vez, hasta que los coorderos se conviertan en
+          leones."
+            author="Robin Hood - Movie 2010"
+            right
+          />
+        </div>
+      </Hero>
       <div ref={refFooter}>
         <Footer />
       </div>

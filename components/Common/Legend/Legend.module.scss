@@ -1,0 +1,50 @@
+@import '@styles/base/fonts';
+@import '@styles/base/palette';
+@import '@styles/utilities/utils';
+
+.legend {
+  @extend .center-full-column;
+
+  &__content {
+    width: 100%;
+    height: auto;
+    padding: 5em 0;
+    box-sizing: border-box;
+  }
+
+  &__text {
+    font-family: $font-montserrat;
+    font-size: 7.8vmin;
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.2;
+    &::first-letter {
+      font-size: 250%;
+      color: $color-red-redbull;
+      line-height: 0.8;
+    }
+  }
+
+  &__header {
+    margin-left: 0.5em;
+    font-weight: 600;
+    color: $color-white;
+  }
+
+  &__quote {
+    color: $color-red-redbull;
+    font-weight: 700;
+  }
+
+  &__author {
+    width: 100%;
+    color: $color-white;
+    color: rgba($color-white-rgb, 0.1);
+    font-family: $font-montserrat;
+    font-size: 3.5vmin;
+    text-align: right;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 5vmin;
+  }
+}

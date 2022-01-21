@@ -1,0 +1,9 @@
+@import '@styles/base/fonts';
+@import '@styles/base/palette';
+
+.hero {
+  width: 100%;
+  height: auto;
+  background-color: $color-dark-medium;
+  box-sizing: border-box;
+}

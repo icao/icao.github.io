@@ -2,11 +2,18 @@
 @import '@styles/base/fonts';
 
 .card {
+  transition: background-color 0.4s cubic-bezier(0.185, 0.85, 0.45, 1) 0s;
+  &:hover {
+    background-color: $color-dark-medium;
+    transition: background-color 0.4s cubic-bezier(0.185, 0.85, 0.45, 1) 0s;
+  }
+
   &__image {
     width: 100%;
     height: auto;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 
     @media screen and (max-width: 768px) {
     }

@@ -8,7 +8,11 @@ import backgroundImage from '@public/images/background.jpg'
 import styles from './Home.module.scss'
 
 const Home = () => (
-  <section id="home" className={styles.home}>
+  <section
+    id="home"
+    className={styles.home}
+    style={{ backgroundImage: ` url('/images/background_05.webp')` }}
+  >
     <div className={styles.home__background}>
       <Image
         src={backgroundImage}

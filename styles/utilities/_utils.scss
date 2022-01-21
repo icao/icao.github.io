@@ -13,6 +13,13 @@
   align-items: center;
 }
 
+.center-full-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .color-enphasis {
   color: $color-red-redbull;
 }
@@ -119,4 +126,18 @@
 //Clase custom - Esclusivo para un margen al cursor del componente Typewriter
 .typed-cursor {
   margin-left: 5px;
+}
+
+.text__left {
+  text-align: left;
+}
+.text__center {
+  text-align: center;
+}
+.text__right {
+  text-align: right;
+}
+
+.color__white {
+  color: $color-white;
 }
