@@ -23,56 +23,46 @@
     background-position: center center;
     background-size: cover;
     display: inline-block;
-    top: -2.5vh;
-    left: 3vw;
-    width: 56vw;
-    height: 80vh;
+    top: 0;
+    left: 5vw;
+    width: 52vw;
+    height: 100vh;
+
     transition: all 0.8s;
     position: relative;
 
-    clip-path: polygon(31% 0%, 100% 25%, 63% 95%, 0% 86%);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     will-change: transform;
     animation-name: zoomingEntrance;
     animation-duration: 2s;
 
     @media screen and (max-width: 1200px) {
-      clip-path: polygon(31% 0, 100% 25%, 61% 100%, 0 93%);
-      top: 15vh;
-      left: 3vw;
-      width: 640px;
-      height: 560px;
-    }
-
-    // ipad horizontal
-    @media screen and (max-width: 1200px) and (max-height: 1000px) and (orientation: landscape) {
-      top: 10vh;
-      left: 7vw;
+      width: 50vw;
     }
 
     @media screen and (max-width: 992px) {
-      clip-path: polygon(25% 0%, 100% 25%, 80% 100%, 0 85%);
-      top: 15vh;
-      left: 10vw;
-      width: 640px;
-      height: 560px;
+      left: 41.2vw;
+      width: 60vw;
     }
 
+    // ipad mini
     @media screen and (max-width: 768px) {
-      clip-path: polygon(25% 0, 100% 25%, 80% 100%, 0 85%);
-      top: 8vh;
-      left: 6vw;
-      width: 640px;
-      height: 560px;
+      clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+      top: 0;
+      left: 41.5vw;
+      width: 60vw;
     }
 
+    // Mobiles
     @media screen and (max-width: 576px) {
-      clip-path: polygon(50% 0%, 100% 30%, 60% 100%, 0% 85%);
-      top: 8vh;
-      left: -15vw;
-      width: 600px;
-      height: 540px;
+      clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+      top: 0;
+      left: 5vw;
+      width: 105%;
+      height: 68vh;
     }
 
+    // Mobiles landscape
     @media screen and (max-height: 550px) and (orientation: landscape) {
       position: absolute;
       left: 0px;
