@@ -9,7 +9,7 @@ export const HeaderDefault = () => (
   <div>
     <Header />
     <div id="home" />
-    <div id="about" />
+    <div id="icao" />
     <div id="skills" />
     <div id="resume" />
     <div id="projects" />

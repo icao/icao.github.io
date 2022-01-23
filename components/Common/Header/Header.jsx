@@ -7,7 +7,7 @@ import styles from './Header.module.scss'
 
 const menuItems = [
   { id: 1, tag: 'home', name: 'home' },
-  { id: 2, tag: 'about', name: 'icao' },
+  { id: 2, tag: 'icao', name: 'icao' },
   { id: 3, tag: 'skills', name: 'habilidades' },
   { id: 4, tag: 'resume', name: 'experiencia' },
   { id: 5, tag: 'projects', name: 'proyectos' },
@@ -23,7 +23,7 @@ const Header = ({ transparent }) => {
   const [itemActive, setItemActive] = useState({
     id: 1,
     tag: 'home',
-    name: 'inicio',
+    name: 'home',
   })
 
   useEffect(() => {

@@ -11,11 +11,24 @@
 
 @keyframes zoomingEntrance {
   from {
-    transform: scale(1.15);
+    transform: scale(1.25);
     opacity: 0;
   }
   to {
     transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomingEntrance45 {
+  from {
+    transform: scale(1.15);
+    transform: translate(45%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    transform: translate(0%, 0%);
     opacity: 1;
   }
 }

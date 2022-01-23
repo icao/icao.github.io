@@ -7,8 +7,8 @@ const Legend = ({ text, author, right, center }) => (
     <div className={styles.legend__content}>
       <h3
         className={clsx(styles.legend__text, {
-          [['text__right']]: right,
           [['text__center']]: center,
+          [['text__right']]: right,
         })}
       >
         <span className={styles.legend__quote}>&#34;</span>

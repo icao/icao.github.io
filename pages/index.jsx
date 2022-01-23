@@ -7,6 +7,7 @@ import Projects from '@components/Layout/Projects/Projects'
 import Footer from '@components/Layout/Footer/Footer'
 import Hero from '@components/Layout/Hero/Hero'
 import Legend from '@components/Common/Legend/Legend'
+import Icao from '@components/Layout/Icao/Icao'
 
 export default function Index() {
   const refFooter = useRef(null)
@@ -66,7 +67,7 @@ export default function Index() {
       <main>
         <Home />
 
-        <div id="about">
+        <div id="icao">
           <div className="container ">
             <section className=" section">
               <Title
@@ -74,62 +75,16 @@ export default function Index() {
                 textEmphasis="ICAO"
                 positionEmphasisAfter
               />
-              <p>
-                Hola! Gracias por tomarte el tiempo de conocerme, es un placer
-                para mi que estes aqui.
-              </p>
-              <p>
-                Dejame presentarme, mi nombre es Ildefonso César Aparicio
-                Orozco, soy Mexicano y resido actualmente en la ciudad de
-                México.
-              </p>
-              <p>
-                Soy Front End Developer y amante del diseño, tengo pasión por
-                implementar UI modernas, sobre todo inovadoras. La curiosidad me
-                alienta a estar en continuo aprendizaje y me llevó a encontrar
-                un área en el desarrollo web, en la cual decidí empeñar mi
-                talento.
-              </p>
-              <p>
-                Me encanta lo que hago, me gusta involucrarme con personas de
-                distintar áreas y asi formar un pensamiento interdiciplinario,
-                lo cual va de la mano con la implementacion de software.
-              </p>
-              <p>
-                Cuando no programo, me gusta tomar fotografias, aun soy un
-                fotografo amateur, pero me llaman las calles y las personas, por
-                eso me gusta el estilo de street photography.
-              </p>
-              <p>
-                Me encanta escuchar musica para la ocasion, disfruto en hacerlo
-                mientras trabajo.
-              </p>
-              <p>
-                Y no dejo a un lado los videojuegos, confiezo que me gusta el
-                universo de World of Warcraft y Halo.
-              </p>
-
-              <p>
-                Si quieres conocer mas de mis detalles profesionales, considera
-                seguir explorando mas abajo, adelante.
-              </p>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
+              <Icao />
             </section>
           </div>
         </div>
 
-        <Hero>
+        {/* <Hero>
           <div className="container">
             <Legend text="Cuando yo cambio, el mundo cambia" center />
           </div>
-        </Hero>
+        </Hero> */}
 
         <div id="skills">
           <div className="container ">
