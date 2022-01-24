@@ -54,6 +54,7 @@
   font-weight: 900;
 }
 
+// Class if you using NEXT/IMAGE
 .next__image {
   &-container {
     position: relative;
@@ -109,6 +110,14 @@
     background-color: $color-red-redbull;
     color: $color-white;
   }
+}
+
+.button--call-to-action-icon {
+  @extend .button--call-to-action;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 
 .ul__emphasis {

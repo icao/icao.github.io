@@ -70,11 +70,14 @@ export default function Index() {
         <div id="icao">
           <div className="container ">
             <section className=" section">
-              <Title
-                text="Sobre mi ›"
-                textEmphasis="ICAO"
-                positionEmphasisAfter
-              />
+              <div className="section__title">
+                <Title
+                  text="Sobre mi ›"
+                  textEmphasis="ICAO"
+                  positionEmphasisAfter
+                />
+              </div>
+
               <Icao />
             </section>
           </div>
