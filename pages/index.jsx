@@ -8,6 +8,7 @@ import Footer from '@components/Layout/Footer/Footer'
 import Hero from '@components/Layout/Hero/Hero'
 import Legend from '@components/Common/Legend/Legend'
 import Icao from '@components/Layout/Icao/Icao'
+import Skills from '@components/Layout/Skills/Skills'
 
 export default function Index() {
   const refFooter = useRef(null)
@@ -99,39 +100,7 @@ export default function Index() {
                   positionEmphasisBefore
                 />
               </div>
-
-              <h3>Main skills / My specialization</h3>
-              <p>
-                Frontend development, UX/UI design JavaScript, CSS, HTML Vue,
-                jQuery, GSAP Photoshop, Illustrator Strategic thinking,
-                Storytelling E-commerce, Magento, WordPress Graphic design,
-                Brand design
-              </p>
-              <br />
-              <br />
-              <br />
-              <h3>Tools/years</h3>
-              <p>
-                JavaScript/+12 CSS/+12 HTML/+12 SVG/+7 GSAP/+2 Vue.js/+3
-                React/+1 Webpack/+2 Node.js/+2 Typescript/~1 GraphQL/~1
-                jQuery/+10 Adobe Photoshop/+14 Adobe Illustrator/+10
-                WordPress/+10 Magento/+7 Strategic Thinking Storytelling
-              </p>
-              <br />
-              <br />
-              <br />
-              <h3>Languages Skills</h3>
-              <p>Espanol</p>
-              <p>Ingles</p>
-              <br />
-              <br />
-              <br />
-              <h3>Interests</h3>
-              <p>listar las de ocio</p>
-              <p>
-                listar las profesionales como visualizacion de datos, user
-                xperience, accesibilidad, mapas, blockchain, internet of things
-              </p>
+              <Skills />
             </section>
           </div>
         </div>

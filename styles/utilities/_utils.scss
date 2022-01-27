@@ -125,10 +125,31 @@
   li::before {
     content: '\2022';
     color: $color-red-redbull;
-    font-weight: bold;
     display: inline-block;
     width: 1em;
     margin-left: -1em;
+  }
+}
+
+.ul__emphasis-nest {
+  list-style: none;
+  li::before {
+    content: '\0AF0';
+    color: $color-red-redbull;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    font-weight: 100;
+  }
+}
+
+.ul__emphasis--none {
+  list-style: none !important;
+  li::before {
+    content: '' !important;
+    display: inline-block;
+    width: 0;
+    margin-left: 0;
   }
 }
 

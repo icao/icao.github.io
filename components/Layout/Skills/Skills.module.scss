@@ -1,0 +1,57 @@
+@import '@styles/base/palette';
+@import '@styles/base/fonts';
+@import '@styles/utilities/utils';
+
+.skills {
+  &__title {
+    margin: 2em 0 0 0;
+    font-family: $font-poppins;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__subtitle {
+    margin: 2em 0 0 0;
+    font-family: $font-poppins;
+    font-weight: 400;
+    font-size: 20px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__text > li {
+    font-family: $font-poppins;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $color-grey-regular;
+    margin: 16px 0;
+  }
+
+  &__sections {
+    background-color: $color-dark-medium;
+    background-color: $color-grey-darker;
+    padding: 2em 3.5em;
+    @media screen and (max-width: 768px) {
+      padding: 1.5em 2.5em;
+    }
+  }
+
+  &__interests {
+    display: flex;
+    gap: 20px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+    & > * {
+      margin: 0;
+      flex: 1;
+    }
+  }
+}
