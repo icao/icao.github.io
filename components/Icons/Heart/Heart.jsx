@@ -5,7 +5,7 @@ const Heart = ({ color, hoverColor }) => {
   const [refElement, isHover] = useHover()
 
   return (
-    <div style={{ width: '100%', height: 'auto', display: 'flex' }}>
+    <span style={{ width: '100%', height: 'auto', display: 'flex' }}>
       <svg
         aria-hidden="true"
         role="img"
@@ -19,7 +19,7 @@ const Heart = ({ color, hoverColor }) => {
           style={{ transition: 'all 0.5s ease-out' }}
         />
       </svg>
-    </div>
+    </span>
   )
 }
 
