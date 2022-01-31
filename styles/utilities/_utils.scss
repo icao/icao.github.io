@@ -145,11 +145,14 @@
 
 .ul__emphasis--none {
   list-style: none !important;
+  // padding: 0 !important;
+
   li::before {
     content: '' !important;
     display: inline-block;
     width: 0;
     margin-left: 0;
+    padding: 0;
   }
 }
 

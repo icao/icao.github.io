@@ -5,7 +5,7 @@ const Close = ({ color, hoverColor }) => {
   const [refElement, isHover] = useHover()
 
   return (
-    <div style={{ width: '100%', height: 'unset' }}>
+    <div style={{ width: '100%', height: 'unset', display: 'flex' }}>
       <svg
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"

@@ -81,21 +81,21 @@ const Home = () => (
       <div className={styles['social-network__icon']}>
         <Link href="https://codepen.io/icao" passHref>
           <a href="replace" target="_blank" rel="noopener noreferrer">
-            <Codepen color="#e7eeff" hoverColor="#dd013f" />
+            <Codepen color="#e7eeff" hoverColor="#ff3366" />
           </a>
         </Link>
       </div>
       <div className={styles['social-network__icon']}>
         <Link href="https://github.com/icao" passHref>
           <a href="replace" target="_blank" rel="noopener noreferrer">
-            <Github color="#e7eeff" hoverColor="#dd013f" />
+            <Github color="#e7eeff" hoverColor="#ff3366" />
           </a>
         </Link>
       </div>
       <div className={styles['social-network__icon']}>
         <Link href="https://www.linkedin.com/in/cesaricao/" passHref>
           <a href="replace" target="_blank" rel="noopener noreferrer">
-            <Linkedin color="#e7eeff" hoverColor="#dd013f" />
+            <Linkedin color="#e7eeff" hoverColor="#ff3366" />
           </a>
         </Link>
       </div>

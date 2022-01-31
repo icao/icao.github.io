@@ -5,7 +5,7 @@ const Envelope = ({ color, hoverColor }) => {
   const [refElement, isHover] = useHover()
 
   return (
-    <div style={{ width: '100%', height: 'auto' }}>
+    <div style={{ width: '100%', height: 'auto', display: 'flex' }}>
       <svg
         aria-hidden="true"
         role="img"

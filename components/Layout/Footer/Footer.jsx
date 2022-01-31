@@ -4,6 +4,7 @@ import Codepen from '@components/Icons/Codepen/Codepen'
 import Linkedin from '@components/Icons/Linkedin/Linkedin'
 import Github from '@components/Icons/Github/Github'
 import logoFooter from '@public/images/logo_footer.png'
+import Heart from '@components/Icons/Heart/Heart'
 import styles from './Footer.module.scss'
 
 const Footer = () => (
@@ -26,21 +27,21 @@ const Footer = () => (
             <div className={styles['footer__social-network-icon']}>
               <Link href="https://codepen.io/icao" passHref>
                 <a href="replace" target="_blank" rel="noopener noreferrer">
-                  <Codepen color="#e7eeff" hoverColor="#dd013f" />
+                  <Codepen color="#e7eeff" hoverColor="#ff3366" />
                 </a>
               </Link>
             </div>
             <div className={styles['footer__social-network-icon']}>
               <Link href="https://github.com/icao" passHref>
                 <a href="replace" target="_blank" rel="noopener noreferrer">
-                  <Github color="#e7eeff" hoverColor="#dd013f" />
+                  <Github color="#e7eeff" hoverColor="#ff3366" />
                 </a>
               </Link>
             </div>
             <div className={styles['footer__social-network-icon']}>
               <Link href="https://www.linkedin.com/in/cesaricao/" passHref>
                 <a href="replace" target="_blank" rel="noopener noreferrer">
-                  <Linkedin color="#e7eeff" hoverColor="#dd013f" />
+                  <Linkedin color="#e7eeff" hoverColor="#ff3366" />
                 </a>
               </Link>
             </div>
@@ -49,7 +50,11 @@ const Footer = () => (
             icao © Copyright 2022. Todos los derechos reservados.
             <br />
             <br />
-            Diseño & Desarrollo hecho con <small>🤍</small> por <b>icao</b>.
+            Diseño & Desarrollo hecho con
+            <span className={styles['footer__heart-icon']}>
+              <Heart color="#ff3366" hoverColor="#ff3366" />
+            </span>
+            por <b>icao</b>.
           </p>
         </div>
       </div>

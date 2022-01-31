@@ -1,9 +1,17 @@
+import Comment from '@components/Icons/Comment/Comment'
 import clsx from 'clsx'
+import UserCard from '@components/Icons/UserCard/UserCard'
+import BrainCircuit from '@components/Icons/BraincCircuit/BrainCircuit'
 import styles from './Skills.module.scss'
 
 const Skills = () => (
   <div className={styles.skills}>
-    <h3 className={styles.skills__title}>Mi especialización</h3>
+    <h3 className={styles.skills__title}>
+      <span className={styles.skills__icon}>
+        <BrainCircuit color="#ff3366" />
+      </span>
+      Mi especialización
+    </h3>
     <ul className={clsx('ul__emphasis', styles.skills__sections)}>
       <li className={styles.skills__subtitle}>
         Front End Development
@@ -40,7 +48,12 @@ const Skills = () => (
       </li>
     </ul>
 
-    <h3 className={styles.skills__title}>Idiomas</h3>
+    <h3 className={styles.skills__title}>
+      <span className={styles.skills__icon}>
+        <Comment color="#ff3366" />
+      </span>
+      Idiomas
+    </h3>
     <ul
       className={clsx(
         styles.skills__text,
@@ -52,7 +65,13 @@ const Skills = () => (
       <li>Ingles (Nivel A2) y mejorando</li>
     </ul>
 
-    <h3 className={styles.skills__title}>Intereses</h3>
+    <h3 className={styles.skills__title}>
+      {' '}
+      <span className={styles.skills__icon}>
+        <UserCard color="#ff3366" />
+      </span>
+      Intereses
+    </h3>
     <ul
       className={clsx(
         'ul__emphasis',
