@@ -1,0 +1,115 @@
+@import '@styles/base/palette';
+@import '@styles/base/fonts';
+
+%border__container {
+  display: inline-block;
+  position: relative;
+  border: 1px solid $color-red-redbull;
+  border: 1px solid $color-grey-medium;
+  padding: 20px;
+}
+
+%base__arrow {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+}
+
+$arrow-dimension-before: 10px;
+$arrow-dimension-after: 9px;
+
+.moment {
+  &__up-arrow {
+    @extend %border__container;
+
+    &:before {
+      @extend %base__arrow;
+
+      left: calc(50% - $arrow-dimension-before);
+      top: calc(-2 * $arrow-dimension-before);
+      border: $arrow-dimension-before solid transparent;
+      border-bottom-color: $color-grey-medium;
+    }
+
+    &:after {
+      @extend %base__arrow;
+
+      left: calc(50% - $arrow-dimension-after);
+      top: calc(-2 * $arrow-dimension-after + 0.5px);
+      border: $arrow-dimension-after solid transparent;
+      border-bottom-color: $color-dark;
+    }
+  }
+
+  &__left-arrow {
+    @extend %border__container;
+
+    &:before {
+      @extend %base__arrow;
+
+      left: calc(-2 * $arrow-dimension-before);
+      top: calc(50% - $arrow-dimension-before);
+      border: $arrow-dimension-before solid transparent;
+      border-right-color: $color-grey-medium;
+    }
+
+    &:after {
+      @extend %base__arrow;
+
+      left: calc(-2 * $arrow-dimension-after + 0.5px);
+      top: calc(50% - $arrow-dimension-after);
+      border: $arrow-dimension-after solid transparent;
+      border-right-color: $color-dark;
+    }
+  }
+
+  &__down-arrow {
+    @extend %border__container;
+
+    &:before {
+      @extend %base__arrow;
+
+      left: calc(50% - $arrow-dimension-before);
+      top: 100%;
+      border: $arrow-dimension-before solid transparent;
+      border-top-color: $color-grey-medium;
+    }
+
+    &:after {
+      @extend %base__arrow;
+
+      left: calc(50% - $arrow-dimension-after);
+      top: calc(100% - 0.5px);
+      border: $arrow-dimension-after solid transparent;
+      border-top-color: $color-dark;
+    }
+  }
+
+  &__right-arrow {
+    @extend %border__container;
+
+    &:before {
+      @extend %base__arrow;
+
+      left: 100%;
+      top: calc(50% - $arrow-dimension-before);
+      border: $arrow-dimension-before solid transparent;
+      border-left-color: $color-grey-medium;
+    }
+
+    &:after {
+      @extend %base__arrow;
+
+      left: calc(100% - 0.5px);
+      top: calc(50% - $arrow-dimension-after);
+      border: $arrow-dimension-after solid transparent;
+      border-left-color: $color-dark;
+    }
+  }
+}
