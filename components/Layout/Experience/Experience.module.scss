@@ -46,7 +46,6 @@
     padding: 0.6em 1.5em;
     margin: 0 0 1em 0;
 
-    // text-transform: uppercase;
     color: $color-white;
   }
 
@@ -55,15 +54,17 @@
     height: auto;
     display: grid;
     padding: 3em 0;
-    gap: 3em 3em;
+    gap: 1.9em 1.9em;
     grid-auto-rows: auto;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 434px), 1fr));
-    // background-color: rgba($color-grey-dark, 0.9);
+
+    @media screen and (max-width: 992px) {
+      gap: 0px;
+    }
   }
 
   &__dot {
-    background-color: $color-dark;
-    // border-radius: 50%;
+    background-color: $color-red-redbull;
     box-sizing: border-box;
     height: 10px;
     width: 10px;
@@ -71,81 +72,44 @@
   }
 
   &__item {
-    // background-color: $color-grey-darker;
     width: 100%;
     height: auto;
     padding: 20px;
   }
-}
 
-.up-arrow {
-  display: inline-block;
-  position: relative;
-  border: 1px solid #ff0000;
-  text-decoration: none;
-  // border-radius: 2px;
-  padding: 20px;
-  margin-top: 50px;
-}
-.up-arrow:before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 140px;
-  bottom: 100%;
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  border-bottom-color: #ff0000;
-}
+  &__role {
+    margin: 16px 0 0 0;
+    font-family: $font-montserrat;
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-white;
+  }
 
-.up-arrow:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 141px;
-  bottom: calc(100% - 0.5px);
-  width: 0;
-  height: 0;
-  border: 9px solid transparent;
-  border-bottom-color: $color-grey-darker;
-}
+  &__place {
+    font-family: $font-poppins;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $color-white;
+    margin: 16px 0;
+  }
 
-// ---------------------------------------------
-// FIXME: pasarlo a componente, agregar propiedades de left top, bottom, right
-.left-arrow {
-  display: inline-block;
-  position: relative;
-  border: 1px solid $color-red-redbull;
-  border: 1px solid $color-grey-medium;
-  text-decoration: none;
-  // border-radius: 2px;
-  padding: 20px;
-  // margin: 50px;
-}
-.left-arrow:before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: -20px;
-  top: calc(50% - 10px);
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  border-right-color: $color-red-redbull;
-  border-right-color: $color-grey-medium;
-}
+  &__period {
+    font-family: $font-poppins;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1.5;
+    color: $color-red-redbull;
+    margin: 16px 0;
+    text-transform: capitalize;
+  }
 
-.left-arrow:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: calc(-18px + 0.5px);
-  top: calc(50% - 9px);
-  width: 0;
-  height: 0;
-  border: 9px solid transparent;
-  border-right-color: $color-grey-darker;
-  border-right-color: $color-dark;
-  // border-right-color: blue;
+  &__description {
+    font-family: $font-poppins;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $color-grey-regular;
+    margin: 16px 0;
+  }
 }

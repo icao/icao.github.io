@@ -17,6 +17,12 @@ const TimelineMoment = ({
       { [styles['moment__right-arrow']]: arrowRight }
     )}
   >
+    <div
+      className={clsx(
+        { [styles['moment__dot--left']]: arrowLeft },
+        { [styles['moment__dot--right']]: arrowRight }
+      )}
+    />
     {children}
   </div>
 )
