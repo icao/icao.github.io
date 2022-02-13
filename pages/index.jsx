@@ -79,7 +79,6 @@ export default function Index() {
                   positionEmphasisAfter
                 />
               </div>
-
               <Icao />
             </section>
           </div>
@@ -134,17 +133,18 @@ export default function Index() {
             </section>
           </div>
         </div>
-      </main>
-      <Hero>
-        <div className="container">
-          <Legend
-            text="Levantate una y otra vez, hasta que los coorderos se conviertan en
+        <Hero>
+          <div className="container">
+            <Legend
+              text="Levantate una y otra vez, hasta que los coorderos se conviertan en
           leones."
-            author="Robin Hood - Movie 2010"
-            right
-          />
-        </div>
-      </Hero>
+              author="Robin Hood - Movie 2010"
+              right
+            />
+          </div>
+        </Hero>
+      </main>
+
       <div ref={refFooter}>
         <Footer />
       </div>
