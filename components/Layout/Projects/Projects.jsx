@@ -14,43 +14,50 @@ function Projects() {
       urlImage: '/images/photo01.jpeg',
       title: 'The player winner',
       ramonas: '/public/images/photo04.jpg',
+      type: 'Open Source',
     },
     {
       id: 'ICAO02',
       urlImage: '/images/photo02.jpeg',
       title: 'VSCODE Extension',
       ramonas: '/public/images/photo05.jpg',
+      type: 'Open Source',
     },
     {
       id: 'ICAO03',
       urlImage: '/images/photo03.jpeg',
-      title: 'Doesnt Matter',
+      title: 'CODEPEN',
       ramonas: '/public/images/photo06.jpg',
+      type: 'Landing Page',
     },
     {
       id: 'ICAO04',
       urlImage: '/images/photo04.jpeg',
-      title: 'Doesnt Matter',
+      title: 'VSCODE Theme',
       ramonas: '/public/images/photo06.jpg',
+      type: 'Photography',
     },
     {
       id: 'ICAO05',
       urlImage: '/images/photo05.jpg',
-      title: 'Doesnt Matter',
+      title: 'The World Times',
       ramonas: '/public/images/photo06.jpg',
+      type: 'Open Source',
     },
     {
       id: 'ICAO06',
       urlImage:
         'https://images.pexels.com/photos/9749273/pexels-photo-9749273.jpeg',
-      title: 'Doesnt Matter',
+      title: 'Map Finder Routes',
       ramonas: '/public/images/photo06.jpg',
+      type: 'Progressive Web App',
     },
     {
       id: 'ICAO07',
       urlImage: '/images/photo07.jpg',
       title: 'Doesnt Matter, dont worry about it',
       ramonas: '/public/images/photo06.jpg',
+      type: 'Open Source',
     },
   ]
 
@@ -131,7 +138,12 @@ function Projects() {
             }}
             aria-hidden="true"
           >
-            <Card urlImage={project.urlImage} title={project.title} />
+            <Card
+              urlImage={project.urlImage}
+              title={project.title}
+              tag={project.type}
+              designAlternative
+            />
           </div>
         ))}
       </section>

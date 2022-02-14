@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Image from 'next/image'
 import clsx from 'clsx'
 import OpenModal from '@components/Icons/OpenModal/OpenModal'
+import ArrowRight from '@components/Icons/ArrowRight/ArrowRight'
 import styles from './Card.module.scss'
 
 const initialPosition = {
@@ -10,7 +11,7 @@ const initialPosition = {
   positionDetailY: null,
 }
 
-const Card = ({ urlImage, title }) => {
+const Card = ({ urlImage, title, tag, designAlternative }) => {
   const cardDetail = useRef(null)
 
   const [isHover, setIsHover] = useState(false)
@@ -73,26 +74,54 @@ const Card = ({ urlImage, title }) => {
             left: `${positionDetailX}px`,
           }}
         />
-        <div className={styles['card__icon-container']}>
-          <div
-            className={clsx(styles.card__icon, {
-              [styles['card__icon--animated']]: isHover,
-            })}
-          >
-            <OpenModal color="#e7eeff" />
+
+        {!designAlternative && (
+          <div className={styles['card__icon-container']}>
+            <div
+              className={clsx(styles.card__icon, {
+                [styles['card__icon--animated']]: isHover,
+              })}
+            >
+              <OpenModal color="#e7eeff" />
+            </div>
           </div>
+        )}
+
+        {designAlternative && (
+          <div className={styles.design__alternative}>
+            <div className={styles.design__alternative__filter} />
+            <div className={styles.design__alternative__content}>
+              <p className={styles.design__alternative__tags}>{tag}</p>
+              <h3 className={styles.design__alternative__title}>{title}</h3>
+              <div className={styles.design__alternative__view}>
+                <p className={styles.design__alternative__p}>Ver detalle </p>
+                <div className={styles.design__alternative__arrow}>
+                  <ArrowRight color="#e7eeff" />
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+      {!designAlternative && (
+        <div className={styles.card__footer}>
+          <h3 className={styles.card__title}>{title}</h3>
         </div>
-      </div>
-      <div className={styles.card__footer}>
-        <h3 className={styles.card__title}>{title}</h3>
-      </div>
+      )}
     </div>
   )
+}
+
+Card.defaultProps = {
+  tag: null,
+  designAlternative: false,
 }
 
 Card.propTypes = {
   urlImage: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  tag: PropTypes.string,
+  designAlternative: PropTypes.bool,
 }
 
 export default Card

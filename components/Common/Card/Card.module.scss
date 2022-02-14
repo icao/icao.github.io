@@ -1,5 +1,6 @@
 @import '@styles/base/palette';
 @import '@styles/base/fonts';
+@import '@styles/utilities/keyframes';
 
 .card {
   transition: background-color 0.4s cubic-bezier(0.185, 0.85, 0.45, 1) 0s;
@@ -100,3 +101,85 @@
     }
   }
 }
+
+.design__alternative {
+  &__filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-dark-rgb, 0.61);
+
+    z-index: 5;
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 40px;
+    z-index: 11;
+
+    @media screen and (max-width: 992px) {
+      padding: 30px;
+    }
+
+    &:hover {
+      .design__alternative__view {
+        opacity: 1;
+        animation-name: fadeInDown;
+        animation-duration: 0.5s;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-montserrat;
+    font-size: 28px;
+    margin: 0;
+    z-index: 200;
+    font-weight: 700;
+  }
+
+  &__tags {
+    font-family: $font-montserrat;
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    font-weight: 300;
+    line-height: 1.5;
+    text-transform: capitalize;
+  }
+
+  &__view {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+  }
+
+  &__p {
+    font-family: $font-montserrat;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-top: 20px;
+    // font-weight: 500;
+  }
+
+  &__arrow {
+    width: 25px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    margin-left: 10px;
+  }
+}
+
+// // TODO: agregar prop para disenio LTERNATIVO  LISTO
+// todo: STORYBOOK DE CARD DISENIO NUEVO
+// TODO: verificar congruencia de PADDINGS y TAMAÑOS DE FONTS y WEIGTH DE FONTS - TODO DEBE SER CONGRUENTE, FIJAR 3-4 espesores
+// todo: aGREGAR STORYBOOK DE TimelineMoment
