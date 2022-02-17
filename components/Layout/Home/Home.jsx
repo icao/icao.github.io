@@ -17,7 +17,7 @@ const Home = () => (
       <Image
         src={backgroundImage}
         placeholder="blur"
-        alt="image cesar aparicio"
+        alt="imagen perfil cesar aparicio"
         layout="fill"
         objectFit="cover"
       />
