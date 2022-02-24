@@ -6,7 +6,8 @@
   &__title {
     margin: 2em 0 1em 0;
     font-family: $font-poppins;
-    font-weight: 400;
+    font-family: $font-montserrat;
+    font-weight: 600;
     font-size: 24px;
     line-height: 1.5;
 
@@ -27,8 +28,8 @@
   &__subtitle {
     margin: 2em 0 0 0;
     font-family: $font-poppins;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 16px;
 
     &:first-child {
       margin-top: 0;
@@ -50,12 +51,13 @@
   }
 
   &__sections {
-    background-color: $color-dark-intense;
+    // background-color: $color-dark-intense;
+    // background-color: aqua;
     // background-color: $color-dark;
     // background-color: $color-dark-medium;
     // background-color: $color-grey-darker;
     // background-color: $color-grey-dark;
-    padding: 2.5em 3.5em;
+    // padding: 2.5em 3.5em;
     // border: 1px solid $color-dark-medium;
     // border: 1px solid $color-grey-darker;
     // border: 1px solid $color-grey-dark;

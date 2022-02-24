@@ -8,10 +8,14 @@ $arrow-dimension-after: 9px;
   display: inline-block;
   position: relative;
   border: 1px solid $color-grey-dark;
-  padding: 20px;
+  padding: 20px 40px;
   width: inherit;
   background-color: $color-dark;
   transition: all 0.7s cubic-bezier(0.185, 0.85, 0.45, 1) 0s;
+
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
 
   &:hover {
     border: 1px solid $color-red-redbull;

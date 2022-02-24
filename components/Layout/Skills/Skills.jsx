@@ -84,6 +84,7 @@ const Skills = () => (
         <ul className={clsx(styles.skills__text, 'ul__emphasis--none')}>
           <li>Visualizacion de datos</li>
           <li>Experiencia de usuario con accesibilidad</li>
+          <li>Web scraping</li>
           <li>Blockchain</li>
           <li>Internet of things</li>
           <li>Inteligencia Artificial</li>
@@ -95,6 +96,7 @@ const Skills = () => (
           <li>Fotografía (Street Photography)</li>
           <li>Viajar</li>
           <li>Música</li>
+          <li>Museos</li>
           <li>Caminatas para descubir cosas nuevas</li>
           <li>Videojuegos</li>
         </ul>

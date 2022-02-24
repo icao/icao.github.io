@@ -1,6 +1,39 @@
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUpLarge {
+  from {
+    transform: translateY(170%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @keyframes fadeInDown {
   from {
     transform: translateY(-40%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDownLarge {
+  from {
+    transform: translateY(-170%);
     opacity: 0;
   }
   to {

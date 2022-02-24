@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import Link from 'next/link'
 import Head from 'next/head'
 import Header from '@components/Common/Header/Header'
 import Home from '@components/Layout/Home/Home'
@@ -119,9 +120,25 @@ export default function Index() {
           </div>
         </div>
 
+        <Hero>
+          <div className="container">
+            <div>
+              <Link href="mailto:clark012389@hotmail.com" passHref>
+                <a
+                  href="replace"
+                  title="Enviame un correo"
+                  className="button--call-to-action-icon"
+                >
+                  DESCARGAR CV
+                </a>
+              </Link>
+            </div>
+          </div>
+        </Hero>
+
         <div id="projects">
           <div className="container ">
-            <section className="section">
+            <section className="section section--last">
               <div className="section__title">
                 <Title
                   text="Proyectos"

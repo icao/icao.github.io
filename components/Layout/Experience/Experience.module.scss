@@ -41,11 +41,19 @@
     border: 2px solid $color-red-redbull;
     font-size: 24px;
     font-family: $font-montserrat;
-    font-weight: 500;
+    font-weight: 600;
     padding: 0.6em 1.5em;
     margin: 0 0 1em 0;
-
     color: $color-white;
+  }
+
+  &__icon {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
   }
 
   &__section {
@@ -79,15 +87,15 @@
   &__role {
     margin: 16px 0 0 0;
     font-family: $font-montserrat;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 20px;
     color: $color-white;
   }
 
   &__place {
     font-family: $font-poppins;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.5;
     color: $color-white;
     margin: 16px 0;

@@ -99,6 +99,16 @@ function Projects() {
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Recusandae odit fuga iusto.
                     </p>
+
+                    <p className={styles.detail__text}>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Et dignissimos sapiente laudantium, fugiat rem debitis sit
+                      corporis voluptates, odit nihil sed itaque laboriosam,
+                      reiciendis cum?
+                    </p>
+
+                    <p className={styles.detail__text}>Lorem ipsum:</p>
+
                     <ul className="ul__emphasis">
                       <li className={styles.detail__list}>Lorem, ipsum.</li>
                       <li className={styles.detail__list}>
@@ -111,12 +121,6 @@ function Projects() {
                         Adipisci consequuntur nostrum{' '}
                       </li>
                     </ul>
-                    <p className={styles.detail__text}>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Et dignissimos sapiente laudantium, fugiat rem debitis sit
-                      corporis voluptates, odit nihil sed itaque laboriosam,
-                      reiciendis cum?
-                    </p>
                     <div className={styles.detail__footer}>
                       <Link
                         href="https://www.linkedin.com/in/cesaricao/"

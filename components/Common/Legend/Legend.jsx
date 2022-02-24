@@ -29,8 +29,8 @@ Legend.propTypes = {
 
 Legend.defaultProps = {
   author: null,
-  right: true,
-  center: true,
+  right: false,
+  center: false,
 }
 
 export default Legend

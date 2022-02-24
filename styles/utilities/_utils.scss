@@ -99,6 +99,7 @@
   position: relative;
   color: $color-red-redbull;
   transition: all 0.3s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.165, 0.85, 0.45, 1);
   font-family: $font-montserrat;
   font-weight: 500;
   font-size: 14px;
