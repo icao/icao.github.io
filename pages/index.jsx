@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
 import Header from '@components/Common/Header/Header'
 import Home from '@components/Layout/Home/Home'
@@ -11,6 +10,7 @@ import Legend from '@components/Common/Legend/Legend'
 import Icao from '@components/Layout/Icao/Icao'
 import Skills from '@components/Layout/Skills/Skills'
 import Experience from '@components/Layout/Experience/Experience'
+import CvBanner from '@components/Layout/CvBanner/CvBanner'
 
 export default function Index() {
   const refFooter = useRef(null)
@@ -105,6 +105,7 @@ export default function Index() {
             </section>
           </div>
         </div>
+
         <div id="resume">
           <div className="container ">
             <section className="section">
@@ -121,19 +122,7 @@ export default function Index() {
         </div>
 
         <Hero>
-          <div className="container">
-            <div>
-              <Link href="mailto:clark012389@hotmail.com" passHref>
-                <a
-                  href="replace"
-                  title="Enviame un correo"
-                  className="button--call-to-action-icon"
-                >
-                  DESCARGAR CV
-                </a>
-              </Link>
-            </div>
-          </div>
+          <CvBanner />
         </Hero>
 
         <div id="projects">

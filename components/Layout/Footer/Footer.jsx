@@ -22,7 +22,7 @@ const Footer = () => (
               // objectFit="cover"
             />
           </div>
-          <h2 className={styles.footer__title}>Front End Developer</h2>
+          <h3 className={styles.footer__title}>Front End Developer</h3>
           <div className={styles['footer__social-network']}>
             <div className={styles['footer__social-network-icon']}>
               <Link href="https://codepen.io/icao" passHref>
@@ -47,14 +47,14 @@ const Footer = () => (
             </div>
           </div>
           <p className={styles.footer__copyright}>
-            icao © Copyright 2022. Todos los derechos reservados.
-            <br />
-            <br />
             Diseño & Desarrollo hecho con
             <span className={styles['footer__heart-icon']}>
               <Heart color="#ff3366" hoverColor="#ff3366" />
             </span>
-            por <b>icao</b>.
+            por <b>icao</b> en CDMX, México.
+            <br />
+            <br />
+            icao © Copyright 2022.
           </p>
         </div>
       </div>
