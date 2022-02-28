@@ -18,3 +18,13 @@ CardWithExternalURLImage.args = {
     'https://images.pexels.com/photos/9749273/pexels-photo-9749273.jpeg',
   title: 'im before',
 }
+
+export const CardWithAlternativeDesigne = Template.bind()
+
+CardWithAlternativeDesigne.args = {
+  urlImage:
+    'https://images.pexels.com/photos/9749273/pexels-photo-9749273.jpeg',
+  title: 'im before',
+  tag: 'open source',
+  designAlternative: true,
+}
