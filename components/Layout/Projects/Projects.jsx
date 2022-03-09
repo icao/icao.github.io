@@ -14,7 +14,11 @@ function Projects() {
     setModalContent(
       <div className={styles.detail__container}>
         <div className={('next__image-container', styles.detail__image)}>
-          <Image src={urlImage} layout="fill" className="next__image--cover" />
+          <Image
+            src={urlImage}
+            layout="fill"
+            className="next__image--cover-top"
+          />
         </div>
         <div className={styles.detail__content}>
           <h2 className={styles.detail__title}>{title}</h2>
@@ -24,14 +28,19 @@ function Projects() {
             </p>
           ))}
 
-          <p className={styles.detail__text}>Tecnologias usadas:</p>
-          <ul className="ul__emphasis">
-            {technologies.map((technology, index) => (
-              <li key={`${index + 1}`} className={styles.detail__list}>
-                {technology}
-              </li>
-            ))}
-          </ul>
+          {technologies && (
+            <>
+              <p className={styles.detail__text}>Tecnologias usadas:</p>
+              <ul className="ul__emphasis">
+                {technologies.map((technology, index) => (
+                  <li key={`${index + 1}`} className={styles.detail__list}>
+                    {technology}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+
           <div className={styles.detail__footer}>
             <Link href={link} passHref>
               <a

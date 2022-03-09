@@ -80,6 +80,14 @@
     position: relative !important;
     height: unset !important;
   }
+
+  &--cover-top {
+    object-fit: cover;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+    object-position: top;
+  }
 }
 
 .link {

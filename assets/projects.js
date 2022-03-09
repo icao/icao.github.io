@@ -16,7 +16,7 @@ export default [
   },
   {
     id: 'ICAO02',
-    urlImage: '/images/photo02.jpeg',
+    urlImage: '/images/twt.jpeg',
     title: 'The World Times',
     type: 'Aplicación Web',
     descriptions: {
@@ -36,58 +36,73 @@ export default [
   },
   {
     id: 'ICAO03',
-    urlImage: '/images/photo03.jpeg',
+    urlImage: '/images/bm.jpeg',
     title: 'Browser Movies',
     type: 'Aplicación Web',
     descriptions: {
-      paragraphs: ['Aplicación web, buscador de reseña de peliculas.'],
-      technologies: ['dummy'],
+      paragraphs: [
+        'Aplicación web, buscador de peliculas.',
+        'Esta aplicación muestra una lista de resultados de acuerdo a una palabra clave relacionado con el título de la película.',
+        'Se implementó la paginación de los resultados, la persistencia de la búsqueda y la visualización de más información detallada de los resultados.',
+        'Se hizo el consumo de la API RESTfull omdb que provee la lista de peliculas.',
+      ],
+      technologies: ['Reactjs', 'React Router', 'Bulma CSS', 'OMDb API'],
     },
     link: 'http://project-02-search-movies-v2.surge.sh/',
   },
   {
     id: 'ICAO04',
-    urlImage: '/images/photo04.jpeg',
+    urlImage: '/images/evently.jpeg',
     title: 'Evently',
     type: 'Aplicación Web',
     descriptions: {
-      paragraphs: ['Aplicación web para buscar imagenes de stock.'],
-      technologies: ['dummy'],
+      paragraphs: [
+        'Aplicación web para buscar imágenes de stock.',
+        'Esta aplicación despliega una lista de resultados mediante un filtro de búsqueda basado en categorías.',
+        'Los resultados son desplegados visualmente en  como respuesta al llamado de un API RESTful que provee imágenes de Stock.',
+        'Para la gestión del estado se usó Context API, así como la api de Pixabay.',
+      ],
+      technologies: ['Reactjs', 'Context API', 'Custom CSS', 'Pixabay API'],
     },
     link: 'http://project-05-context-api-buscador-imagenes.surge.sh/',
   },
   {
     id: 'ICAO05',
-    urlImage: '/images/photo05.jpg',
-    title: 'The World Times',
+    urlImage: '/images/codepen.jpeg',
+    title: 'CODEPEN',
     type: 'Open Source',
     descriptions: {
-      paragraphs: ['Dummy'],
-      technologies: ['dummy'],
+      paragraphs: [
+        'lorem lorem lorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem lorem',
+      ],
+      // technologies: [],
     },
-    link: 'dummy',
+    link: 'https://codepen.io/icao',
   },
   {
     id: 'ICAO06',
-    urlImage:
-      'https://images.pexels.com/photos/9749273/pexels-photo-9749273.jpeg',
-    title: 'Map Finder Routes',
-    type: 'Progressive Web App',
+    urlImage: '/images/vscode.jpeg',
+    title: 'VSCode Themes',
+    type: 'Open Source',
     descriptions: {
-      paragraphs: ['Dummy'],
-      technologies: ['dummy'],
+      paragraphs: [
+        'lorem lorem lorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem lorem',
+      ],
+      // technologies: [],
     },
-    link: 'dummy',
+    link: 'https://marketplace.visualstudio.com/publishers/icao',
   },
   {
     id: 'ICAO07',
-    urlImage: '/images/photo07.jpg',
-    title: 'Doesnt Matter, dont worry about it',
+    urlImage: '/images/wox.png',
+    title: 'Jeeves - Theme for WOX launcher',
     type: 'Open Source',
     descriptions: {
-      paragraphs: ['Dummy'],
-      technologies: ['dummy'],
+      paragraphs: [
+        'lorem lorem lorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem lorem',
+      ],
+      // technologies: [],
     },
-    link: 'dummy',
+    link: 'https://github.com/icao/wox-themes',
   },
 ]
