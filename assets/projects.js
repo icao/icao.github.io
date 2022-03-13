@@ -73,7 +73,7 @@ export default [
     type: 'Open Source',
     descriptions: {
       paragraphs: [
-        'lorem lorem lorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem lorem',
+        'Varias colecciones y componentes de interfaces e interacción.',
       ],
       // technologies: [],
     },
@@ -86,7 +86,8 @@ export default [
     type: 'Open Source',
     descriptions: {
       paragraphs: [
-        'lorem lorem lorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem lorem',
+        'Temas para VSCODE, el editor de código mas usado en el mundo.',
+        'Inheritance Theme & Electron Vue Theme',
       ],
       // technologies: [],
     },
@@ -99,7 +100,7 @@ export default [
     type: 'Open Source',
     descriptions: {
       paragraphs: [
-        'lorem lorem lorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem lorem',
+        'Tema para WOX lanzador de aplicaciones más usado en windows 10 y 11.',
       ],
       // technologies: [],
     },

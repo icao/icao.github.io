@@ -9,16 +9,48 @@
   height: 100vh;
   overflow: hidden;
 
+  /*
+  background-image: url('/images/bg3.jpg');
+  No se llama aqui por que el storybook no levanta, solo es en este caso,
+  por lo que se manda allamar en el componente via jsx  :( 
+  Posible problema de storybook cuando carga por primera vez el componente home, 
+  no encuentra el recurso.
+  */
   background-size: cover;
   background-position: center;
+  background-position: bottom;
   background-attachment: fixed;
 
-  will-change: transform;
   animation-name: fadeIn;
   animation-duration: 2.5s;
 
+  &:after {
+    position: absolute;
+    content: '';
+    height: 70%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(transparent, 0) 0%,
+      rgba($color-dark-rgb, 1) 100%
+    );
+
+    z-index: 1;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+  }
+
   &__background {
-    background-color: #181919;
+    background-color: $color-dark-medium;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -84,7 +116,7 @@
         left: 0;
         background: linear-gradient(
           to bottom,
-          rgba($color-white-rgb, 0.05) 0%,
+          rgba($color-white-rgb, 0.05) 10%,
           rgba($color-dark-rgb, 0.99) 100%
         );
       }
