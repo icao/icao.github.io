@@ -6,7 +6,7 @@ export default {
 }
 
 export const Default = () => (
-  <Card urlImage="/photo04.jpeg" title="I am the long long title" />
+  <Card urlImage="/background_01.jpg" title="I am the long long title" />
 )
 
 const Template = (args) => <Card {...args} />
