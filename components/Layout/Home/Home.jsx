@@ -72,7 +72,7 @@ const Home = () => (
             <p>
               Me gusta implementar
               <span className={styles['color-enphasis']}>
-                {` diseños inovadores`}
+                {` diseños innovadores`}
               </span>
             </p>
           </div>

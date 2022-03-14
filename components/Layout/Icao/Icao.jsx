@@ -36,33 +36,33 @@ const Icao = () => (
         que estes aqui.
       </p>
       <p>
-        Dejame presentarme, mi nombre es <strong>I</strong>ldefonso{' '}
+        Déjame presentarme, mi nombre es <strong>I</strong>ldefonso{' '}
         <strong>C</strong>ésar <strong>A</strong>paricio <strong>O</strong>
         rozco, soy Mexicano y resido actualmente en la ciudad de México.
       </p>
       <p>
         Soy Front End Developer y amante del diseño, tengo pasión por
-        implementar UI modernas, sobre todo inovadoras. La curiosidad me alienta
-        a estar en continuo aprendizaje y me llevó a encontrar un área en el
-        desarrollo web, en la cual decidí empeñar mi talento.
+        implementar UI modernas, sobre todo innovadoras. La curiosidad me
+        alienta a estar en continuo aprendizaje y me llevó a encontrar un área
+        en el desarrollo web, en la cual decidí empeñar mi talento.
       </p>
       <p>
-        Me encanta lo que hago, me gusta involucrarme con personas de distintar
-        áreas y asi formar un pensamiento interdiciplinario, lo cual va de la
-        mano con la implementacion de software.
+        Me encanta lo que hago, me gusta involucrarme con personas de distintas
+        áreas y así formar un pensamiento interdisciplinario, lo cual va de la
+        mano con la implementación de software.
       </p>
       <p>
-        Cuando no programo, me gusta tomar fotografias, aun soy un fotografo
+        Cuando no programo, me gusta tomar fotografías, aun soy un fotógrafo
         amateur, me llaman las calles y las personas, por eso me gusta el estilo
         de street photography.
       </p>
       <p>
-        Me encanta escuchar musica para la ocasion, disfruto en hacerlo mientras
-        trabajo.
+        Me encanta escuchar música para la ocasión, disfruto hacerlo mientras
+        trabajo, inspira y ayuda a la consentración.
       </p>
       <p>
-        Y no dejo a un lado los videojuegos, confiezo que me gusta el universo
-        de World of Warcraft y Halo.
+        Y no dejo a un lado los videojuegos, de vez en cuando me gusta
+        sumergirme en el mundo gamer.
       </p>
 
       <p>

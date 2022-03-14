@@ -16,7 +16,7 @@ const Skills = () => (
       <li className={styles.skills__subtitle}>
         Front End Development
         <ul className={clsx(styles.skills__text, 'ul__emphasis--none')}>
-          <li>HTML 5</li>
+          <li>HTML 5 (Semántica y Accesibilidad)</li>
           <li>CSS3 (Grid Layout, Flexbox, Responsive Design, SVG Animation)</li>
           <li>Preprocessors CSS (SASS, SCSS)</li>
           <li>Arquitectura CSS (BEM, CSS Modules)</li>
@@ -30,7 +30,7 @@ const Skills = () => (
           <li>MetaFramework SSR (Nuxt, Next)</li>
           <li>Task Runners (Grunt, Gulp)</li>
           <li>Module Bundlers (Webpack, Parcel)</li>
-          <li>Git</li>
+          <li>Git (Workflows y Pull Request)</li>
         </ul>
       </li>
       <li className={styles.skills__subtitle}>
@@ -82,10 +82,9 @@ const Skills = () => (
       <li className={styles.skills__subtitle}>
         Profesionales
         <ul className={clsx(styles.skills__text, 'ul__emphasis--none')}>
-          <li>Visualizacion de datos</li>
+          <li>Visualización de datos</li>
           <li>Experiencia de usuario con accesibilidad</li>
           <li>Web scraping</li>
-          <li>Blockchain</li>
           <li>Internet of things</li>
           <li>Inteligencia Artificial</li>
         </ul>
@@ -97,7 +96,7 @@ const Skills = () => (
           <li>Viajar</li>
           <li>Música</li>
           <li>Museos</li>
-          <li>Caminatas para descubir cosas nuevas</li>
+          <li>Caminatas para descubrir cosas nuevas</li>
           <li>Videojuegos</li>
         </ul>
       </li>
