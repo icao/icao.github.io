@@ -13,13 +13,13 @@ const Experience = () => (
             <h4 className={styles.experience__role}>Product Engineer Junior</h4>
             <p className={styles.experience__place}>Thirty3</p>
             <p className={styles.experience__description}>
-              Desarrollo de aplicaciones web SSR(administracion de articulos,
+              Desarrollo de aplicaciones web SSR(administración de artículos,
               carrito de compra, manejo de sesión con JWT, creación de
-              componentes aparir de un sistema de diseño) y
+              componentes a partir de un sistema de diseño) y
               documentación(Storybook).
             </p>
             <p className={styles.experience__description}>
-              Integración de Front End con servicio Backend via RESTful
+              Integración de Front End con servicio Backend vía RESTful
               API&#39;s con JWT.
             </p>
             <p className={styles.experience__period}>Marzo 2021 - mayo 2021</p>
@@ -35,7 +35,7 @@ const Experience = () => (
             </p>
             <p className={styles.experience__description}>
               Creación de temas para VSCODE y Wox, desarrollo de software para
-              generació de los mismos como una mejora.
+              generación de los mismos como una mejora.
             </p>
             <p className={styles.experience__period}>
               September 2018 - Actualmente
@@ -48,13 +48,13 @@ const Experience = () => (
             <p className={styles.experience__place}>AMK Technologies </p>
             <p className={styles.experience__description}>
               Desarrollo de micrositios y aplicaciones internas (Dashboards,
-              administración de usuarios, mapas e informes). Inegración de Front
-              End con servicio Backend via RESTful API&#39;s.
+              administración de usuarios, mapas e informes). Integración de
+              Front End con servicio Backend vía RESTful API&#39;s.
             </p>
             <p className={styles.experience__description}>
               Creación de material educativo para el equipo de diseño sobre
               herramientas para la mejora del workflow entre el área de Front
-              End y Diseño, adicionalmente una capacitacion de CSS.
+              End y Diseño, adicionalmente una capacitación de CSS.
             </p>
             <p className={styles.experience__period}>
               October 2016 - September 2018
@@ -71,7 +71,7 @@ const Experience = () => (
             </p>
             <p className={styles.experience__description}>
               Monitoreo de aplicaciones de operaciones, soporte(mesa de ayuda) y
-              elaboracion de informes.
+              elaboración de informes.
             </p>
             <p className={styles.experience__period}>
               December 2015 – April 2016
@@ -83,7 +83,7 @@ const Experience = () => (
             <h4 className={styles.experience__role}>Webmaster / Developer</h4>
             <p className={styles.experience__place}> iDi Marketing </p>
             <p className={styles.experience__description}>
-              Creacion y diseño de sitios web para negocios locales en la Ciudad
+              Creación y diseño de sitios web para negocios locales en la Ciudad
               de México.
             </p>
             <p className={styles.experience__description}>
