@@ -20,7 +20,7 @@ const Skills = () => (
           <li>
             CSS3 (Grid Layout, Flexbox, Diseño responsivo, animación SVG,)
           </li>
-          <li>Proprocesadores CSS (SASS, SCSS)</li>
+          <li>Preprocesadores CSS (SASS, SCSS)</li>
           <li>Arquitectura CSS (BEM, CSS Modules)</li>
           <li>CSS Frameworks (Tailwind, Bulma, Bootstrap)</li>
           <li>JavaScript (ES6, Promises, Async/Await, Object patterns)</li>
