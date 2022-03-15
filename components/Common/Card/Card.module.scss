@@ -1,0 +1,194 @@
+@import '@styles/base/palette';
+@import '@styles/base/fonts';
+@import '@styles/utilities/keyframes';
+
+.card {
+  background-color: $color-dark;
+  transition: background-color 0.4s cubic-bezier(0.185, 0.85, 0.45, 1) 0s;
+  &:hover {
+    background-color: $color-dark-medium;
+    transition: background-color 0.4s cubic-bezier(0.185, 0.85, 0.45, 1) 0s;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+    }
+
+    &-container {
+      // width: 100%;
+      // height: inherit;
+      // object-fit: cover;
+      position: relative;
+      // ---------------------------------
+
+      width: 100%;
+
+      & > div,
+      span {
+        position: unset !important;
+      }
+
+      .image {
+        object-fit: contain;
+        width: 100% !important;
+        position: relative !important;
+        height: unset !important;
+      }
+    }
+  }
+
+  &__detail {
+    border-radius: 50%;
+    position: absolute;
+    background-color: $color-red-redbull;
+    z-index: 10;
+    transition: transform 2s cubic-bezier(0.185, 0.85, 0.45, 1) 0s;
+    transform: scale(0);
+  }
+
+  &__detail--animated {
+    transform: scale(3);
+  }
+
+  &__footer {
+    padding: 20px;
+    color: $color-white;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-family: $font-montserrat;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    margin: 0;
+    word-wrap: break-word;
+    line-height: 1.6;
+    &:hover {
+      color: $color-red-redbull;
+      cursor: pointer;
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    height: auto;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 2s cubic-bezier(0.185, 0.85, 0.45, 1) 0s,
+      opacity 1.3s cubic-bezier(0.185, 0.85, 0.1, 1) 0s;
+
+    &-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 20;
+    }
+
+    &--animated {
+      opacity: 1;
+      transform: translateY(0%);
+      transition: transform 2s cubic-bezier(0.185, 0.85, 0.45, 1) 0s,
+        opacity 2s cubic-bezier(0.185, 0.85, 0.1, 1) 0s;
+    }
+  }
+}
+
+.design__alternative {
+  &__filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-dark-rgb, 0.61);
+    background: linear-gradient(
+      to top,
+      rgba($color-dark-rgb, 0.6) 0%,
+      rgba($color-dark-rgb, 0.75) 100%
+    );
+
+    z-index: 5;
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 40px;
+    z-index: 11;
+
+    @media screen and (max-width: 992px) {
+      padding: 30px;
+    }
+
+    &:hover {
+      .design__alternative__view {
+        opacity: 1;
+        animation-name: fadeInDown;
+        animation-duration: 0.5s;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-montserrat;
+    font-size: 28px;
+    margin: 0;
+    z-index: 200;
+    font-weight: 700;
+    color: $color-white;
+  }
+
+  &__tags {
+    font-family: $font-montserrat;
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    font-weight: 300;
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: $color-white;
+  }
+
+  &__view {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+  }
+
+  &__p {
+    font-family: $font-montserrat;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-top: 20px;
+    color: $color-white;
+  }
+
+  &__arrow {
+    width: 25px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    margin-left: 10px;
+  }
+}
+
+// // TODO: agregar prop para disenio LTERNATIVO  LISTO
+// todo: STORYBOOK DE CARD DISENIO NUEVO
+// TODO: verificar congruencia de PADDINGS y TAMAÑOS DE FONTS y WEIGTH DE FONTS - TODO DEBE SER CONGRUENTE, FIJAR 3-4 espesores
+// todo: aGREGAR STORYBOOK DE TimelineMoment

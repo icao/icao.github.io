@@ -1,0 +1,183 @@
+@import '@styles/base/palette';
+@import '@styles/base/fonts';
+
+$arrow-dimension-before: 10px;
+$arrow-dimension-after: 9px;
+
+%border__container {
+  display: inline-block;
+  position: relative;
+  border: 1px solid $color-grey-dark;
+  padding: 20px 40px;
+  width: inherit;
+  background-color: $color-dark;
+  transition: all 0.7s cubic-bezier(0.185, 0.85, 0.45, 1) 0s;
+
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
+
+  &:hover {
+    border: 1px solid $color-red-redbull;
+
+    %dot {
+      background-color: $color-red-redbull;
+    }
+  }
+}
+
+%base__arrow {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  transition: border 0.7s cubic-bezier(0.185, 0.85, 0.45, 1) 0s;
+}
+
+%dot {
+  height: 10px;
+  width: 10px;
+  border: 2px solid $color-red-redbull;
+  position: absolute;
+  top: calc(50% - 5px);
+  background-color: $color-dark;
+  transition: all 0.7s cubic-bezier(0.185, 0.85, 0.45, 1) 0s;
+}
+
+.moment {
+  &__up-arrow {
+    @extend %border__container;
+
+    &:before {
+      @extend %base__arrow;
+
+      left: calc(50% - $arrow-dimension-before);
+      top: calc(-2 * $arrow-dimension-before);
+      border: $arrow-dimension-before solid transparent;
+      border-bottom-color: $color-grey-dark;
+    }
+
+    &:after {
+      @extend %base__arrow;
+
+      left: calc(50% - $arrow-dimension-after);
+      top: calc(-2 * $arrow-dimension-after + 0.5px);
+      border: $arrow-dimension-after solid transparent;
+      border-bottom-color: $color-dark;
+    }
+
+    &:hover {
+      &:before {
+        border-bottom-color: $color-red-redbull;
+      }
+    }
+  }
+
+  &__left-arrow {
+    @extend %border__container;
+    margin-top: 70px;
+
+    @media screen and (max-width: 992px) {
+      margin-top: 0px;
+    }
+
+    &:before {
+      @extend %base__arrow;
+
+      left: calc(-2 * $arrow-dimension-before);
+      top: calc(50% - $arrow-dimension-before);
+      border: $arrow-dimension-before solid transparent;
+      border-right-color: $color-grey-dark;
+    }
+
+    &:after {
+      @extend %base__arrow;
+
+      left: calc(-2 * $arrow-dimension-after + 0.5px);
+      top: calc(50% - $arrow-dimension-after);
+      border: $arrow-dimension-after solid transparent;
+      border-right-color: $color-dark;
+    }
+
+    &:hover {
+      &:before {
+        border-right-color: $color-red-redbull;
+      }
+    }
+  }
+
+  &__down-arrow {
+    @extend %border__container;
+
+    &:before {
+      @extend %base__arrow;
+
+      left: calc(50% - $arrow-dimension-before);
+      bottom: calc(-2 * $arrow-dimension-before);
+      border: $arrow-dimension-before solid transparent;
+      border-top-color: $color-grey-dark;
+    }
+
+    &:after {
+      @extend %base__arrow;
+
+      left: calc(50% - $arrow-dimension-after);
+      bottom: calc(-2 * $arrow-dimension-after + 0.5px);
+      border: $arrow-dimension-after solid transparent;
+      border-top-color: $color-dark;
+    }
+
+    &:hover {
+      &:before {
+        border-top-color: $color-red-redbull;
+      }
+    }
+  }
+
+  &__right-arrow {
+    @extend %border__container;
+
+    &:before {
+      @extend %base__arrow;
+
+      right: calc(-2 * $arrow-dimension-before);
+      top: calc(50% - $arrow-dimension-before);
+      border: $arrow-dimension-before solid transparent;
+      border-left-color: $color-grey-dark;
+    }
+
+    &:after {
+      @extend %base__arrow;
+
+      right: calc(-2 * $arrow-dimension-after + 1px);
+      top: calc(50% - $arrow-dimension-after);
+      border: $arrow-dimension-after solid transparent;
+      border-left-color: $color-dark;
+    }
+
+    &:hover {
+      &:before {
+        border-left-color: $color-red-redbull;
+      }
+    }
+  }
+
+  &__dot--left {
+    @extend %dot;
+    left: calc(-41px);
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__dot--right {
+    @extend %dot;
+    right: calc(-41px);
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+}

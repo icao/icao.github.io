@@ -1,0 +1,62 @@
+@import '@styles/base/palette';
+@import '@styles/base/fonts';
+@import '@styles/utilities/utils';
+
+.icao {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 500px), 1fr));
+  grid-gap: 3em;
+
+  p {
+    font-family: $font-poppins;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $color-grey-regular;
+  }
+
+  &__profile-photo {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    @extend .center-full;
+    flex-direction: column;
+  }
+
+  &__photo {
+    width: 50vmin;
+    height: 50vmin;
+    width: calc(50vmin - 5vw);
+    height: calc(50vmin - 5vw);
+    border-radius: 50%;
+    overflow: hidden;
+    @extend .center-full;
+  }
+
+  &__name {
+    margin: 50px 0 0 0;
+    font-family: $font-montserrat;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  &__title {
+    margin: 1.5em 0;
+    font-family: $font-montserrat;
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  &__icon {
+    width: 22px;
+    height: auto;
+  }
+
+  &__about {
+  }
+}

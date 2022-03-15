@@ -1,0 +1,136 @@
+// MEDIA QUERY
+
+@media screen and (max-width: 1200px) and (max-height: 1000px) and (orientation: landscape) {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (max-height: 550px) and (orientation: landscape) {
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  &-fluid {
+    max-width: none;
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 100%;
+  }
+}
+
+.section {
+  padding: 180px 0 40px 0;
+
+  @media screen and (max-width: 992px) {
+    padding: 150px 0 40px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 120px 0 30px 0;
+  }
+
+  &__title {
+    margin-bottom: 100px;
+  }
+
+  &--last {
+    padding: 180px 0;
+
+    @media screen and (max-width: 992px) {
+      padding: 150px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 120px 0;
+    }
+  }
+}
+
+// Menor 0 - 576
+@media screen and (max-width: 576px) {
+  .container {
+    // background-color: #ff7f164d;
+  }
+}
+
+// Hasta 577 - 768
+@media screen and (min-width: 577px) {
+  .container {
+    // background-color: #edbfff2d;
+    max-width: 540px; // 30px
+  }
+}
+
+// Hasta 768 - 992
+@media screen and (min-width: 768px) {
+  .container {
+    // background-color: #c42fff1a;
+    max-width: 720px; // 40px
+  }
+}
+
+// Hasta 992 - 1200
+@media screen and (min-width: 992px) {
+  .container {
+    // background-color: #e2fa082c;
+    max-width: 960px; //30px
+  }
+}
+
+// Hasta 1200 - 1820
+@media screen and (min-width: 1200px) {
+  .container {
+    // background-color: #ff00001a;
+    max-width: 1140px; // 60px
+  }
+}
+
+// Hasta adelante de 1820 - 2k = FullHD
+@media screen and (min-width: 1820px) {
+  .container {
+    // background-color: #2041ff1a;
+    max-width: 1200px;
+  }
+}
+
+// Hasta adelante de 2k - 4k
+@media screen and (min-width: 2060px) {
+  .container {
+    // background-color: #efeef71a;
+    max-width: 1400px;
+  }
+}
+
+// Hasta adelante de 4k - infinito
+@media screen and (min-width: 3840px) {
+  .container {
+    // background-color: #45d6fa1a;
+    max-width: 1400px;
+  }
+}
+
+.collection {
+  width: 100%;
+  height: auto;
+  display: grid;
+  gap: 2em;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+
+  grid-template-rows: masonry; // Cuando los navegadores lo soporten, se pondra en masonry auomaticamente
+}
+
+.grid {
+  display: grid;
+}
