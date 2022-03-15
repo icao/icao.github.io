@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import photoImage from '@public/images/photo_01.jpg'
+import photoImage from '@public/images/me.jpg'
 import styles from './Icao.module.scss'
 
 const Icao = () => (
