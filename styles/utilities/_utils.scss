@@ -115,7 +115,13 @@
   padding: 1em 2.5em;
   border: 2px solid $color-red-redbull;
   display: inline-block;
+  text-align: center;
   &:hover {
+    background-color: $color-red-redbull;
+    color: $color-white;
+  }
+
+  &--focus {
     background-color: $color-red-redbull;
     color: $color-white;
   }

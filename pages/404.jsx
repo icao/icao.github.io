@@ -37,6 +37,7 @@ export default function Custom404() {
         src={background}
         layout="fill"
         objectFit="cover"
+        placeholder="blur"
       />
       <div style={textContainer}>
         <h1 style={text}>404</h1>

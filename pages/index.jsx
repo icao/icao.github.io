@@ -51,7 +51,7 @@ export default function Index() {
           name="description"
           content="I am a Front End Developer and Design Lover"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
         <meta name="theme-color" content="#141414" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
