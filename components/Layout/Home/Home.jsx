@@ -11,7 +11,6 @@ const Home = () => (
   <section
     id="home"
     className={styles.home}
-    // style={{ backgroundImage: `url('/images/bg3.jpg')` }}
     style={{ backgroundImage: `url('/images/bg3.webp')` }}
   >
     <div className={styles.home__content}>

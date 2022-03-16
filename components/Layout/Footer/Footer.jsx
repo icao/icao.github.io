@@ -19,7 +19,7 @@ const Footer = () => (
               // layout="fill"
               // width="250"
               // height="100"
-              // className={styles.img}
+              className="next__image--responsive"
               placeholder="blur"
             />
           </div>
