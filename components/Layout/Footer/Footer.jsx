@@ -15,11 +15,12 @@ const Footer = () => (
           <div className={styles['footer__image-container']}>
             <Image
               src={logoFooter}
+              alt="Logo ICAO"
               // layout="fill"
               // width="250"
               // height="100"
               // className={styles.img}
-              // objectFit="cover"
+              placeholder="blur"
             />
           </div>
           <h3 className={styles.footer__title}>Front End Developer</h3>
