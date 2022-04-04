@@ -107,4 +107,3 @@ export default [
     link: 'https://github.com/icao/wox-themes',
   },
 ]
-
