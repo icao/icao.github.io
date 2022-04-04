@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Card from '@components/Common/Card/Card'
 import Modal from '@components/Common/Modal/Modal'
@@ -9,15 +9,41 @@ import styles from './Projects.module.scss'
 function Projects() {
   const [isOpenModal, setIsOpenModal] = useState(false)
   const [modalContent, setModalContent] = useState(null)
+  const [projectsFormated, setProjectsFormated] = useState([])
 
-  const generateModal = (urlImage, title, paragraphs, technologies, link) => {
+  const getProjectsFormated = async () => {
+    const newFormatPromise = projects.map(async (project) => {
+      const moduleImage = await import(`@public/images/${project.urlImage}`)
+      return { ...project, moduleImage: moduleImage.default }
+    })
+    // Espera todas las promesas
+    const newProjects = await Promise.all(newFormatPromise)
+    // Envia al estado ls nueva lista de projectos con la nueva propiedad de moduleImage
+    setProjectsFormated(newProjects)
+    // return newProjects
+  }
+
+  useEffect(() => {
+    // Function to format the url images, to use with Next/Imagee
+    getProjectsFormated()
+  }, [])
+
+  const generateModal = (
+    moduleImage,
+    title,
+    paragraphs,
+    technologies,
+    link
+  ) => {
     setModalContent(
       <div className={styles.detail__container}>
         <div className={('next__image-container', styles.detail__image)}>
           <Image
-            src={urlImage}
+            src={moduleImage.src}
             layout="fill"
             className="next__image--cover-top"
+            placeholder="blur"
+            blurDataURL={moduleImage.blurDataURL}
           />
         </div>
         <div className={styles.detail__content}>
@@ -62,10 +88,10 @@ function Projects() {
     <>
       {isOpenModal && <Modal showModal={setIsOpenModal}>{modalContent}</Modal>}
       <section className="collection">
-        {projects.map(
+        {projectsFormated.map(
           ({
             id,
-            urlImage,
+            moduleImage,
             title,
             type,
             descriptions: { paragraphs, technologies },
@@ -75,12 +101,18 @@ function Projects() {
               key={id}
               onClick={() => {
                 setIsOpenModal(true)
-                generateModal(urlImage, title, paragraphs, technologies, link)
+                generateModal(
+                  moduleImage,
+                  title,
+                  paragraphs,
+                  technologies,
+                  link
+                )
               }}
               aria-hidden="true"
             >
               <Card
-                urlImage={urlImage}
+                moduleImage={moduleImage}
                 title={title}
                 tag={type}
                 designAlternative

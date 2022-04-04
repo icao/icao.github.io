@@ -64,9 +64,7 @@ export default function Index() {
           rel="stylesheet"
         />
       </Head>
-
       <Header transparent={isFooterIntersected} />
-
       <main>
         <Home />
 
@@ -150,7 +148,6 @@ export default function Index() {
           </div>
         </Hero>
       </main>
-
       <div ref={refFooter}>
         <Footer />
       </div>
