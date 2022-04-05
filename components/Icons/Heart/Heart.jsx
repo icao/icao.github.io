@@ -8,7 +8,6 @@ const Heart = ({ color, hoverColor }) => {
     <span style={{ width: '100%', height: 'auto', display: 'flex' }}>
       <svg
         aria-hidden="true"
-        role="img"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
         ref={refElement}
