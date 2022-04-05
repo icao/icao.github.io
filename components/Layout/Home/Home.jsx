@@ -4,7 +4,7 @@ import Github from '@components/Icons/Github/Github'
 import Linkedin from '@components/Icons/Linkedin/Linkedin'
 import Link from 'next/link'
 import Image from 'next/image'
-import backgroundImage from '@public/images/background.jpg'
+import backgroundImage from '@public/images/background.webp'
 import styles from './Home.module.scss'
 
 const Home = () => (
