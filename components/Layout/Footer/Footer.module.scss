@@ -23,12 +23,19 @@
     &-container {
       position: relative;
       width: 100%;
-      max-width: 200px;
-      height: auto;
+      max-width: 200px; // FIXME:
+      height: auto; // FIXME:
 
       & > div,
       span {
         position: unset !important;
+      }
+
+      .image {
+        object-fit: contain;
+        width: 100% !important;
+        position: relative !important;
+        height: unset !important;
       }
     }
   }
