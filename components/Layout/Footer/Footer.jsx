@@ -49,10 +49,10 @@ const Footer = () => (
           </div>
           <p className={styles.footer__copyright}>
             Diseño & Desarrollo hecho con
-            <span className={styles['footer__heart-icon']}>
+            <i className={styles['footer__heart-icon']}>
               <Heart color="#ff3366" hoverColor="#ff3366" />
-            </span>
-            por <b>icao</b> en CDMX, México.
+            </i>
+            por <strong>icao</strong> en CDMX, México.
             <br />
             <br />
             icao © Copyright 2022.
