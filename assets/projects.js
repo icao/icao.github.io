@@ -1,7 +1,7 @@
 export default [
   {
     id: 'ICAO01',
-    urlImage: '/images/amk.jpeg',
+    urlImage: 'amk.jpeg',
     title: 'AMK Technologies',
     type: 'Sitio Web',
     descriptions: {
@@ -16,7 +16,7 @@ export default [
   },
   {
     id: 'ICAO02',
-    urlImage: '/images/twt.jpeg',
+    urlImage: 'twt.jpeg',
     title: 'The World Times',
     type: 'Aplicación Web',
     descriptions: {
@@ -36,7 +36,7 @@ export default [
   },
   {
     id: 'ICAO03',
-    urlImage: '/images/bm.jpeg',
+    urlImage: 'bm.jpeg',
     title: 'Browser Movies',
     type: 'Aplicación Web',
     descriptions: {
@@ -52,7 +52,7 @@ export default [
   },
   {
     id: 'ICAO04',
-    urlImage: '/images/evently.jpeg',
+    urlImage: 'evently.jpeg',
     title: 'Evently',
     type: 'Aplicación Web',
     descriptions: {
@@ -68,7 +68,7 @@ export default [
   },
   {
     id: 'ICAO05',
-    urlImage: '/images/codepen.jpeg',
+    urlImage: 'codepen.jpeg',
     title: 'CODEPEN',
     type: 'Open Source',
     descriptions: {
@@ -81,7 +81,7 @@ export default [
   },
   {
     id: 'ICAO06',
-    urlImage: '/images/vscode.jpeg',
+    urlImage: 'vscode.jpeg',
     title: 'VSCode Themes',
     type: 'Open Source',
     descriptions: {
@@ -95,7 +95,7 @@ export default [
   },
   {
     id: 'ICAO07',
-    urlImage: '/images/wox.png',
+    urlImage: 'wox.png',
     title: 'Jeeves - Theme for WOX launcher',
     type: 'Open Source',
     descriptions: {

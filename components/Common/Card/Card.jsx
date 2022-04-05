@@ -11,7 +11,7 @@ const initialPosition = {
   positionDetailY: null,
 }
 
-const Card = ({ urlImage, title, tag, designAlternative }) => {
+const Card = ({ moduleImage, title, tag, designAlternative }) => {
   const cardDetail = useRef(null)
 
   const [isHover, setIsHover] = useState(false)
@@ -57,10 +57,12 @@ const Card = ({ urlImage, title, tag, designAlternative }) => {
       <div className={styles.card__image} ref={cardDetail}>
         <div className={styles['card__image-container']}>
           <Image
-            src={urlImage}
+            src={moduleImage.src}
             layout="fill"
             className={styles.image}
             objectFit="contain"
+            placeholder="blur"
+            blurDataURL={moduleImage.blurDataURL}
           />
         </div>
         <div
@@ -118,7 +120,10 @@ Card.defaultProps = {
 }
 
 Card.propTypes = {
-  urlImage: PropTypes.string.isRequired,
+  moduleImage: PropTypes.shape({
+    blurDataURL: PropTypes.string,
+    src: PropTypes.string,
+  }).isRequired,
   title: PropTypes.string.isRequired,
   tag: PropTypes.string,
   designAlternative: PropTypes.bool,
