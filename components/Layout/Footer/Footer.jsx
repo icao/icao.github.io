@@ -17,13 +17,8 @@ const Footer = () => (
               src={logoFooter}
               alt="Logo ICAO"
               layout="fill"
-              // width="250"
-              // height="100"
-              // className="next__image--responsive" //TODO: yaestaba
-              // className={styles.image}
               className={styles.footer__image}
               placeholder="blur"
-              // objectFit="cover
             />
           </div>
           <h3 className={styles.footer__title}>Front End Developer</h3>
