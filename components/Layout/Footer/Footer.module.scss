@@ -23,19 +23,12 @@
     &-container {
       position: relative;
       width: 100%;
-      max-width: 200px; // FIXME:
-      height: auto; // FIXME:
+      max-width: 200px; // FIXME: Cuando cambies el logo
+      height: auto; // FIXME: Cuando cambies el logo
 
       & > div,
       span {
         position: unset !important;
-      }
-
-      .image {
-        object-fit: contain;
-        width: 100% !important;
-        position: relative !important;
-        height: unset !important;
       }
     }
   }
