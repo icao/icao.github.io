@@ -16,10 +16,11 @@
   Posible problema de storybook cuando carga por primera vez el componente home, 
   no encuentra el recurso.
   */
-  background-size: cover;
-  background-position: center;
-  background-position: bottom;
-  background-attachment: fixed;
+  //TODO: validar en el storybook
+  // Por si en un futuro se quiere reutilizar el background fijo parallax, en clase css
+  // background-size: cover;
+  // background-position: bottom;
+  // background-attachment: fixed;
 
   animation-name: fadeIn;
   animation-duration: 2.5s;

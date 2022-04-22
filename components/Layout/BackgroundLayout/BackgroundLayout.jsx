@@ -2,8 +2,13 @@ import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './BackgroundLayout.module.scss'
 
-const BackgroundLayout = ({ src, children }) => {
-  const [source, setSource] = useState('/images/for-test.jpg')
+const BackgroundLayout = ({
+  src,
+  placeholderBlur,
+  children,
+  backgroundPositionBottom,
+}) => {
+  const [source, setSource] = useState(placeholderBlur)
 
   useEffect(() => {
     const img = new Image()
@@ -13,21 +18,26 @@ const BackgroundLayout = ({ src, children }) => {
 
   return (
     <div
-      style={{ backgroundImage: `url(${source})` }}
+      style={{
+        backgroundImage: `url(${source})`,
+        backgroundPosition: backgroundPositionBottom && 'bottom',
+      }}
       className={styles.layout}
     >
-      {children}{' '}
+      {children}
     </div>
   )
 }
 
 BackgroundLayout.defaultProps = {
-  src: '/images/background_test.jpg',
+  backgroundPositionBottom: false,
 }
 
 BackgroundLayout.propTypes = {
-  src: PropTypes.string,
+  src: PropTypes.string.isRequired,
+  placeholderBlur: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  backgroundPositionBottom: PropTypes.bool,
 }
 
 export default BackgroundLayout
