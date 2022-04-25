@@ -11,6 +11,7 @@ import Icao from '@components/Layout/Icao/Icao'
 import Skills from '@components/Layout/Skills/Skills'
 import Experience from '@components/Layout/Experience/Experience'
 import CvBanner from '@components/Layout/CvBanner/CvBanner'
+// import Card from '@components/Common/Card/Card'
 
 export default function Index() {
   const refFooter = useRef(null)
@@ -67,7 +68,6 @@ export default function Index() {
       <Header transparent={isFooterIntersected} />
       <main>
         <Home />
-
         <div id="icao">
           <div className="container ">
             <section className="section">
@@ -86,6 +86,42 @@ export default function Index() {
         {/* <Hero>
           <div className="container">
             <Legend text="Cuando yo cambio, el mundo cambia" center />
+          </div>
+        </Hero> */}
+
+        {/* TODO: FUNCIONAN LOS 3 */}
+        {/* FIXME: en storybook no  funcionan, revisar porque no funciona cuando se resuelvael bug de la integracion de storybook con next ó haya mas informacion */}
+        {/* FIXME: REVISAR PERIODICAMENTE PARA DARLE SOLUCION */}
+        {/* <Hero>
+          <div
+            className="container"
+            style={{
+              display: 'flex',
+              gap: '50px',
+            }}
+          >
+            <div style={{ flex: '1' }}>
+              <Card
+                urlExternalImage="/images/me.jpg"
+                title="im before"
+                isURLExternal
+              />
+            </div>
+            <div style={{ flex: '1' }}>
+              <Card
+                urlExternalImage="https://images.pexels.com/photos/9749273/pexels-photo-9749273.jpeg"
+                title="im before"
+                isURLExternal
+              />
+            </div>
+            <div style={{ flex: '1' }}>
+              <Card
+                urlExternalImage="https://images.pexels.com/photos/9749273/pexels-photo-9749273.jpeg"
+                title="im before"
+                isURLExternal
+                designAlternative
+              />
+            </div>
           </div>
         </Hero> */}
 

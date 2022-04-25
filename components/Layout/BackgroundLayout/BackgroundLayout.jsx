@@ -6,7 +6,7 @@ const BackgroundLayout = ({
   src,
   placeholderBlur,
   children,
-  backgroundPositionBottom,
+  backgroundPosition,
 }) => {
   const [source, setSource] = useState(placeholderBlur)
 
@@ -20,7 +20,7 @@ const BackgroundLayout = ({
     <div
       style={{
         backgroundImage: `url(${source})`,
-        backgroundPosition: backgroundPositionBottom && 'bottom',
+        backgroundPosition,
       }}
       className={styles.layout}
     >
@@ -30,14 +30,14 @@ const BackgroundLayout = ({
 }
 
 BackgroundLayout.defaultProps = {
-  backgroundPositionBottom: false,
+  backgroundPosition: 'center',
 }
 
 BackgroundLayout.propTypes = {
   src: PropTypes.string.isRequired,
   placeholderBlur: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
-  backgroundPositionBottom: PropTypes.bool,
+  backgroundPosition: PropTypes.string,
 }
 
 export default BackgroundLayout

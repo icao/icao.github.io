@@ -6,6 +6,7 @@ const CvBanner = () => (
   <BackgroundLayout
     src="/images/bg_cv_banner.webp"
     placeholderBlur="/images/bg_cv_banner_placeholder.webp"
+    backgroundPosition="top"
   >
     <div className={styles.banner}>
       <div className={styles.banner__filter}>

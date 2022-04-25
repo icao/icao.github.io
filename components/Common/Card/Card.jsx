@@ -11,7 +11,14 @@ const initialPosition = {
   positionDetailY: null,
 }
 
-const Card = ({ moduleImage, title, tag, designAlternative }) => {
+const Card = ({
+  moduleImage,
+  title,
+  tag,
+  designAlternative,
+  urlExternalImage,
+  isURLExternal,
+}) => {
   const cardDetail = useRef(null)
 
   const [isHover, setIsHover] = useState(false)
@@ -56,14 +63,24 @@ const Card = ({ moduleImage, title, tag, designAlternative }) => {
     <div className={styles.card}>
       <div className={styles.card__image} ref={cardDetail}>
         <div className={styles['card__image-container']}>
-          <Image
-            src={moduleImage.src}
-            layout="fill"
-            className={styles.image}
-            objectFit="contain"
-            placeholder="blur"
-            blurDataURL={moduleImage.blurDataURL}
-          />
+          {!isURLExternal ? (
+            <Image
+              src={moduleImage.src}
+              layout="fill"
+              className={styles.image}
+              objectFit="contain"
+              placeholder="blur"
+              blurDataURL={moduleImage.blurDataURL}
+            />
+          ) : (
+            <Image
+              src={urlExternalImage}
+              layout="fill"
+              className={styles.image}
+              objectFit="contain"
+              // placeholder="blur" No se genera el efecto blur sin un link que fue importado dinamicamente con import
+            />
+          )}
         </div>
         <div
           className={clsx(styles.card__detail, {
@@ -115,18 +132,26 @@ const Card = ({ moduleImage, title, tag, designAlternative }) => {
 }
 
 Card.defaultProps = {
+  moduleImage: {
+    blurDataURL: null,
+    src: null,
+  },
   tag: null,
   designAlternative: false,
+  urlExternalImage: null,
+  isURLExternal: false,
 }
 
 Card.propTypes = {
   moduleImage: PropTypes.shape({
     blurDataURL: PropTypes.string,
     src: PropTypes.string,
-  }).isRequired,
+  }),
   title: PropTypes.string.isRequired,
   tag: PropTypes.string,
   designAlternative: PropTypes.bool,
+  urlExternalImage: PropTypes.string,
+  isURLExternal: PropTypes.bool,
 }
 
 export default Card

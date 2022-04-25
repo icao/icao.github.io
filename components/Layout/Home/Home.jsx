@@ -12,7 +12,7 @@ const Home = () => (
   <BackgroundLayout
     src="/images/bg_home.webp"
     placeholderBlur="/images/bg_home_placeholder.webp"
-    backgroundPositionBottom
+    backgroundPosition="bottom"
   >
     <section id="home" className={styles.home}>
       <div className={styles.home__content}>
