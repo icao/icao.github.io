@@ -30,5 +30,6 @@ module.exports = {
 
     return config
   },
+  // Nueva forma de disponer los estaticos
   staticDirs: ['../public', '../public/images'],
 }

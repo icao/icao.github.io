@@ -3,12 +3,13 @@
 @import '@styles/utilities/utils';
 
 .footer {
-  background-image: url('/images/background_04.webp');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  width: 100%;
-  height: 100%;
+  // Por si en un futuro se quiere reutilizar el background fijo parallax, en clase css
+  // background-image: url('/images/background_04.webp');
+  // background-size: cover;
+  // background-position: center;
+  // background-attachment: fixed;
+  // width: 100%;
+  // height: 100%;
 
   &__filtro-background {
     background-color: rgba($color-dark-intense-rgb, 0.2);

@@ -3,7 +3,11 @@ import BackgroundLayout from '@components/Layout/BackgroundLayout/BackgroundLayo
 import styles from './CvBanner.module.scss'
 
 const CvBanner = () => (
-  <BackgroundLayout>
+  <BackgroundLayout
+    src="/images/bg_cv_banner.webp"
+    placeholderBlur="/images/bg_cv_banner_placeholder.webp"
+    backgroundPosition="top"
+  >
     <div className={styles.banner}>
       <div className={styles.banner__filter}>
         <div className="container">
