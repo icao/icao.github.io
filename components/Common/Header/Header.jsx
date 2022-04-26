@@ -64,8 +64,9 @@ const Header = ({ transparent }) => {
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: `${refHeader.current.offsetHeight * -1}px 0px`,
-      threshold: 0.15, // FIXME: ajustarme al final del proyecto, dependo del height de cada seccion
+      rootMargin: `${refHeader.current.offsetHeight * -1}px 0px -20% 0px`,
+      // INFO: threshold es el porcentaje del contenido del target observado en el momento, puede variar si el target tiene altura dinamica(chcia o muy alta) porque se calcula en porcentajes del elemento observado.
+      threshold: [0.15, 0.5],
     }
 
     menuItems.forEach((item) => {
