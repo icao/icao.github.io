@@ -8,7 +8,7 @@ const BackgroundLayout = ({
   children,
   backgroundPosition,
 }) => {
-  const [source, setSource] = useState('')
+  const [source, setSource] = useState(undefined)
   const refBgLayout = useRef(null)
   const [isBgLoaded, setIsBgLoaded] = useState(false)
 
@@ -68,10 +68,16 @@ const BackgroundLayout = ({
   return (
     <div
       ref={refBgLayout}
-      style={{
-        backgroundImage: `url(${source})`,
-        backgroundPosition,
-      }}
+      style={
+        source !== undefined
+          ? {
+              backgroundImage: `url(${source})`,
+              backgroundPosition,
+            }
+          : {
+              backgroundPosition,
+            }
+      }
       className={styles.layout}
     >
       {children}
