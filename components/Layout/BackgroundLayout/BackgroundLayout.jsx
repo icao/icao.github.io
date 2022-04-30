@@ -69,7 +69,7 @@ const BackgroundLayout = ({
     <div
       ref={refBgLayout}
       style={{
-        backgroundImage: `url(${source})dsd`,
+        backgroundImage: `url(${source})`,
         backgroundPosition,
       }}
       className={styles.layout}
