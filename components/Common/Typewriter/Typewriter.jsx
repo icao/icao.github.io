@@ -16,7 +16,6 @@ const Typewriter = ({ options, children }) => {
   return (
     <>
       <div ref={element} style={{ display: 'inline' }} />
-
       {children}
     </>
   )
