@@ -1,4 +1,7 @@
+@import '@styles/base/palette';
+
 .layout {
+  background-color: $color-grey-darker;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
