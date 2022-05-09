@@ -55,4 +55,6 @@ Typewriter.defaultProps = {
   children: null,
 }
 
+// check te Documentation of typed.js for more configuration options: https://github.com/mattboldt/typed.js/
+
 export default Typewriter
