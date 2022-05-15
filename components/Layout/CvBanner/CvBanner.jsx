@@ -32,7 +32,7 @@ const CvBanner = () => (
                 DESCARGAR CV
               </a>
             </Link>
-            <Link href="mailto:clark012389@hotmail.com" passHref>
+            <Link href="mailto:cesar.aparicio.icao@outlook.com" passHref>
               <a
                 href="replace"
                 title="Enviame un correo"

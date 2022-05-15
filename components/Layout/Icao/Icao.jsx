@@ -19,7 +19,7 @@ const Icao = () => (
       </div>
       <h2 className={styles.icao__name}>Ildefonso César Aparicio Orozco</h2>
       <h3 className={styles.icao__title}>Front End Developer</h3>
-      <Link href="mailto:clark012389@hotmail.com" passHref>
+      <Link href="mailto:cesar.aparicio.icao@outlook.com" passHref>
         <a
           href="replace"
           title="Enviame un correo"

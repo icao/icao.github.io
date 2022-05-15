@@ -20,9 +20,9 @@ const Experience = () => (
             </p>
             <p className={styles.experience__description}>
               Integración de Front End con servicio Backend vía RESTful
-              API&#39;s con JWT.
+              API&#39;s.
             </p>
-            <p className={styles.experience__period}>Marzo 2021 - mayo 2021</p>
+            <p className={styles.experience__period}>Marzo 2021 - Mayo 2021</p>
           </TimelineMoment>
         </div>
         <div className={styles.experience__item}>
@@ -38,7 +38,7 @@ const Experience = () => (
               generación de los mismos como una mejora.
             </p>
             <p className={styles.experience__period}>
-              September 2018 - Actualmente
+              Septiembre 2018 - Actualmente
             </p>
           </TimelineMoment>
         </div>
@@ -57,7 +57,7 @@ const Experience = () => (
               End y Diseño, adicionalmente una capacitación de CSS.
             </p>
             <p className={styles.experience__period}>
-              October 2016 - September 2018
+              Octubre 2016 - Septiembre 2018
             </p>
           </TimelineMoment>
         </div>
@@ -74,7 +74,7 @@ const Experience = () => (
               elaboración de informes.
             </p>
             <p className={styles.experience__period}>
-              December 2015 – April 2016
+              Diciembre 2015 – Abril 2016
             </p>
           </TimelineMoment>
         </div>
@@ -91,7 +91,7 @@ const Experience = () => (
               WordPress.
             </p>
             <p className={styles.experience__period}>
-              December 2012 – December 2014
+              Diciembre 2012 – Diciembre 2014
             </p>
           </TimelineMoment>
         </div>
