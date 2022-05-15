@@ -99,7 +99,7 @@ const Home = () => (
             </Link>
           </div>
           <div className={styles['social-network__icon']}>
-            <Link href="https://www.linkedin.com/in/cesaricao/" passHref>
+            <Link href="https://www.linkedin.com/in/icao" passHref>
               <a href="replace" target="_blank" rel="noopener noreferrer">
                 <Linkedin color="#e7eeff" hoverColor="#ff3366" />
               </a>

@@ -17,9 +17,7 @@ const Skills = () => (
         Front End Development
         <ul className={clsx(styles.skills__text, 'ul__emphasis--none')}>
           <li>HTML 5 (Semántica y Accesibilidad)</li>
-          <li>
-            CSS3 (Grid Layout, Flexbox, Diseño responsivo, animación SVG,)
-          </li>
+          <li>CSS3 (Grid Layout, Flexbox, Diseño responsivo, animación SVG)</li>
           <li>Preprocesadores CSS (SASS, SCSS)</li>
           <li>Arquitectura CSS (BEM, CSS Modules)</li>
           <li>CSS Frameworks (Tailwind, Bulma, Bootstrap)</li>

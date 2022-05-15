@@ -43,7 +43,7 @@ const Footer = () => (
                 </Link>
               </div>
               <div className={styles['footer__social-network-icon']}>
-                <Link href="https://www.linkedin.com/in/cesaricao/" passHref>
+                <Link href="https://www.linkedin.com/in/icao" passHref>
                   <a href="replace" target="_blank" rel="noopener noreferrer">
                     <Linkedin color="#e7eeff" hoverColor="#ff3366" />
                   </a>
