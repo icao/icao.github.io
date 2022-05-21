@@ -13,9 +13,9 @@ const Experience = () => (
             <h4 className={styles.experience__role}>Product Engineer Junior</h4>
             <p className={styles.experience__place}>Thirty3</p>
             <p className={styles.experience__description}>
-              Desarrollo de aplicaciones web SSR(administración de artículos,
-              carrito de compra, manejo de sesión con JWT, creación de
-              componentes a partir de un sistema de diseño) y
+              Desarrollo de aplicaciones web SSR(landing pages, administración
+              de artículos, carrito de compra, manejo de sesión con JWT,
+              creación de componentes a partir de un sistema de diseño) y
               documentación(Storybook).
             </p>
             <p className={styles.experience__description}>
@@ -31,11 +31,12 @@ const Experience = () => (
               Freelance Front End Developer y Open Source
             </h4>
             <p className={styles.experience__description}>
-              Desarrollo de sitios web para negocios pequeños.
+              Desarrollo de sitios web para pequeños negocios(landing pages,
+              sitios web con múltiples páginas).
             </p>
             <p className={styles.experience__description}>
-              Creación de temas para VSCODE y Wox, desarrollo de software para
-              generación de los mismos como una mejora.
+              Creación de temas para VSCode y Wox Launcher. Generador de temas
+              para VSCode.
             </p>
             <p className={styles.experience__period}>
               Septiembre 2018 - Actualmente
@@ -47,14 +48,16 @@ const Experience = () => (
             <h4 className={styles.experience__role}>Front End Developer</h4>
             <p className={styles.experience__place}>AMK Technologies </p>
             <p className={styles.experience__description}>
-              Desarrollo de micrositios y aplicaciones internas (Dashboards,
-              administración de usuarios, mapas e informes). Integración de
-              Front End con servicio Backend vía RESTful API&#39;s.
+              Desarrollo de micrositios, landing pages y aplicaciones
+              internas(Dashboards, administración de usuarios, mapas e
+              informes). Integración de Front End con servicio Backend vía
+              RESTful API&#39;s.
             </p>
             <p className={styles.experience__description}>
-              Creación de material educativo para el equipo de diseño sobre
-              herramientas para la mejora del workflow entre el área de Front
-              End y Diseño, adicionalmente una capacitación de CSS.
+              Creación de material educativo sobre herramientas de
+              prototipado(Zeplin, In Vision) para la mejora del workflow entre
+              el área de Front End y Diseño. Capacitación de CSS al equipo de
+              diseño.
             </p>
             <p className={styles.experience__period}>
               Octubre 2016 - Septiembre 2018
