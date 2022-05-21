@@ -18,8 +18,6 @@ const CvBanner = () => (
           </p>
           <br />
           <div className={styles.banner__buttons}>
-            {/* TODO: AGREGAR CV DEFINITIVO */}
-            {/* TODO: sacar fotografia del perfil de la seccion de ICAO */}
             <Link href="/docs/cv.pdf" download="CV_Cesar_Aparicio" passHref>
               <a
                 href="replace"
