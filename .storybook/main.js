@@ -6,11 +6,15 @@ module.exports = {
     '../components/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/preset-scss',
+    {
+      name: 'storybook-addon-next',
+      options: {
+        nextConfigPath: path.resolve(__dirname, '../next.config.js'),
+      },
+    },
+    '@storybook/addon-essentials', // Muestra varios errores en consola, pero son exclusivos del plugin, NO ES EL PROYECTO
     'storybook-addon-outline',
-    '@hover/storybook-addon-pseudo-states',
+    // '@storybook/preset-scss', // Solucionaba el problema de las importaciones de los archivos SCSS:  @storybook/preset-scss
   ],
   framework: '@storybook/react',
   core: {
