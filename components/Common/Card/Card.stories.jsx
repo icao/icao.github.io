@@ -1,9 +1,5 @@
 import Card from './Card'
 
-// FIXME: Resuelveme cuando se recuelva el bug, en la version de storybook con next image
-// NOTE: Existe un proyecto donde funionaba con una version vieja donde se ve involuvrado el yarn lock
-// VER en: C:\Users\icaOS\Desktop\nextjs-example
-
 export default {
   title: 'Components/Common/Card',
   component: Card,
