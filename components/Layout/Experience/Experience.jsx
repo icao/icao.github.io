@@ -10,7 +10,7 @@ const Experience = () => (
       <div className={styles.experience__section}>
         <div className={styles.experience__item}>
           <TimelineMoment arrowRight>
-            <h4 className={styles.experience__role}>Product Engineer Junior</h4>
+            <h4 className={styles.experience__role}>Product Engineer</h4>
             <p className={styles.experience__place}>Thirty3</p>
             <p className={styles.experience__description}>
               Desarrollo de aplicaciones web SSR(landing pages, administración
