@@ -51,7 +51,9 @@
     "storybook-addon-outline": "^1.4.2"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --cache --color",
+    
     "*.{js,jsx,json,ts,tsx,scss,css}": "npx prettier --color"
   }
 }
+
+
