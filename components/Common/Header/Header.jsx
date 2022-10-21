@@ -5,10 +5,6 @@ import useWindowResize from '@hooks/useWindowResize'
 import useKeyPress from '@hooks/useKeyPress'
 import styles from './Header.module.scss'
 
-
-
-
-
 const menuItems = [
   { id: 1, tag: 'home', name: 'home' },
   { id: 2, tag: 'icao', name: 'icao' },
